@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moonlight/constants/app.dart';
+import 'package:moonlight/config/config.dart';
 import 'constants/routes.dart';
-import 'constants/theme.dart';
-import 'views/example/auth/views/register_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,8 +19,10 @@ class MyApp extends StatelessWidget {
         valueListenable: themeNotifier,
         builder: (_, ThemeMode currentMode, __) {
           return MaterialApp(
-            title: appName,
-            theme: lightTheme,
+            title: AppConfig.name,
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
             // themeMode: ThemeMode.system,
             darkTheme: ThemeData.dark(),
             themeMode: currentMode,
