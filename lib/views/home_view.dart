@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../constants/app.dart';
 import '../widgets/drawer.dart';
 
 class HomeView extends StatelessWidget {

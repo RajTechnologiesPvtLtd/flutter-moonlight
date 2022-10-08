@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+const TextColor = Color.fromRGBO(50, 50, 93, 1.0);
 
 class DrawerTile extends StatelessWidget {
   final String title;

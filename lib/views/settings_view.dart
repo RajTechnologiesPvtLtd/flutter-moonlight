@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import '../constants/app.dart';
+import 'package:moonlight/config/config.dart';
 import '../main.dart';
 import '../utils/tools.dart';
 import '../widgets/drawer.dart';
@@ -48,7 +48,7 @@ class SettingsView extends StatelessWidget {
               title: Text("Contact Us"),
               trailing: Icon(Icons.navigate_next),
               onTap: (() {
-                launchURL(appContactUsUrl);
+                launchURL(AppLink.contactUs);
               }),
             ),
             ListTile(
@@ -56,7 +56,7 @@ class SettingsView extends StatelessWidget {
               title: Text("FAQ"),
               trailing: Icon(Icons.navigate_next),
               onTap: (() {
-                launchURL(appContactUsUrl);
+                launchURL(AppLink.contactUs);
               }),
             ),
             Center(
@@ -64,53 +64,53 @@ class SettingsView extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w500)), //Pages
             ),
             Visibility(
-                visible: appOfficialWebsite.isNotEmpty,
+                visible: AppLink.officialWebsite.isNotEmpty,
                 child: ListTile(
                   leading: Icon(Icons.language),
                   title: Text("Official Website"),
                   trailing: Icon(Icons.navigate_next),
                   onTap: (() {
-                    launchURL(appOfficialWebsite);
+                    launchURL(AppLink.officialWebsite);
                   }),
                 )),
             Visibility(
-                visible: appYoutube.isNotEmpty,
+                visible: AppLink.youtube.isNotEmpty,
                 child: ListTile(
                   leading: Icon(Icons.language),
                   title: Text("YouTube"),
                   trailing: Icon(Icons.navigate_next),
                   onTap: (() {
-                    launchURL(appYoutube);
+                    launchURL(AppLink.youtube);
                   }),
                 )),
             Visibility(
-                visible: appInstagram.isNotEmpty,
+                visible: AppLink.instagram.isNotEmpty,
                 child: ListTile(
                   leading: Icon(Icons.language),
                   title: Text("Instagram"),
                   trailing: Icon(Icons.navigate_next),
                   onTap: (() {
-                    launchURL(appInstagram);
+                    launchURL(AppLink.instagram);
                   }),
                 )),
             Visibility(
-                visible: appFacebook.isNotEmpty,
+                visible: AppLink.facebook.isNotEmpty,
                 child: ListTile(
                   leading: Icon(Icons.language),
                   title: Text("Facebook"),
                   trailing: Icon(Icons.navigate_next),
                   onTap: (() {
-                    launchURL(appFacebook);
+                    launchURL(AppLink.facebook);
                   }),
                 )),
             Visibility(
-                visible: appTwitter.isNotEmpty,
+                visible: AppLink.twitter.isNotEmpty,
                 child: ListTile(
                   leading: Icon(Icons.language),
                   title: Text("Twitter"),
                   trailing: Icon(Icons.navigate_next),
                   onTap: (() {
-                    launchURL(appTwitter);
+                    launchURL(AppLink.twitter);
                   }),
                 )),
             Center(
@@ -124,7 +124,7 @@ class SettingsView extends StatelessWidget {
               title: Text("Terms & Conditions"),
               trailing: Icon(Icons.navigate_next),
               onTap: (() {
-                launchURL(appTermsConditionsUrl);
+                launchURL(AppLink.termsAndConditions);
               }),
             ),
             ListTile(
@@ -132,7 +132,7 @@ class SettingsView extends StatelessWidget {
               title: Text("About Us"),
               trailing: Icon(Icons.navigate_next),
               onTap: (() {
-                launchURL(appAboutUsUrl);
+                launchURL(AppLink.aboutUs);
               }),
             ),
             ListTile(
@@ -140,7 +140,7 @@ class SettingsView extends StatelessWidget {
               title: Text("Share The App"),
               trailing: Icon(Icons.navigate_next),
               onTap: (() {
-                CustomShare(appShareTheAppMsg);
+                CustomShare(AppConfig.shareTheAppMsg);
               }),
             ),
             ListTile(
@@ -148,7 +148,7 @@ class SettingsView extends StatelessWidget {
                 title: Text("Rate This App"),
                 trailing: Icon(Icons.navigate_next),
                 onTap: (() {
-                  launchURL(appRateThisAppLink);
+                  launchURL(AppConfig.rateThisAppLink);
                 }))
           ],
         ),
