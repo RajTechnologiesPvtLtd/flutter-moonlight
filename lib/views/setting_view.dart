@@ -6,8 +6,8 @@ import '../main.dart';
 import '../utils/tools.dart';
 import '../widgets/drawer.dart';
 
-class SettingsView extends StatelessWidget {
-  const SettingsView({Key? key}) : super(key: key);
+class SettingView extends StatelessWidget {
+  const SettingView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -16,55 +16,55 @@ class ExampleView extends StatelessWidget {
             ListTile(
               title: Center(child: Text("Auth UI Example")),
               onTap: () {
-                Navigator.pushNamed(context, AuthViewRoute);
+                Navigator.pushNamed(context, exampleAuthViewRoute);
               },
             ),
             ListTile(
               title: Center(child: Text("Grid View")),
               onTap: () {
-                Navigator.pushNamed(context, GridViewRoute);
+                Navigator.pushNamed(context, exampleGridViewRoute);
               },
             ),
             ListTile(
               title: Center(child: Text("Load Local Image")),
               onTap: () {
-                Navigator.pushNamed(context, LoadLocalImageRoute);
+                Navigator.pushNamed(context, exampleLoadLocalImageRoute);
               },
             ),
             ListTile(
               title: Center(child: Text("Load Local JSON")),
               onTap: () {
-                Navigator.pushNamed(context, LoadLocalJSONRoute);
+                Navigator.pushNamed(context, exampleLoadLocalJsonRoute);
               },
             ),
             ListTile(
               title: Center(child: Text("Load More Using API")),
               onTap: () {
-                Navigator.pushNamed(context, LoadMoreUsingAPIRoute);
+                Navigator.pushNamed(context, exampleLoadMoreUsingApi);
               },
             ),
             ListTile(
               title: Center(child: Text("Buttons Example")),
               onTap: () {
-                Navigator.pushNamed(context, ButtonsExampleRoute);
+                Navigator.pushNamed(context, exampleButtons);
               },
             ),
             ListTile(
               title: Center(child: Text("Using Bottom Nav Bar Example")),
               onTap: () {
-                Navigator.pushNamed(context, UsingBottomNavBarExampleRoute);
+                Navigator.pushNamed(context, exampleUsingBottomNavBar);
               },
             ),
             ListTile(
               title: Center(child: Text("Using Alert Dialog")),
               onTap: () {
-                Navigator.pushNamed(context, UsingAlertDialogRoute);
+                Navigator.pushNamed(context, exampleUsingAlertDialog);
               },
             ),
             ListTile(
               title: Center(child: Text("Input Fields Example")),
               onTap: () {
-                Navigator.pushNamed(context, InputFieldsExampleRoute);
+                Navigator.pushNamed(context, exampleInputFields);
               },
             ),
           ],
