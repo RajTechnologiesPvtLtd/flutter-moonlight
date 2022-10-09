@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../config/config.dart';
-import '../constants/routes.dart';
 import '../utils/tools.dart';
 import '../widgets/widget.dart';
 
@@ -30,15 +29,15 @@ class HomeView extends StatelessWidget {
               const SizedBox(width: 2),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).popAndPushNamed(exampleRoute);
+                    Navigator.of(context).popAndPushNamed(App.example);
                   },
                   child: const Text("Examples")),
               const SizedBox(width: 2),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).popAndPushNamed(settingRoute);
+                    Navigator.of(context).popAndPushNamed(App.setting);
                   },
-                  child: const Text("Settings"))
+                  child: const Text("Settings1"))
             ],
           )
         ],

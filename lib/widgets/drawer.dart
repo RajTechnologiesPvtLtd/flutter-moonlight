@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants/routes.dart';
+import '../config/config.dart';
 import 'drawer-tile.dart';
 
 class MoonLightDrawer extends StatelessWidget {
@@ -33,14 +33,14 @@ class MoonLightDrawer extends StatelessWidget {
         title: "Home",
         icon: Icons.home,
         onTap: () {
-          Navigator.of(context).popAndPushNamed(rootRoute);
+          Navigator.of(context).popAndPushNamed(App.home);
         },
       ),
       DrawerTile(
         title: "Load More",
         icon: Icons.list,
         onTap: () {
-          Navigator.of(context).popAndPushNamed(loadMoreRoute);
+          Navigator.of(context).popAndPushNamed(App.loadMore);
         },
       ),
 
@@ -48,14 +48,14 @@ class MoonLightDrawer extends StatelessWidget {
         title: "Examples",
         icon: Icons.list,
         onTap: () {
-          Navigator.of(context).popAndPushNamed(exampleRoute);
+          Navigator.of(context).popAndPushNamed(App.example);
         },
       ),
       DrawerTile(
         title: "Settings",
         icon: Icons.settings,
         onTap: () {
-          Navigator.of(context).popAndPushNamed(settingRoute);
+          Navigator.of(context).popAndPushNamed(App.setting);
         },
       ),
       // Divider(),
