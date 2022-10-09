@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:moonlight/config/config.dart';
 import 'constants/routes.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Google Mobile Ads Start
+  MobileAds.instance.initialize();
+  // Google Mobile Ads End
+
   runApp(const MyApp());
 }
 

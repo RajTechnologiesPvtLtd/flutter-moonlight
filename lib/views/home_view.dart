@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../config/config.dart';
 import '../constants/routes.dart';
 import '../utils/tools.dart';
-import '../widgets/drawer.dart';
+import '../widgets/widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       drawer: const MoonLightDrawer("Home"),
       appBar: AppBar(title: const Text("Home")),
+      bottomNavigationBar: BannerAdWidget(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/routes.dart';
-import '../widgets/drawer.dart';
+import '../widgets/widget.dart';
 
 class ExampleView extends StatelessWidget {
   const ExampleView({Key? key}) : super(key: key);
@@ -10,6 +10,7 @@ class ExampleView extends StatelessWidget {
     return Scaffold(
       drawer: MoonLightDrawer("Examples"),
       appBar: AppBar(title: Text("Examples")),
+      bottomNavigationBar: BannerAdWidget(),
       body: Center(
         child: ListView(
           children: [

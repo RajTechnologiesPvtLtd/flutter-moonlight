@@ -40,6 +40,7 @@ dependencies:
   url_launcher: ^6.1.5
   http: ^0.13.5
   dio: ^4.0.6
+  google_mobile_ads: ^2.0.1
 
 dev_dependencies:
   flutter_test:
