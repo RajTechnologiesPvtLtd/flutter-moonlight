@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:moonlight/controllers/load_more_controller.dart';
 import '../controllers/controllers.dart';
 import '../views/example/example_views.dart';
 
 //Routes Name Define
 const rootRoute = "/";
+const loadMoreRoute = "/load-more";
 const settingRoute = "/settings";
 const exampleRoute = "/examples";
 
@@ -25,6 +27,8 @@ class Routes {
     switch (settings.name) {
       case rootRoute:
         return MaterialPageRoute(builder: (_) => HomeController());
+      case loadMoreRoute:
+        return MaterialPageRoute(builder: (_) => LoadMoreController());
       case settingRoute:
         return MaterialPageRoute(builder: (_) => SettingController());
       case exampleRoute:

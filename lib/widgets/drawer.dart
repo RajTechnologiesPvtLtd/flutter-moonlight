@@ -36,6 +36,13 @@ class MoonLightDrawer extends StatelessWidget {
           Navigator.of(context).popAndPushNamed(rootRoute);
         },
       ),
+      DrawerTile(
+        title: "Load More",
+        icon: Icons.list,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(loadMoreRoute);
+        },
+      ),
 
       DrawerTile(
         title: "Examples",

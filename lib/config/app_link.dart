@@ -1,6 +1,6 @@
 class AppLink {
   static String officialWebsite =
-      "https://github.com/RajTechnologiesPvtLtd/flutter-moonlight";
+      "https://rajtechnologiespvtltd.github.io/flutter-moonlight/";
   static String aboutUs = officialWebsite;
   static String termsAndConditions = officialWebsite;
   static String privacyPolicy = officialWebsite;
