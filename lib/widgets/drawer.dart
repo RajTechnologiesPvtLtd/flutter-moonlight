@@ -37,18 +37,24 @@ class MoonLightDrawer extends StatelessWidget {
         },
       ),
       DrawerTile(
+        title: "Examples",
+        icon: Icons.list,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(App.example);
+        },
+      ),
+      DrawerTile(
         title: "Load More",
         icon: Icons.list,
         onTap: () {
           Navigator.of(context).popAndPushNamed(App.loadMore);
         },
       ),
-
       DrawerTile(
-        title: "Examples",
+        title: "SQL Crud",
         icon: Icons.list,
         onTap: () {
-          Navigator.of(context).popAndPushNamed(App.example);
+          Navigator.of(context).popAndPushNamed(App.sqlCrud);
         },
       ),
       DrawerTile(

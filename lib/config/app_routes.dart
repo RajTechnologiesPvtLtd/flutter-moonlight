@@ -1,6 +1,7 @@
 import '../controllers/controllers.dart';
 import '../core/classes/classes.dart';
 import '../views/example/example_views.dart';
+import '../views/views.dart';
 
 class Routes extends RouteManager {
   Routes() {
@@ -12,6 +13,7 @@ class App extends RouteManager {
   static const String name = '';
   static const String home = '${App.name}/';
   static const String loadMore = '${App.name}/load-more';
+  static const String sqlCrud = '${App.name}/sql-crud';
   static const String example = '${App.name}/examples';
   static const String setting = '${App.name}/setting';
   // Examples
@@ -28,6 +30,7 @@ class App extends RouteManager {
     addRoute(App.home, (context) => const HomeController());
     addRoute(App.setting, (context) => const SettingController());
     addRoute(App.loadMore, (context) => const LoadMoreController());
+    addRoute(App.sqlCrud, (context) => const SqlCRUDView());
     addRoute(App.example, (context) => const ExampleController());
     // Examples
     addRoute(App.exampleAuth, (context) => const AuthView());
