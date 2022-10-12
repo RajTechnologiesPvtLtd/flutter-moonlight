@@ -26,6 +26,7 @@ class App extends RouteManager {
   static const String exampleInputFields = "/input-fields-example";
   static const String exampleUsingAlertDialog = "/using-alert-dialog-example";
   static const String exampleUsingBottomNavBar = "/using-bottom-nav-bar";
+  static const String exampleSnackBar = "/snack-bar";
   App() {
     addRoute(App.home, (context) => const HomeController());
     addRoute(App.setting, (context) => const SettingController());
@@ -37,10 +38,13 @@ class App extends RouteManager {
     addRoute(App.exampleGridView, (context) => GridViewPage());
     addRoute(App.exampleLoadLocalImage, (context) => LoadLocalImagePage());
     addRoute(App.exampleLoadLocalJson, (context) => LoadLocalJSONPage());
-    addRoute(App.exampleLoadMoreUsingApi, (context) => LoadMoreUsingAPIPage());
-    addRoute(App.exampleButtons, (context) => ButtonsExample());
-    addRoute(App.exampleInputFields, (context) => InputFieldsExample());
-    addRoute(App.exampleUsingAlertDialog, (context) => UsingAlertDialogView());
+    addRoute(
+        App.exampleLoadMoreUsingApi, (context) => const LoadMoreUsingAPIPage());
+    addRoute(App.exampleButtons, (context) => const ButtonsExample());
+    addRoute(App.exampleInputFields, (context) => const InputFieldsExample());
+    addRoute(
+        App.exampleUsingAlertDialog, (context) => const UsingAlertDialogView());
+    addRoute(App.exampleSnackBar, (context) => const SnackBarView());
     addRoute(
         App.exampleUsingBottomNavBar, (context) => UsingBottomNavBarView());
   }

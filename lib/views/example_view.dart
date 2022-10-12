@@ -63,6 +63,12 @@ class ExampleView extends StatelessWidget {
               },
             ),
             ListTile(
+              title: Center(child: Text("Snack Bar")),
+              onTap: () {
+                Navigator.pushNamed(context, App.exampleSnackBar);
+              },
+            ),
+            ListTile(
               title: Center(child: Text("Input Fields Example")),
               onTap: () {
                 Navigator.pushNamed(context, App.exampleInputFields);
