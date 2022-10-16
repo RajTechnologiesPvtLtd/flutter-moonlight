@@ -74,6 +74,13 @@ class ExampleView extends StatelessWidget {
                 Navigator.pushNamed(context, App.exampleInputFields);
               },
             ),
+            ListTile(
+              title: Center(child: Text("Check Internet Connection")),
+              onTap: () {
+                Navigator.pushNamed(
+                    context, App.exampleCheckInternetConnection);
+              },
+            ),
           ],
         ),
       ),

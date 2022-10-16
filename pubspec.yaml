@@ -42,6 +42,7 @@ dependencies:
   dio: ^4.0.6
   google_mobile_ads: ^2.0.1
   sqflite: ^2.1.0+1
+  connectivity_plus: ^2.3.9
 
 dev_dependencies:
   flutter_test:
