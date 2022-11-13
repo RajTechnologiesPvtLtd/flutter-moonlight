@@ -23,7 +23,7 @@ class HomeView extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    launchURL(AppLink.officialWebsite);
+                    mlLaunchURL(AppLink.officialWebsite);
                   },
                   child: const Text("Official Website")),
               const SizedBox(width: 2),

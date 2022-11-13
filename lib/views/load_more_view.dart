@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../config/config.dart';
-import '../widgets/drawer.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -19,7 +18,7 @@ class _LoadMoreViewState extends State<LoadMoreView> {
 
   // At the beginning, we fetch the first 20 posts
   int _page = 0;
-  int _limit = 20;
+  final int _limit = 20;
 
   // There is next page or not
   bool _hasNextPage = true;
@@ -97,7 +96,7 @@ class _LoadMoreViewState extends State<LoadMoreView> {
   void initState() {
     super.initState();
     _firstLoad();
-    _controller = new ScrollController()..addListener(_loadMore);
+    _controller = ScrollController()..addListener(_loadMore);
   }
 
   @override

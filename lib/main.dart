@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moonlight/config/app_routes.dart';
 import 'config/config.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -28,15 +27,13 @@ class MyApp extends StatelessWidget {
             title: AppConfig.name,
             theme: ThemeData(
               primarySwatch: Colors.blue,
+              useMaterial3: true,
             ),
             // themeMode: ThemeMode.system,
             darkTheme: ThemeData.dark(),
             themeMode: currentMode,
-            // initialRoute: rootRoute,
-            // onGenerateRoute: Routes.generateRoute,
             initialRoute: '/',
             routes: Routes().routes,
-            // home: const RegisterScreen(),
           );
         });
   }
