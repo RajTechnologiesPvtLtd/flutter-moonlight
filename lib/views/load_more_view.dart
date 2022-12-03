@@ -3,7 +3,7 @@ import '../config/config.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import '../widgets/widget.dart';
+import '../widgets/widgets.dart';
 
 class LoadMoreView extends StatefulWidget {
   const LoadMoreView({Key? key}) : super(key: key);

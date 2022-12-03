@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../utils/input_decoration.dart';
-import '../../utils/validator.dart';
+import '../../utils/utils.dart';
 
 class CustomTextField extends StatelessWidget {
   String labelText;

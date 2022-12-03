@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../config/config.dart';
 import '../utils/tools.dart';
-import '../widgets/widget.dart';
+import '../widgets/widgets.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);

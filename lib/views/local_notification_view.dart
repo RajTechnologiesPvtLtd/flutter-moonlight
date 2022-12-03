@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moonlight/services/services.dart';
-import '../widgets/widget.dart';
+import '../widgets/widgets.dart';
 
 class LocalNotificationView extends StatefulWidget {
   const LocalNotificationView({Key? key}) : super(key: key);

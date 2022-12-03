@@ -1,4 +1,4 @@
-![Logo](../screenshot.png)
+<img src="../screenshot.png" width="200px">
 
 
 # MoonLight
@@ -53,17 +53,47 @@ lib
 │───config
 |   │──config.dart
 |   │──app_config.dart
+|   │──app_routes.dart
 |   │──app_link.dart
 |   │──app_image.dart
 |   └──api_endpoints.dart
-│───constants
-|   └──routes.dart
+│───core
+|   └──classes
+|       │──classes.dart
+|       └──route_manager.dart
+│───services
+|   │──services.dart
+|   │──local_notification_service.dart
 │───utils
 |   │──input_decoration.dart
 |   │──tools.dart
+|   │──sql_helper.dart
 |   └──validator.dart.dart
+│───widgets
+|   │──widgets.dart
+|   │──navbar.dart
+|   │──drawer-tile.dart
+|   │──drawer.dart
+|   │──full_screen_loader.dart
+|   │──no_more_content.dart
+|   │──on_screen_loader.dart
+|   │──banner_ad_widget.dart
+|   └──fields
+|      └──custom_text_field.dart
+│───controllers
+|   │──controllers.dart
+|   │──home_controller.dart
+|   │──setting_controller.dart
+|   │──load_more_controller.dart
+|   └──example_controller.dart
 │───views
+|   │──views.dart
 |   │──home_view.dart
+|   │──setting_view.dart
+|   │──load_more_view.dart
+|   │──local_notification_view.dart
+|   │──sql_crud_view.dart
+|   │──example_view.dart
 |   └──example
 |      │──buttons_view.dart
 |      │──grid_view.dart
@@ -72,12 +102,6 @@ lib
 |      │──load_local_json.dart
 |      │──load_more_using_api.dart
 |      └──validator.dart.dart
-│───widgets
-|   │──navbar.dart
-|   │──drawer.dart
-|   │──drawer-tile.dart
-|   └──fields
-|      └──custom_text_field.dart
 ```
 
 ## Example apps
@@ -114,6 +138,10 @@ lib
 - **[http](https://pub.dev/packages/http)**
 - **[share_plus](https://pub.dev/packages/share_plus)**
 - **[google_fonts](https://pub.dev/packages/google_fonts)**
+- **[google_mobile_ads](https://pub.dev/packages/google_mobile_ads)**
+- **[sqflite](https://pub.dev/packages/sqflite)**
+- **[connectivity_plus](https://pub.dev/packages/connectivity_plus)**
+- **[flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications)**
 
 ## Maintenance by Raj Technologies Pvt Ltd (For Flutter Starter Project)
 
