@@ -9,13 +9,14 @@ This Docs given Flutter easy implement Flutter Project
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/RajTechnologiesPvtLtd/flutter-moonlight/master/screenshot.png)
+<img src="screenshot.png" alt="Flutter Moonlight Framework" width="200"/>
 
 
 ## Features
 
 - Core Routes
 - MVC Architecture 
+- Local Notification
 
 
 ## Examples

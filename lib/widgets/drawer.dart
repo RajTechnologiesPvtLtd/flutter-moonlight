@@ -58,6 +58,13 @@ class MoonLightDrawer extends StatelessWidget {
         },
       ),
       DrawerTile(
+        title: "Local Notification",
+        icon: Icons.list,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(App.localNotification);
+        },
+      ),
+      DrawerTile(
         title: "Settings",
         icon: Icons.settings,
         onTap: () {

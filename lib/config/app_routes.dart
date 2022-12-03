@@ -14,6 +14,7 @@ class App extends RouteManager {
   static const String home = '${App.name}/';
   static const String loadMore = '${App.name}/load-more';
   static const String sqlCrud = '${App.name}/sql-crud';
+  static const String localNotification = '${App.name}/local-notification';
   static const String example = '${App.name}/examples';
   static const String setting = '${App.name}/setting';
   // Examples
@@ -34,6 +35,7 @@ class App extends RouteManager {
     addRoute(App.setting, (context) => const SettingController());
     addRoute(App.loadMore, (context) => const LoadMoreController());
     addRoute(App.sqlCrud, (context) => const SqlCRUDView());
+    addRoute(App.localNotification, (context) => const LocalNotificationView());
     addRoute(App.example, (context) => const ExampleController());
     // Examples
     addRoute(App.exampleAuth, (context) => const AuthView());
