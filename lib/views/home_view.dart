@@ -37,7 +37,17 @@ class HomeView extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).popAndPushNamed(App.setting);
                   },
-                  child: const Text("Settings1"))
+                  child: const Text("Settings")),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).popAndPushNamed(App.loadMoreMVC);
+                  },
+                  child: const Text("load More MVC"))
             ],
           )
         ],

@@ -108,8 +108,8 @@ class _LoadMoreViewState extends State<LoadMoreView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Load More"),
-      appBar: AppBar(title: const Text("Load More")),
+      drawer: const MoonLightDrawer("Load More MVC"),
+      appBar: AppBar(title: const Text("Load More MVC")),
       bottomNavigationBar: BannerAdWidget(),
       body: _isFirstLoadRunning
           ? const FullScreenLoader()
