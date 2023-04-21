@@ -112,7 +112,7 @@ class _LoadMoreViewState extends State<LoadMoreView> {
       appBar: AppBar(title: const Text("Load More MVC")),
       bottomNavigationBar: BannerAdWidget(),
       body: _isFirstLoadRunning
-          ? const FullScreenLoader()
+          ? fullScreenLoader()
           : Column(
               children: [
                 Expanded(
@@ -131,10 +131,10 @@ class _LoadMoreViewState extends State<LoadMoreView> {
                 ),
 
                 // when the _loadMore function is running
-                if (_isLoadMoreRunning == true) const OnScreenLoader(),
+                if (_isLoadMoreRunning == true) onScreenLoader(),
 
                 // When nothing else to load
-                if (_hasNextPage == false) const NoMoreContent()
+                if (_hasNextPage == false) noMoreContent()
               ],
             ),
     );
