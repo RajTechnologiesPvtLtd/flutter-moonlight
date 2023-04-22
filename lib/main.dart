@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             // themeMode: ThemeMode.system,
             darkTheme: ThemeData.dark(),
             themeMode: currentMode,
-            initialRoute: '/',
+            initialRoute: App.loginAuth,
             routes: Routes().routes,
           );
         });

@@ -6,3 +6,5 @@ export 'example_view.dart';
 export 'local_notification_view.dart';
 // MVC
 export 'LoadMoreViewMVC.dart';
+// Auth System
+export 'auth/login_view.dart';
