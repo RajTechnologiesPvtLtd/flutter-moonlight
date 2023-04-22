@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/utils.dart';
+import '../widgets/widgets.dart';
 
 class SqlCRUDView extends StatefulWidget {
   const SqlCRUDView({Key? key}) : super(key: key);
@@ -118,37 +119,38 @@ class _SqlCRUDViewState extends State<SqlCRUDView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('raviyatechnical'),
+        title: const Text('SQL CRUD'),
       ),
       body: _isLoading
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
-          : ListView.builder(
-              itemCount: _journals.length,
-              itemBuilder: (context, index) => Card(
-                margin: const EdgeInsets.all(15),
-                child: ListTile(
-                    title: Text(_journals[index]['title']),
-                    subtitle: Text(_journals[index]['description']),
-                    trailing: SizedBox(
-                      width: 100,
-                      child: Row(
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.edit),
-                            onPressed: () => _showForm(_journals[index]['id']),
+          ? fullScreenLoader()
+          : (_journals.isEmpty)
+              ? noDataFound()
+              : ListView.builder(
+                  itemCount: _journals.length,
+                  itemBuilder: (context, index) => Card(
+                    margin: const EdgeInsets.all(15),
+                    child: ListTile(
+                        title: Text(_journals[index]['title']),
+                        subtitle: Text(_journals[index]['description']),
+                        trailing: SizedBox(
+                          width: 100,
+                          child: Row(
+                            children: [
+                              IconButton(
+                                icon: const Icon(Icons.edit),
+                                onPressed: () =>
+                                    _showForm(_journals[index]['id']),
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.delete),
+                                onPressed: () =>
+                                    _deleteItem(_journals[index]['id']),
+                              ),
+                            ],
                           ),
-                          IconButton(
-                            icon: const Icon(Icons.delete),
-                            onPressed: () =>
-                                _deleteItem(_journals[index]['id']),
-                          ),
-                        ],
-                      ),
-                    )),
-              ),
-            ),
+                        )),
+                  ),
+                ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () => _showForm(null),

@@ -113,30 +113,32 @@ class _LoadMoreViewState extends State<LoadMoreView> {
       bottomNavigationBar: BannerAdWidget(),
       body: _isFirstLoadRunning
           ? fullScreenLoader()
-          : Column(
-              children: [
-                Expanded(
-                  child: ListView.builder(
-                    controller: _controller,
-                    itemCount: _posts.length,
-                    itemBuilder: (_, index) => Card(
-                      margin: const EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 10),
-                      child: ListTile(
-                        title: Text(_posts[index]['title']),
-                        // subtitle: Text(_posts[index]['body']),
+          : (_posts.isEmpty)
+              ? noDataFound()
+              : Column(
+                  children: [
+                    Expanded(
+                      child: ListView.builder(
+                        controller: _controller,
+                        itemCount: _posts.length,
+                        itemBuilder: (_, index) => Card(
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 8, horizontal: 10),
+                          child: ListTile(
+                            title: Text(_posts[index]['title']),
+                            // subtitle: Text(_posts[index]['body']),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+
+                    // when the _loadMore function is running
+                    if (_isLoadMoreRunning == true) onScreenLoader(),
+
+                    // When nothing else to load
+                    if (_hasNextPage == false) noMoreContent()
+                  ],
                 ),
-
-                // when the _loadMore function is running
-                if (_isLoadMoreRunning == true) onScreenLoader(),
-
-                // When nothing else to load
-                if (_hasNextPage == false) noMoreContent()
-              ],
-            ),
     );
   }
 }
