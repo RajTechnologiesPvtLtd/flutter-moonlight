@@ -51,6 +51,13 @@ class MoonLightDrawer extends StatelessWidget {
         },
       ),
       DrawerTile(
+        title: "Load More With Cache",
+        icon: Icons.list,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(App.loadMoreWithCache);
+        },
+      ),
+      DrawerTile(
         title: "SQL Crud",
         icon: Icons.list,
         onTap: () {

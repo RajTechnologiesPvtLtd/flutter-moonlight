@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget fullScreenLoader() {
-  return Scaffold(
+  return const Scaffold(
     body: Center(
       child: CircularProgressIndicator(),
     ),
