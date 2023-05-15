@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../utils/utils.dart';
 
-class CustomTextField extends StatelessWidget {
+import 'input_decoration.dart';
+import '../../utils/validator.dart';
+
+class mlTextField extends StatelessWidget {
   String labelText;
   String? hintText;
   TextEditingController controller = TextEditingController();
-  CustomTextField(
+  mlTextField(
       {required this.labelText,
       this.hintText,
       required this.controller,

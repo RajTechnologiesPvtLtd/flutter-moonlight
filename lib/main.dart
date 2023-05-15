@@ -26,13 +26,24 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: AppConfig.name,
             theme: ThemeData(
-              primarySwatch: Colors.blue,
               useMaterial3: true,
+              colorScheme: ColorScheme(
+                primary: Colors.orange,
+                secondary: Colors.amber,
+                background: Colors.white,
+                surface: Colors.white,
+                brightness: Brightness.light,
+                error: Colors.red[900]!,
+                onPrimary: Colors.white,
+                onSecondary: Colors.white,
+                onBackground: Colors.black,
+                onSurface: Colors.black,
+                onError: Colors.white,
+              ),
             ),
-            // themeMode: ThemeMode.system,
             darkTheme: ThemeData.dark(),
             themeMode: currentMode,
-            initialRoute: '/',
+            initialRoute: App.home,
             routes: Routes().routes,
           );
         });
