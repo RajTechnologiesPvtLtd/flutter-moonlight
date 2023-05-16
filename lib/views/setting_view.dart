@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moonlight/config/config.dart';
 import '../main.dart';
 import '../utils/utils.dart';
-import '../widgets/drawer.dart';
+import '../widgets/widgets.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({Key? key}) : super(key: key);
@@ -10,8 +10,7 @@ class SettingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Settings"),
-      appBar: AppBar(title: const Text("Settings")),
+      appBar: const Navbar(title: "Settings"),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -20,8 +20,8 @@ class App extends RouteManager {
   static const String setting = '${App.name}/setting';
   //MVC
   static const String loadMoreMVC = '${App.name}/load-more-mvc';
-  // Auth system 
-  static const String loginAuth = '${App.name}/login';  
+  // Auth system
+  static const String loginAuth = '${App.name}/login';
   // Examples
   static const String exampleAuth = "/auth";
   static const String exampleGridView = "/grid-view";
@@ -39,14 +39,15 @@ class App extends RouteManager {
     addRoute(App.home, (context) => const HomeController());
     addRoute(App.setting, (context) => const SettingController());
     addRoute(App.loadMore, (context) => const LoadMoreController());
-    addRoute(App.loadMoreWithCache, (context) => const LoadMoreWithCacheController());
+    addRoute(App.loadMoreWithCache,
+        (context) => const LoadMoreWithCacheController());
     addRoute(App.sqlCrud, (context) => const SqlCRUDView());
     addRoute(App.localNotification, (context) => const LocalNotificationView());
     addRoute(App.example, (context) => const ExampleController());
     //MVC
-    addRoute(App.loadMoreMVC, (context) => LoadMoreViewMVC());
+    addRoute(App.loadMoreMVC, (context) => const LoadMoreViewMVC());
     // Auth System
-    addRoute(App.loginAuth, (context) => LoginController());
+    addRoute(App.loginAuth, (context) => const LoginController());
     // Examples
     addRoute(App.exampleAuth, (context) => const AuthView());
     addRoute(App.exampleGridView, (context) => GridViewPage());

@@ -4,6 +4,6 @@ class LoginResponseModel {
   LoginResponseModel({this.token});
 
   LoginResponseModel.fromJson(json) {
-    token = json['token'];
+    token = json['data']['token'];
   }
 }

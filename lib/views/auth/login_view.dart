@@ -22,7 +22,7 @@ class _LoginViewState extends State<LoginView> {
 
   Future<void> loginUser(String email, String password) async {
     final response = await _authService
-        .fetchLogin(LoginRequestModel(email: email, password: password));
+        .login(LoginRequestModel(email: email, password: password));
     if (response != null) {
       /// Set isLogin to true6
       // _authManager.login(response.token.toString());
@@ -58,10 +58,10 @@ class _LoginViewState extends State<LoginView> {
                 labelText: "Password",
               ),
               ElevatedButton(
+                child: const Text("Login"),
                 onPressed: () {
                   loginUser(_emailCtr.text, _passwordCtr.text);
                 },
-                child: const Text("Login"),
               )
             ],
           ),

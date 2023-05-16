@@ -1,66 +1,43 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'package:http/http.dart' as http;
 
 import '../config/config.dart';
+import '../core/classes/classes.dart';
 import '../models/models.dart';
 
 class AuthService {
-  Future<LoginResponseModel?> fetchLogin(LoginRequestModel model) async {
+  bool isLoggedIn() {
+    // Check if the user is logged in
+    // Return true if logged in, false otherwise
+    return true;
+  }
+
+  Future<LoginResponseModel?> login(LoginRequestModel model) async {
     MLApi mlApi = MLApi();
     final response = await mlApi.postData(model.toJson(), ApiEndpoint.login);
     if (response.statusCode == HttpStatus.ok) {
       var jsonData = jsonDecode(response.body);
+      CacheManager.saveData("api_token", jsonData['data']['token']);
       return LoginResponseModel.fromJson(jsonData);
     } else {
       return null;
     }
   }
-}
 
-class MLApi {
-  postData(data, apiUrl) async {
-    var fullUrl = apiUrl;
-    // var token = await _getToken();
-    try {
-      return await http
-          .post(
-            Uri.parse(fullUrl),
-            body: jsonEncode(data),
-            headers: ApiEndpoint.commanHeader,
-          )
-          .timeout(
-            const Duration(seconds: 5),
-          );
-    } on TimeoutException catch (e) {
-      return http.Response(jsonEncode({"success": false, "code": 404}), 404);
-    } on Exception catch (e) {
-      return http.Response(jsonEncode({"success": false, "code": 404}), 404);
+  Future logout() async {
+    MLApi mlApi = MLApi();
+    bool checkToken = await CacheManager.checkKeyExist("api_token");
+    if (checkToken) {
+      var token = CacheManager.readData("api_token");
+      final response = await mlApi.postData([], ApiEndpoint.logout);
+      if (response.statusCode == HttpStatus.ok) {
+        var jsonData = jsonDecode(response.body);
+        return jsonData;
+      } else {
+        return null;
+      }
     }
+    CacheManager.deleteData("api_token");
   }
-
-  getData(apiUrl) async {
-    var fullUrl = apiUrl;
-    // var token = await _getToken();
-    try {
-      return await http
-          .get(
-            Uri.parse(fullUrl),
-            headers: ApiEndpoint.commanHeader,
-          )
-          .timeout(
-            const Duration(seconds: 5),
-          );
-    } on TimeoutException catch (e) {
-      return http.Response(jsonEncode({"success": false, "code": 404}), 404);
-    } on Exception catch (e) {
-      return http.Response(jsonEncode({"success": false, "code": 404}), 404);
-    }
-  }
-
-  // _getToken() async {
-  //   SharedPreferences localStorage = await SharedPreferences.getInstance();
-  //   return localStorage.getString('token');
-  // }
 }

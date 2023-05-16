@@ -96,6 +96,7 @@ class _SqlCRUDViewState extends State<SqlCRUDView> {
   Future<void> _addItem() async {
     await SQLHelper.createItem(
         _titleController.text, _descriptionController.text);
+    showMessage(context, "Successfully created a journal!");
     _refreshJournals();
   }
 
@@ -103,24 +104,22 @@ class _SqlCRUDViewState extends State<SqlCRUDView> {
   Future<void> _updateItem(int id) async {
     await SQLHelper.updateItem(
         id, _titleController.text, _descriptionController.text);
+    showMessage(context, "Successfully update a journal!");
     _refreshJournals();
   }
 
 // Delete an item
   void _deleteItem(int id) async {
     await SQLHelper.deleteItem(id);
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      content: Text('Successfully deleted a journal!'),
-    ));
+    showMessage(context, "Successfully deleted a journal!");
     _refreshJournals();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SQL CRUD'),
-      ),
+      drawer: const MoonLightDrawer("SQL CRUD"),
+      appBar: const Navbar(title: "SQL CRUD"),
       body: _isLoading
           ? fullScreenLoader()
           : (_journals.isEmpty)

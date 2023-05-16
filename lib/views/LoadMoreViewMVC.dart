@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../controllers/controllers.dart';
+import '../widgets/widgets.dart';
 
 class LoadMoreViewMVC extends StatefulWidget {
   const LoadMoreViewMVC({Key? key}) : super(key: key);
@@ -62,7 +63,8 @@ class _LoadMoreViewMVCState extends State<LoadMoreViewMVC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Load More MVC")),
+      drawer: const MoonLightDrawer("Load More MVC"),
+      appBar: const Navbar(title: "Load More MVC"),
       body: _buildList(),
     );
   }

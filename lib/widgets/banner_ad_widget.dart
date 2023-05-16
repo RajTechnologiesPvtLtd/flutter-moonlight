@@ -3,7 +3,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:moonlight/config/app_config.dart';
 
 class BannerAdWidget extends StatefulWidget {
-  BannerAdWidget({Key? key}) : super(key: key);
+  const BannerAdWidget({Key? key}) : super(key: key);
 
   @override
   _BannerAdWidgetState createState() => _BannerAdWidgetState();

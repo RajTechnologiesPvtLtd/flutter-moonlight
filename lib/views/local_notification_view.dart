@@ -23,7 +23,7 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MoonLightDrawer("Local Notification"),
-      appBar: AppBar(title: const Text("Local Notification")),
+      appBar: const Navbar(title: "Local Notification"),
       bottomNavigationBar: BannerAdWidget(),
       body: Center(
         child: Column(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../config/config.dart';
+import '../core/classes/classes.dart';
 import 'drawer-tile.dart';
 
 class MoonLightDrawer extends StatelessWidget {
@@ -9,9 +10,7 @@ class MoonLightDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        child: Container(
-            //color: WhiteColor,
-            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+        child: ListView(padding: EdgeInsets.zero, children: <Widget>[
       DrawerHeader(
         decoration: BoxDecoration(
           color: Theme.of(context).backgroundColor,
@@ -20,8 +19,8 @@ class MoonLightDrawer extends StatelessWidget {
           decoration: BoxDecoration(
             color: Theme.of(context).backgroundColor,
           ),
-          accountEmail: Text("raviyatechnical@gmail.com"),
-          accountName: Text("Bhargav Raviya"),
+          accountEmail: const Text("raviyatechnical@gmail.com"),
+          accountName: const Text("Bhargav Raviya"),
           currentAccountPicture: Image.network(
             "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png",
             fit: BoxFit.cover,
@@ -32,60 +31,44 @@ class MoonLightDrawer extends StatelessWidget {
       DrawerTile(
         title: "Home",
         icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.home);
-        },
+        onTap: () => Nav.toNamed(context, App.home),
       ),
       DrawerTile(
         title: "Examples",
         icon: Icons.list,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.example);
-        },
+        onTap: () => Nav.toNamed(context, App.example),
       ),
       DrawerTile(
         title: "Load More",
         icon: Icons.list,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.loadMore);
-        },
+        onTap: () => Nav.toNamed(context, App.loadMore),
       ),
       DrawerTile(
         title: "Load More With Cache",
         icon: Icons.list,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.loadMoreWithCache);
-        },
+        onTap: () => Nav.toNamed(context, App.loadMoreWithCache),
       ),
       DrawerTile(
         title: "SQL Crud",
         icon: Icons.list,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.sqlCrud);
-        },
+        onTap: () => Nav.toNamed(context, App.sqlCrud),
       ),
       DrawerTile(
         title: "Local Notification",
         icon: Icons.notifications,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.localNotification);
-        },
+        onTap: () => Nav.toNamed(context, App.localNotification),
       ),
       DrawerTile(
         title: "Settings",
         icon: Icons.settings,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(App.setting);
-        },
+        onTap: () => Nav.toNamed(context, App.setting),
       ),
       // Divider(),
       // DrawerTile(
       //   title: "Logout",
       //   icon: Icons.logout,
-      //   onTap: () {
-      //     Navigator.of(context).pushNamed(Routes.initRoute);
-      //   },
+      //   onTap: () => Nav.toNamed(context, App.setting),
       // ),
-    ])));
+    ]));
   }
 }

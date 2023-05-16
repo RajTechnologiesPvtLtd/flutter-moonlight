@@ -22,8 +22,8 @@ class DrawerTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-          padding: EdgeInsets.all(16),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.all(16),
+          decoration: const BoxDecoration(
               //color: isSelected ? PrimaryColor : WhiteColor,
               borderRadius: BorderRadius.all(Radius.circular(8))),
           child: Row(
@@ -36,7 +36,7 @@ class DrawerTile extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       letterSpacing: .3,
                       fontSize: 15,
                       //color: isSelected ? WhiteColor : Color.fromRGBO(0, 0, 0, 0.7)
