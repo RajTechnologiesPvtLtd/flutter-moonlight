@@ -37,4 +37,5 @@
             android:value="ca-app-pub-3940256099942544~3347511713"/>
         <!-- Google Mobile Ads End -->
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

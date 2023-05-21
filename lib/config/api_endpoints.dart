@@ -9,7 +9,7 @@ class ApiEndpoint {
 
   static const loadMoreUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-  static const commanHeader = {
+  static const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
   };

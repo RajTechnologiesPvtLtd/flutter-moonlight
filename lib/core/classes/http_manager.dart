@@ -12,7 +12,7 @@ class MLApi {
           .post(
             Uri.parse(fullUrl),
             body: jsonEncode(data),
-            headers: ApiEndpoint.commanHeader,
+            headers: ApiEndpoint.headers,
           )
           .timeout(
             const Duration(seconds: 5),
@@ -31,7 +31,7 @@ class MLApi {
       return await http
           .get(
             Uri.parse(fullUrl),
-            headers: ApiEndpoint.commanHeader,
+            headers: ApiEndpoint.headers,
           )
           .timeout(
             const Duration(seconds: 5),
