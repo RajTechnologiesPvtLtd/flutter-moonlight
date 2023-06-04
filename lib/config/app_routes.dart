@@ -1,6 +1,5 @@
 import '../controllers/controllers.dart';
 import '../core/classes/classes.dart';
-import '../views/example/example_views.dart';
 import '../views/views.dart';
 
 class Routes extends RouteManager {
@@ -35,6 +34,7 @@ class App extends RouteManager {
   static const String exampleSnackBar = "/snack-bar";
   static const String exampleCheckInternetConnection =
       "/check-internet-connection";
+  static const String exampleYoutubeVideo = "/youtube-video";
   App() {
     addRoute(App.home, (context) => const HomeController());
     addRoute(App.setting, (context) => const SettingController());
@@ -64,5 +64,6 @@ class App extends RouteManager {
         App.exampleUsingBottomNavBar, (context) => UsingBottomNavBarView());
     addRoute(App.exampleCheckInternetConnection,
         (context) => CheckInternetConnectionView());
+    addRoute(App.exampleYoutubeVideo, (context) => const YoutubeVideoView());
   }
 }
