@@ -36,18 +36,17 @@ class App extends RouteManager {
       "/check-internet-connection";
   static const String exampleYoutubeVideo = "/youtube-video";
   App() {
-    addRoute(App.home, (context) => const HomeController());
-    addRoute(App.setting, (context) => const SettingController());
-    addRoute(App.loadMore, (context) => const LoadMoreController());
-    addRoute(App.loadMoreWithCache,
-        (context) => const LoadMoreWithCacheController());
+    addRoute(App.home, (context) => HomeView());
+    addRoute(App.setting, (context) => const SettingView());
+    addRoute(App.loadMore, (context) => const LoadMoreView());
+    addRoute(App.loadMoreWithCache, (context) => const LoadMoreWithCacheView());
     addRoute(App.sqlCrud, (context) => const SqlCRUDView());
     addRoute(App.localNotification, (context) => const LocalNotificationView());
     addRoute(App.example, (context) => const ExampleController());
     //MVC
     addRoute(App.loadMoreMVC, (context) => const LoadMoreViewMVC());
     // Auth System
-    addRoute(App.loginAuth, (context) => const LoginController());
+    addRoute(App.loginAuth, (context) => const LoginView());
     // Examples
     addRoute(App.exampleAuth, (context) => const AuthView());
     addRoute(App.exampleGridView, (context) => GridViewPage());

@@ -42,7 +42,7 @@ class _AuthViewState extends State<AuthView> {
           },
           decoration: inputDecoration('E-mail', Icons.person),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         TextFormField(
@@ -54,7 +54,7 @@ class _AuthViewState extends State<AuthView> {
           controller: passwordCtr,
           decoration: inputDecoration('Password', Icons.lock),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         ElevatedButton(
@@ -63,7 +63,7 @@ class _AuthViewState extends State<AuthView> {
               // await _viewModel.loginUser(emailCtr.text, passwordCtr.text);
             }
           },
-          child: Text('Login'),
+          child: const Text('Login'),
         ),
         TextButton(
           onPressed: () {
@@ -71,7 +71,7 @@ class _AuthViewState extends State<AuthView> {
               _formType = FormType.register;
             });
           },
-          child: Text('Does not have an account?'),
+          child: const Text('Does not have an account?'),
         )
       ]),
     );
@@ -91,7 +91,7 @@ class _AuthViewState extends State<AuthView> {
           },
           decoration: inputDecoration('E-mail', Icons.person),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         TextFormField(
@@ -103,7 +103,7 @@ class _AuthViewState extends State<AuthView> {
           controller: passwordCtr,
           decoration: inputDecoration('Password', Icons.lock),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         TextFormField(
@@ -114,7 +114,7 @@ class _AuthViewState extends State<AuthView> {
           },
           decoration: inputDecoration('Retype Password', Icons.lock),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         ElevatedButton(
@@ -123,7 +123,7 @@ class _AuthViewState extends State<AuthView> {
               // await _viewModel.registerUser(emailCtr.text, passwordCtr.text);
             }
           },
-          child: Text('Register'),
+          child: const Text('Register'),
         ),
         TextButton(
           onPressed: () {
@@ -131,7 +131,7 @@ class _AuthViewState extends State<AuthView> {
               _formType = FormType.login;
             });
           },
-          child: Text('Login'),
+          child: const Text('Login'),
         )
       ]),
     );
@@ -141,10 +141,10 @@ class _AuthViewState extends State<AuthView> {
 InputDecoration inputDecoration(String labelText, IconData iconData,
     {String? prefix, String? helperText}) {
   return InputDecoration(
-    contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+    contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
     helperText: helperText,
     labelText: labelText,
-    labelStyle: TextStyle(color: Colors.grey),
+    labelStyle: const TextStyle(color: Colors.grey),
     fillColor: Colors.grey.shade200,
     filled: true,
     prefixText: prefix,
@@ -152,19 +152,19 @@ InputDecoration inputDecoration(String labelText, IconData iconData,
       iconData,
       size: 20,
     ),
-    prefixIconConstraints: BoxConstraints(minWidth: 60),
+    prefixIconConstraints: const BoxConstraints(minWidth: 60),
     enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
-        borderSide: BorderSide(color: Colors.black)),
+        borderSide: const BorderSide(color: Colors.black)),
     focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
-        borderSide: BorderSide(color: Colors.black)),
+        borderSide: const BorderSide(color: Colors.black)),
     errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
-        borderSide: BorderSide(color: Colors.black)),
+        borderSide: const BorderSide(color: Colors.black)),
     border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
-        borderSide: BorderSide(color: Colors.black)),
+        borderSide: const BorderSide(color: Colors.black)),
   );
 }
 

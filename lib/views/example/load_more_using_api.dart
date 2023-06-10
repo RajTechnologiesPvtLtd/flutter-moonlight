@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
-import 'package:moonlight/widgets/navbar.dart';
+import '../../widgets/widgets.dart';
 
 class LoadMoreUsingAPIPage extends StatefulWidget {
   const LoadMoreUsingAPIPage({Key? key}) : super(key: key);
@@ -95,7 +94,7 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
   void initState() {
     super.initState();
     _firstLoad();
-    _controller = new ScrollController()..addListener(_loadMore);
+    _controller = ScrollController()..addListener(_loadMore);
   }
 
   @override
@@ -107,11 +106,11 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Navbar(
+        appBar: const Navbar(
           title: "Load More Using API",
         ),
         body: _isFirstLoadRunning
-            ? Center(
+            ? const Center(
                 child: CircularProgressIndicator(),
               )
             : Column(
@@ -121,8 +120,8 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
                       controller: _controller,
                       itemCount: _posts.length,
                       itemBuilder: (_, index) => Card(
-                        margin:
-                            EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 10),
                         child: ListTile(
                           title: Text(_posts[index]['title']),
                           subtitle: Text(_posts[index]['body']),
@@ -133,8 +132,8 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
 
                   // when the _loadMore function is running
                   if (_isLoadMoreRunning == true)
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10, bottom: 40),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 10, bottom: 40),
                       child: Center(
                         child: CircularProgressIndicator(),
                       ),
@@ -145,7 +144,7 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
                     Container(
                       padding: const EdgeInsets.only(top: 30, bottom: 40),
                       color: Colors.amber,
-                      child: Center(
+                      child: const Center(
                         child: Text('You have fetched all of the content'),
                       ),
                     ),

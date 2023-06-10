@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../widgets/widgets.dart';
 
 class YoutubeVideoView extends StatelessWidget {

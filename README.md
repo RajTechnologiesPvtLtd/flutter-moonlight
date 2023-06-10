@@ -29,6 +29,7 @@ This Docs given Flutter easy implement Flutter Project
 
 ## Examples
 
+- Youtube Video Player
 - Grid Layout
 - Load local image
 - Load local json
@@ -85,7 +86,7 @@ flutter run
 To deploy this project run
 
 ```bash
-  flutter build apk
+  flutter build apk --release
 ```
 
 

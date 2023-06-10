@@ -15,9 +15,9 @@ class HomeView extends StatelessWidget {
       drawer: const MoonLightDrawer("Home"),
       // appBar: const Navbar(title: "Home"),
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Home",
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),

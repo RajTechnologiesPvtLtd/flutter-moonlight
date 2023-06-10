@@ -7,9 +7,9 @@ class InputFieldsExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buttons Example"),
+        title: const Text("Buttons Example"),
       ),
-      body: SimpleTextFields(),
+      body: const SimpleTextFields(),
     );
   }
 }
@@ -66,8 +66,8 @@ class SimpleTextFields extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            children: const [
+          const Column(
+            children: [
               Text(
                 "With Prefixed Icon",
                 style: TextStyle(fontSize: 16),

@@ -7,9 +7,9 @@ class ButtonsExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buttons Example"),
+        title: const Text("Buttons Example"),
       ),
-      body: SimpleButtons(),
+      body: const SimpleButtons(),
     );
   }
 }

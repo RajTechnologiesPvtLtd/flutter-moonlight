@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:moonlight/widgets/navbar.dart';
+import '../../widgets/widgets.dart';
 
 class LoadLocalJSONPage extends StatelessWidget {
+  const LoadLocalJSONPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Navbar(title: "Load Local JSON"),
+      appBar: const Navbar(title: "Load Local JSON"),
       body: FutureBuilder(
         future:
             DefaultAssetBundle.of(context).loadString('assets/json/users.json'),

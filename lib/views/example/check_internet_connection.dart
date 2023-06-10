@@ -4,6 +4,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
 class CheckInternetConnectionView extends StatefulWidget {
+  const CheckInternetConnectionView({super.key});
   @override
   _CheckInternetConnectionViewState createState() =>
       _CheckInternetConnectionViewState();
@@ -60,7 +61,7 @@ class _CheckInternetConnectionViewState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Check Internet Connection"),
+        title: const Text("Check Internet Connection"),
         backgroundColor: Colors.redAccent,
       ),
       body: Container(
@@ -69,13 +70,13 @@ class _CheckInternetConnectionViewState
             Container(
               width: double.infinity,
               alignment: Alignment.center,
-              margin: EdgeInsets.only(bottom: 30),
+              margin: const EdgeInsets.only(bottom: 30),
               color: isoffline ? Colors.red : Colors.lightGreen,
               //red color on offline, green on online
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Text(
                 isoffline ? "Device is Offline" : "Device is Online",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
             ElevatedButton(
@@ -93,7 +94,7 @@ class _CheckInternetConnectionViewState
                     print("No internet connection");
                   }
                 },
-                child: Text("Check Internet Connection"))
+                child: const Text("Check Internet Connection"))
           ])),
     );
   }

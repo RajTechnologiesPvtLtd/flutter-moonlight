@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-
-import '../../widgets/navbar.dart';
+import '../../widgets/widgets.dart';
 
 class GridViewPage extends StatelessWidget {
+  const GridViewPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Navbar(title: "Grid View"),
+      appBar: const Navbar(title: "Grid View"),
       body: GridView.count(
         primary: true,
         padding: const EdgeInsets.all(1.0),
@@ -39,7 +39,7 @@ GestureDetector getStructuredGridCell(name, image) {
           mainAxisSize: MainAxisSize.min,
           verticalDirection: VerticalDirection.down,
           children: <Widget>[
-            Image(image: AssetImage('assets/images/' + image)),
+            Image(image: AssetImage("assets/images/$image")),
             Center(
               child: Text(name),
             )

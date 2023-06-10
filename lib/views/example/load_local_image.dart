@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-
-import 'package:moonlight/widgets/navbar.dart';
+import '../../widgets/widgets.dart';
 
 class LoadLocalImagePage extends StatelessWidget {
+  const LoadLocalImagePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Navbar(title:"Load Local Image"),
+      appBar: const Navbar(title: "Load Local Image"),
       body: Container(
         child: Center(
-          child: Text(
+          child: const Text(
             "Hello World!",
             style: TextStyle(color: Colors.black, fontSize: 35),
           ),
         ),
         // Set the image as the background of the Container
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 // Load image from assets
                 image: AssetImage('assets/images/logo.jpg'),

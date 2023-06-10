@@ -8,7 +8,7 @@ class UsingAlertDialogView extends StatefulWidget {
 }
 
 class _UsingAlertDialogViewState extends State<UsingAlertDialogView> {
-  AlertDialog dialog = AlertDialog(
+  AlertDialog dialog = const AlertDialog(
       content: Text(
     "Hello World!",
     style: TextStyle(fontSize: 30.0),
@@ -17,20 +17,18 @@ class _UsingAlertDialogViewState extends State<UsingAlertDialogView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Using Alert Dialog"),
+          title: const Text("Using Alert Dialog"),
         ),
-        body: Container(
-          child: Center(
-            child: ElevatedButton(
-                child: Text("Hit to alert!"),
-                // On press of the button
-                onPressed: () {
-                  // Show dialog
-                  showDialog(
-                      context: context,
-                      builder: (BuildContext context) => dialog);
-                }),
-          ),
+        body: Center(
+          child: ElevatedButton(
+              child: const Text("Hit to alert!"),
+              // On press of the button
+              onPressed: () {
+                // Show dialog
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) => dialog);
+              }),
         ));
   }
 }

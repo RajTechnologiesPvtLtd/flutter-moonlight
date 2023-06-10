@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moonlight/services/services.dart';
+import '../services/services.dart';
 import '../widgets/widgets.dart';
 
 class LocalNotificationView extends StatefulWidget {

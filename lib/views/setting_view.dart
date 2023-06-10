@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:moonlight/config/config.dart';
 import '../main.dart';
 import '../utils/utils.dart';
 import '../widgets/widgets.dart';
+import '../core/classes/classes.dart';
+import '../config/config.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({Key? key}) : super(key: key);
@@ -34,6 +35,15 @@ class SettingView extends StatelessWidget {
                     MyApp.themeNotifier.value == ThemeMode.light
                         ? ThemeMode.dark
                         : ThemeMode.light;
+              }),
+            ),
+            ListTile(
+              leading: const Icon(Icons.cached_outlined),
+              title: const Text("API Cache Clear"),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: (() {
+                CacheManager.clearData();
+                showMessage(context, "API cache clear successfully.");
               }),
             ),
             const Center(
