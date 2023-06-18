@@ -24,7 +24,7 @@ class _mlPasswordFieldState extends State<mlPasswordField> {
     return TextFormField(
       obscureText: widget.passwordVisible,
       validator: (value) {
-        return CustomTextValidator(value);
+        return customTextValidator(value);
       },
       controller: widget.controller,
       decoration: InputDecoration(

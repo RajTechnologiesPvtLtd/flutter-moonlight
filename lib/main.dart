@@ -7,7 +7,6 @@ void main() {
   // Google Mobile Ads Start
   MobileAds.instance.initialize();
   // Google Mobile Ads End
-
   runApp(const MyApp());
 }
 

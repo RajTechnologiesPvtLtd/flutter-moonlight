@@ -18,7 +18,7 @@ class mlTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: (value) {
-        return CustomTextValidator(value);
+        return customTextValidator(value);
       },
       controller: controller,
       decoration: inputDecoration(labelText, Icons.abc),
