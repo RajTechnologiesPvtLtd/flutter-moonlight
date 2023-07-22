@@ -35,6 +35,9 @@ class App extends RouteManager {
   static const String exampleCheckInternetConnection =
       "/check-internet-connection";
   static const String exampleYoutubeVideo = "/youtube-video";
+  static const String exampleDataTable = "/data-table";
+  static const String examplePaginatedDataTable = "/paginated-data-table";
+  static const String exampleAutocomplete = "/autocomplete";
   App() {
     addRoute(App.home, (context) => HomeView());
     addRoute(App.setting, (context) => const SettingView());
@@ -49,9 +52,10 @@ class App extends RouteManager {
     addRoute(App.loginAuth, (context) => const LoginView());
     // Examples
     addRoute(App.exampleAuth, (context) => const AuthView());
-    addRoute(App.exampleGridView, (context) => GridViewPage());
-    addRoute(App.exampleLoadLocalImage, (context) => LoadLocalImagePage());
-    addRoute(App.exampleLoadLocalJson, (context) => LoadLocalJSONPage());
+    addRoute(App.exampleGridView, (context) => const GridViewPage());
+    addRoute(
+        App.exampleLoadLocalImage, (context) => const LoadLocalImagePage());
+    addRoute(App.exampleLoadLocalJson, (context) => const LoadLocalJSONPage());
     addRoute(
         App.exampleLoadMoreUsingApi, (context) => const LoadMoreUsingAPIPage());
     addRoute(App.exampleButtons, (context) => const ButtonsExample());
@@ -59,10 +63,27 @@ class App extends RouteManager {
     addRoute(
         App.exampleUsingAlertDialog, (context) => const UsingAlertDialogView());
     addRoute(App.exampleSnackBar, (context) => const SnackBarView());
-    addRoute(
-        App.exampleUsingBottomNavBar, (context) => UsingBottomNavBarView());
+    addRoute(App.exampleUsingBottomNavBar,
+        (context) => const UsingBottomNavBarView());
     addRoute(App.exampleCheckInternetConnection,
-        (context) => CheckInternetConnectionView());
+        (context) => const CheckInternetConnectionView());
     addRoute(App.exampleYoutubeVideo, (context) => const YoutubeVideoView());
+    addRoute(App.exampleDataTable, (context) => const DataTableView());
+    addRoute(App.examplePaginatedDataTable,
+        (context) => const PaginatedDataTableView());
+    addRoute(
+        App.exampleAutocomplete,
+        (context) => DropdownWithSearch(
+              options: [
+                'Apple',
+                'Banana',
+                'Cherry',
+                'Grape',
+                'Lemon',
+                'Orange',
+                'Strawberry',
+                'Watermelon',
+              ],
+            ));
   }
 }

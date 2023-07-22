@@ -1,4 +1,4 @@
-package com.moonlight.app.moonlight
+package com.rajtechnologies.moonlight
 
 import io.flutter.embedding.android.FlutterActivity
 

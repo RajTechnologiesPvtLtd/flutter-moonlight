@@ -28,6 +28,18 @@ class ExampleView extends StatelessWidget {
               onTap: () => Nav.toNamed(context, App.exampleGridView),
             ),
             ListTile(
+              title: const Center(child: Text("Data Table")),
+              onTap: () => Nav.toNamed(context, App.exampleDataTable),
+            ),
+            ListTile(
+              title: const Center(child: Text("Paginated Data Table")),
+              onTap: () => Nav.toNamed(context, App.examplePaginatedDataTable),
+            ),
+            ListTile(
+              title: const Center(child: Text("Autocomplete")),
+              onTap: () => Nav.toNamed(context, App.exampleAutocomplete),
+            ),
+            ListTile(
               title: const Center(child: Text("Load Local Image")),
               onTap: () => Nav.toNamed(context, App.exampleLoadLocalImage),
             ),

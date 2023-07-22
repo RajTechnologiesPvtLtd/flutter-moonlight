@@ -7,6 +7,8 @@ class ApiEndpoint {
   static const login = '${api}login';
   static const logout = '${api}logout';
 
+  static const users = '${api}users';
+
   static const loadMoreUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   static const headers = {

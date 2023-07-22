@@ -7,15 +7,15 @@ void main() {
   // Google Mobile Ads Start
   MobileAds.instance.initialize();
   // Google Mobile Ads End
-  runApp(const MyApp());
+  runApp(const MainApp());
 }
 
-class MyApp extends StatelessWidget {
+class MainApp extends StatelessWidget {
   // Theme Mode Change Start
   static final ValueNotifier<ThemeMode> themeNotifier =
       ValueNotifier(ThemeMode.light);
   // Theme Mode Change End
-  const MyApp({Key? key}) : super(key: key);
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

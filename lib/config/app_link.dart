@@ -5,10 +5,4 @@ class AppLink {
   static String termsAndConditions = officialWebsite;
   static String privacyPolicy = officialWebsite;
   static String contactUs = officialWebsite;
-
-  //Social media
-  static String youtube = officialWebsite;
-  static String instagram = officialWebsite;
-  static String facebook = officialWebsite;
-  static String twitter = officialWebsite;
 }

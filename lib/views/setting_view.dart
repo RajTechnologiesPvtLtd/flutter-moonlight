@@ -23,16 +23,16 @@ class SettingView extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w500)),
             ),
             ListTile(
-              leading: Icon(MyApp.themeNotifier.value == ThemeMode.light
+              leading: Icon(MainApp.themeNotifier.value == ThemeMode.light
                   ? Icons.dark_mode
                   : Icons.light_mode),
-              title: MyApp.themeNotifier.value == ThemeMode.light
+              title: MainApp.themeNotifier.value == ThemeMode.light
                   ? const Text("Dark Mode")
                   : const Text("Light Mode"),
               trailing: const Icon(Icons.navigate_next),
               onTap: (() {
-                MyApp.themeNotifier.value =
-                    MyApp.themeNotifier.value == ThemeMode.light
+                MainApp.themeNotifier.value =
+                    MainApp.themeNotifier.value == ThemeMode.light
                         ? ThemeMode.dark
                         : ThemeMode.light;
               }),
@@ -47,100 +47,10 @@ class SettingView extends StatelessWidget {
               }),
             ),
             const Center(
-              child: Text("Help",
-                  style: TextStyle(fontWeight: FontWeight.w500)), //Pages
-            ),
-            ListTile(
-              leading: const Icon(Icons.contact_page),
-              title: const Text("Contact Us"),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: (() {
-                mlLaunchURL(AppLink.contactUs);
-              }),
-            ),
-            ListTile(
-              leading: const Icon(Icons.help_outline),
-              title: const Text("FAQ"),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: (() {
-                mlLaunchURL(AppLink.contactUs);
-              }),
-            ),
-            const Center(
-              child: Text("Contact Channels",
-                  style: TextStyle(fontWeight: FontWeight.w500)), //Pages
-            ),
-            Visibility(
-                visible: AppLink.officialWebsite.isNotEmpty,
-                child: ListTile(
-                  leading: const Icon(Icons.language),
-                  title: const Text("Official Website"),
-                  trailing: const Icon(Icons.navigate_next),
-                  onTap: (() {
-                    mlLaunchURL(AppLink.officialWebsite);
-                  }),
-                )),
-            Visibility(
-                visible: AppLink.youtube.isNotEmpty,
-                child: ListTile(
-                  leading: const Icon(Icons.language),
-                  title: const Text("YouTube"),
-                  trailing: const Icon(Icons.navigate_next),
-                  onTap: (() {
-                    mlLaunchURL(AppLink.youtube);
-                  }),
-                )),
-            Visibility(
-                visible: AppLink.instagram.isNotEmpty,
-                child: ListTile(
-                  leading: const Icon(Icons.language),
-                  title: const Text("Instagram"),
-                  trailing: const Icon(Icons.navigate_next),
-                  onTap: (() {
-                    mlLaunchURL(AppLink.instagram);
-                  }),
-                )),
-            Visibility(
-                visible: AppLink.facebook.isNotEmpty,
-                child: ListTile(
-                  leading: const Icon(Icons.language),
-                  title: const Text("Facebook"),
-                  trailing: const Icon(Icons.navigate_next),
-                  onTap: (() {
-                    mlLaunchURL(AppLink.facebook);
-                  }),
-                )),
-            Visibility(
-                visible: AppLink.twitter.isNotEmpty,
-                child: ListTile(
-                  leading: const Icon(Icons.language),
-                  title: const Text("Twitter"),
-                  trailing: const Icon(Icons.navigate_next),
-                  onTap: (() {
-                    mlLaunchURL(AppLink.twitter);
-                  }),
-                )),
-            const Center(
               child: Text(
-                "About App",
+                "Rating & Share",
                 style: TextStyle(fontWeight: FontWeight.w500),
               ), //Pages
-            ),
-            ListTile(
-              leading: const Icon(Icons.description),
-              title: const Text("Terms & Conditions"),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: (() {
-                mlLaunchURL(AppLink.termsAndConditions);
-              }),
-            ),
-            ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text("About Us"),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: (() {
-                mlLaunchURL(AppLink.aboutUs);
-              }),
             ),
             ListTile(
               leading: const Icon(Icons.share),
@@ -156,7 +66,55 @@ class SettingView extends StatelessWidget {
                 trailing: const Icon(Icons.navigate_next),
                 onTap: (() {
                   mlShare(AppConfig.rateThisAppLink);
-                }))
+                })),
+            const Center(
+              child: Text(
+                "About App",
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ), //Pages
+            ),
+            Visibility(
+                visible: AppLink.officialWebsite.isNotEmpty,
+                child: ListTile(
+                  leading: const Icon(Icons.language),
+                  title: const Text("Official Website"),
+                  trailing: const Icon(Icons.navigate_next),
+                  onTap: (() {
+                    mlLaunchURL(AppLink.officialWebsite);
+                  }),
+                )),
+            ListTile(
+              leading: const Icon(Icons.info),
+              title: const Text("About Us"),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: (() {
+                mlLaunchURL(AppLink.aboutUs);
+              }),
+            ),
+            ListTile(
+              leading: const Icon(Icons.contact_page),
+              title: const Text("Contact Us"),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: (() {
+                mlLaunchURL(AppLink.contactUs);
+              }),
+            ),
+            ListTile(
+              leading: const Icon(Icons.description),
+              title: const Text("Terms & Conditions"),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: (() {
+                mlLaunchURL(AppLink.termsAndConditions);
+              }),
+            ),
+            ListTile(
+              leading: const Icon(Icons.policy),
+              title: const Text("Privacy Policy"),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: (() {
+                mlLaunchURL(AppLink.privacyPolicy);
+              }),
+            ),
           ],
         ),
       ),

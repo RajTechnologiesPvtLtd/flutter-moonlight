@@ -11,23 +11,23 @@ class MoonLightDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
         child: ListView(padding: EdgeInsets.zero, children: <Widget>[
-      DrawerHeader(
+      UserAccountsDrawerHeader(
         decoration: BoxDecoration(
-          color: Theme.of(context).backgroundColor,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
-        child: UserAccountsDrawerHeader(
-          decoration: BoxDecoration(
-            color: Theme.of(context).backgroundColor,
-          ),
-          accountEmail: const Text("raviyatechnical@gmail.com"),
-          accountName: const Text("Bhargav Raviya"),
-          currentAccountPicture: Image.network(
-            "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png",
+        accountEmail: const Text(
+          "raviyatechnical@gmail.com",
+        ),
+        accountName: const Text(
+          "Bhargav Raviya",
+        ),
+        currentAccountPicture: CircleAvatar(
+          child: Image.network(
+            "https://avatars.githubusercontent.com/u/46953122?v=4",
             fit: BoxFit.cover,
           ),
         ),
       ),
-
       DrawerTile(
         title: "Home",
         icon: Icons.home,
@@ -63,12 +63,6 @@ class MoonLightDrawer extends StatelessWidget {
         icon: Icons.settings,
         onTap: () => Nav.toNamed(context, App.setting),
       ),
-      // Divider(),
-      // DrawerTile(
-      //   title: "Logout",
-      //   icon: Icons.logout,
-      //   onTap: () => Nav.toNamed(context, App.setting),
-      // ),
     ]));
   }
 }

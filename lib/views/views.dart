@@ -22,3 +22,6 @@ export 'example/using_bottom_nav_bar.dart';
 export 'example/snackbar_view.dart';
 export 'example/check_internet_connection.dart';
 export 'example/youtube_video_view.dart';
+export 'example/data_table_view.dart';
+export 'example/paginated_data_table.dart';
+export 'example/autocomplete_fields_example.dart';
