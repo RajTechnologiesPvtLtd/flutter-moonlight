@@ -18,6 +18,8 @@ class App extends RouteManager {
   static const String example = '${App.name}/examples';
   static const String setting = '${App.name}/setting';
   //MVC
+  static const String exampleMVC = "/example-mvc";
+  static const String exampleCounterMVC = "/counter-mvc";
   static const String loadMoreMVC = '${App.name}/load-more-mvc';
   // Auth system
   static const String loginAuth = '${App.name}/login';
@@ -45,8 +47,10 @@ class App extends RouteManager {
     addRoute(App.loadMoreWithCache, (context) => const LoadMoreWithCacheView());
     addRoute(App.sqlCrud, (context) => const SqlCRUDView());
     addRoute(App.localNotification, (context) => const LocalNotificationView());
-    addRoute(App.example, (context) => const ExampleController());
+    addRoute(App.example, (context) => const ExampleView());
     //MVC
+    addRoute(App.exampleMVC, (context) => const ExampleMVCView());
+    addRoute(App.exampleCounterMVC, (context) => const CounterView());
     addRoute(App.loadMoreMVC, (context) => const LoadMoreViewMVC());
     // Auth System
     addRoute(App.loginAuth, (context) => const LoginView());
@@ -74,7 +78,7 @@ class App extends RouteManager {
     addRoute(
         App.exampleAutocomplete,
         (context) => DropdownWithSearch(
-              options: [
+              options: const [
                 'Apple',
                 'Banana',
                 'Cherry',

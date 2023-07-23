@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../controllers/controllers.dart';
-import '../widgets/widgets.dart';
+import '../../controllers/controllers.dart';
+import '../../widgets/widgets.dart';
 
 class LoadMoreViewMVC extends StatefulWidget {
   const LoadMoreViewMVC({Key? key}) : super(key: key);

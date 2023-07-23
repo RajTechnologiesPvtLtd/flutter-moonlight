@@ -1,3 +1,5 @@
+// MVC
+export 'counter_model.dart';
 export 'LoadMoreModelMVC.dart';
 // Auth System
 export 'auth/login_request_model.dart';

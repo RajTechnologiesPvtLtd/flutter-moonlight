@@ -6,7 +6,9 @@ export 'sql_crud_view.dart';
 export 'example_view.dart';
 export 'local_notification_view.dart';
 // MVC
-export 'LoadMoreViewMVC.dart';
+export 'example_mvc_view.dart';
+export 'example_mvc/counter_view.dart';
+export 'example_mvc/LoadMoreViewMVC.dart';
 // Auth System
 export 'auth/login_view.dart';
 // Example

@@ -57,8 +57,8 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                  onPressed: () => Nav.toNamed(context, App.loadMoreMVC),
-                  child: const Text("load More MVC")),
+                  onPressed: () => Nav.toNamed(context, App.exampleMVC),
+                  child: const Text("Example MVC")),
             ],
           )
         ],

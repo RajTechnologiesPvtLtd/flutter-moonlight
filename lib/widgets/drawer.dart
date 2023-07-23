@@ -39,6 +39,11 @@ class MoonLightDrawer extends StatelessWidget {
         onTap: () => Nav.toNamed(context, App.example),
       ),
       DrawerTile(
+        title: "MVC Examples",
+        icon: Icons.list,
+        onTap: () => Nav.toNamed(context, App.exampleMVC),
+      ),
+      DrawerTile(
         title: "Load More",
         icon: Icons.list,
         onTap: () => Nav.toNamed(context, App.loadMore),
@@ -50,7 +55,7 @@ class MoonLightDrawer extends StatelessWidget {
       ),
       DrawerTile(
         title: "SQL Crud",
-        icon: Icons.list,
+        icon: Icons.account_tree,
         onTap: () => Nav.toNamed(context, App.sqlCrud),
       ),
       DrawerTile(

@@ -27,6 +27,12 @@ This Docs given Flutter easy implement Flutter Project
 - Local Database - CRUD Operation
 - Local Notification
 
+## Examples MVC
+
+- Counter App
+- Load More Data Using API MVC
+
+
 ## Examples
 
 - Youtube Video Player
@@ -37,6 +43,9 @@ This Docs given Flutter easy implement Flutter Project
 - Using Bottom Navigation Bar
 - Using Alert Dialog
 - Using Snack Bar
+- Data Table
+- Paginated Data Table
+- Autocomplete
 - Check Internet Connection
 
 ## Reusable Widgets
