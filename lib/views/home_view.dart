@@ -36,17 +36,13 @@ class HomeView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text("Welcome to Flutter Moonlight Framework"),
-          const SizedBox(height: 2),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                   onPressed: () => mlLaunchURL(AppLink.officialWebsite),
                   child: const Text("Official Website")),
-              const SizedBox(width: 2),
-              ElevatedButton(
-                  onPressed: () => Nav.toNamed(context, App.example),
-                  child: const Text("Examples")),
               const SizedBox(width: 2),
               ElevatedButton(
                   onPressed: () => Nav.toNamed(context, App.setting),
@@ -56,6 +52,10 @@ class HomeView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.example),
+                  child: const Text("Examples")),
+              const SizedBox(width: 2),
               ElevatedButton(
                   onPressed: () => Nav.toNamed(context, App.exampleMVC),
                   child: const Text("Example MVC")),

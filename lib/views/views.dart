@@ -2,13 +2,13 @@ export 'home_view.dart';
 export 'setting_view.dart';
 export 'load_more_view.dart';
 export 'load_more_with_cache_view.dart';
-export 'sql_crud_view.dart';
 export 'example_view.dart';
 export 'local_notification_view.dart';
 // MVC
 export 'example_mvc_view.dart';
 export 'example_mvc/counter_view.dart';
 export 'example_mvc/LoadMoreViewMVC.dart';
+export 'example_mvc/sql_view.dart';
 // Auth System
 export 'auth/login_view.dart';
 // Example
@@ -27,3 +27,4 @@ export 'example/youtube_video_view.dart';
 export 'example/data_table_view.dart';
 export 'example/paginated_data_table.dart';
 export 'example/autocomplete_fields_example.dart';
+export 'example/sql_crud_view.dart';

@@ -53,7 +53,6 @@ class _PaginatedDataTableViewState extends State<PaginatedDataTableView> {
 
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
-      inspect(jsonData);
       final dataList = jsonData['data']['users'] as List<dynamic>;
 
       final List<DataModel> newData =

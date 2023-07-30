@@ -54,11 +54,6 @@ class MoonLightDrawer extends StatelessWidget {
         onTap: () => Nav.toNamed(context, App.loadMoreWithCache),
       ),
       DrawerTile(
-        title: "SQL Crud",
-        icon: Icons.account_tree,
-        onTap: () => Nav.toNamed(context, App.sqlCrud),
-      ),
-      DrawerTile(
         title: "Local Notification",
         icon: Icons.notifications,
         onTap: () => Nav.toNamed(context, App.localNotification),

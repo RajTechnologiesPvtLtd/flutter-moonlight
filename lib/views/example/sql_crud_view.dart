@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../utils/utils.dart';
-import '../widgets/widgets.dart';
+import '../../utils/utils.dart';
+import '../../widgets/widgets.dart';
 
 class SqlCRUDView extends StatefulWidget {
   const SqlCRUDView({Key? key}) : super(key: key);

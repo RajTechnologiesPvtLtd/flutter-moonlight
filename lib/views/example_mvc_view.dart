@@ -10,18 +10,22 @@ class ExampleMVCView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MoonLightDrawer("Home"),
-      appBar: const Navbar(title: "Examples"),
+      appBar: const Navbar(title: "MVC Examples"),
       bottomNavigationBar: const BannerAdWidget(),
       body: Center(
         child: ListView(
           children: [
             ListTile(
-              title: const Center(child: Text("Counter MVC")),
+              title: const Center(child: Text("Counter")),
               onTap: () => Nav.toNamed(context, App.exampleCounterMVC),
             ),
             ListTile(
-              title: const Center(child: Text("load More MVC")),
+              title: const Center(child: Text("load More")),
               onTap: () => Nav.toNamed(context, App.loadMoreMVC),
+            ),
+            ListTile(
+              title: const Center(child: Text("SQL")),
+              onTap: () => Nav.toNamed(context, App.sqlMVC),
             ),
           ],
         ),

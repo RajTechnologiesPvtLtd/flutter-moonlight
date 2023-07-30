@@ -21,6 +21,7 @@ class App extends RouteManager {
   static const String exampleMVC = "/example-mvc";
   static const String exampleCounterMVC = "/counter-mvc";
   static const String loadMoreMVC = '${App.name}/load-more-mvc';
+  static const String sqlMVC = '${App.name}/sql-mvc';
   // Auth system
   static const String loginAuth = '${App.name}/login';
   // Examples
@@ -52,6 +53,7 @@ class App extends RouteManager {
     addRoute(App.exampleMVC, (context) => const ExampleMVCView());
     addRoute(App.exampleCounterMVC, (context) => const CounterView());
     addRoute(App.loadMoreMVC, (context) => const LoadMoreViewMVC());
+    addRoute(App.sqlMVC, (context) => const SqlView());
     // Auth System
     addRoute(App.loginAuth, (context) => const LoginView());
     // Examples

@@ -26,18 +26,13 @@ class ApiClient {
       'email': email,
       'password': password,
     };
-
     // Response response = await _http.post(
     //   ,
     //   data: body_data,
     //   // queryParameters: {'apikey': ApiSecret.apiKey},
     // );
-    inspect(body_data);
     var uri = Uri.parse(appAPILogin);
-
     final response = await http.post(uri, body: body_data);
-
-    inspect(response);
     return response;
   }
 
