@@ -1,6 +1,6 @@
 import '../config/config.dart';
 import 'controllers.dart';
 
-class SqlController extends CRUDController {
+class SqlController extends SqlCRUDController {
   SqlController() : super(table: AppDatabase.sqlTable);
 }

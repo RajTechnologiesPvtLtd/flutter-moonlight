@@ -16,10 +16,17 @@ This Docs given Flutter easy implement Flutter Project
 
 - Core Routes
 - MVC Architecture 
+- HTTP CRUD Method (MVC Architecture )
+- SQLite CRUD Method (MVC Architecture )
 - Local Notification
 - Local Database using sqflite package
 - Switch To Dark or Light Mode
 - Banner Ad - Google Mobile Ads (Google Admob)
+
+## Laravel REST API package recommendation
+
+[https://github.com/raviyatechnical/laravel-api-generator](https://github.com/raviyatechnical/laravel-api-generator)
+
 
 ## MoonLight Examples
 
@@ -29,9 +36,10 @@ This Docs given Flutter easy implement Flutter Project
 
 ## Examples MVC
 
+- CRUD Controller App (HTTP CRUD Method)
+- Sql CRUD Controller App (CRUD Method)
 - Counter App
 - Load More Data Using API MVC
-
 
 ## Examples
 

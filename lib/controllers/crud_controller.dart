@@ -1,70 +1,115 @@
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart' as sql;
+import 'dart:convert';
+import 'dart:io';
+import '../config/config.dart';
 import 'controllers.dart';
 
 class CRUDController extends BaseController {
-  final String table;
-  late String orderBy;
+  final String basePath;
+  final String resourcePath;
+  final Map<String, String> headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer 1|hiGnP1SX3JQhj5hVoTMyXi3PxfsDXHabEzmCUVIR",
+  };
 
-  CRUDController({required this.table, this.orderBy = "id"});
+  CRUDController({
+    this.basePath = ApiEndpoint.api,
+    required this.resourcePath,
+  });
 
-  Future<List<Map<String, dynamic>>> list() async {
-    final db = await BaseController.db();
-    return db.query(table, orderBy: orderBy);
-  }
-
-  Future<int> store(obj) async {
+  Future<List<dynamic>> paginateList() async {
     try {
-      final db = await BaseController.db();
-      final int id = await db.transaction<int>((txn) async {
-        // Perform the insert operation inside the transaction
-        return await txn.insert(table, obj,
-            conflictAlgorithm: sql.ConflictAlgorithm.replace);
-      }).catchError(handleError);
-
-      return id;
+      var uri = Uri.parse(basePath + resourcePath);
+      final response = await httpClient.get(uri, headers: headers);
+      if (response.statusCode == HttpStatus.ok) {
+        final responseData = jsonDecode(response.body);
+        return responseData['data']['records'];
+      }
     } catch (e) {
       // Handle the error as per your requirements.
-      print("Error occurred while storing data: $e");
-      return -1; // Return a specific value to indicate the failure.
+      debugPrint("Error occurred while storing data: $e");
     }
+    return [];
   }
 
-  Future<int> update(int id, dynamic obj) async {
+  Future<List<dynamic>> list() async {
     try {
-      final db = await BaseController.db();
-      final int result = await db.transaction<int>((txn) async {
-        // Perform the update operation inside the transaction
-        return await txn.update(table, obj, where: "id = ?", whereArgs: [id]);
+      var uri = Uri.parse(basePath + resourcePath);
+      final response = await httpClient.get(uri, headers: headers);
+      if (response.statusCode == HttpStatus.ok) {
+        final responseData = jsonDecode(response.body);
+        return responseData['data'];
+      }
+    } catch (e) {
+      // Handle the error as per your requirements.
+      debugPrint("Error occurred while storing data: $e");
+    }
+    return [];
+  }
+
+  Future<dynamic> store(obj) async {
+    try {
+      var uri = Uri.parse(basePath + resourcePath);
+      final response =
+          await httpClient.post(uri, body: jsonEncode(obj), headers: headers);
+      if (response.statusCode == HttpStatus.ok) {
+        final responseData = jsonDecode(response.body);
+        return responseData['data'];
+      }
+      handleApiError({
+        'statusCode': response.statusCode,
+        'message': response.body,
       });
-      return result;
+    } catch (error) {
+      handleApiError(error);
+    }
+  }
+
+  Future<dynamic> show(String id) async {
+    try {
+      var uri = Uri.parse("$basePath$resourcePath/$id");
+      final response = await httpClient.get(uri, headers: headers);
+      if (response.statusCode == HttpStatus.ok) {
+        final responseData = jsonDecode(response.body);
+        return responseData['data'];
+      }
     } catch (e) {
       // Handle the error as per your requirements.
-      print("Error occurred while updating data: $e");
-      return -1; // Return a specific value to indicate the failure.
+      debugPrint("Error occurred while storing data: $e");
     }
+    return {};
   }
 
-  Future<void> delete(int id) async {
-    final db = await BaseController.db();
+  Future<dynamic> update(String id, dynamic obj) async {
     try {
-      await db.delete(table, where: "id = ?", whereArgs: [id]);
-    } catch (err) {
-      debugPrint("Something went wrong when deleting an item: $err");
+      var uri = Uri.parse("$basePath$resourcePath/$id");
+      final response = await httpClient
+          .put(uri, body: jsonEncode(obj), headers: headers)
+          .catchError(handleError);
+      if (response.statusCode == HttpStatus.ok) {
+        final responseData = jsonDecode(response.body);
+        return responseData['data'];
+      }
+      handleApiError({
+        'statusCode': response.statusCode,
+        'message': response.body,
+      });
+    } catch (error) {
+      handleApiError(error);
     }
   }
 
-  // Future<int> store(obj) async {
-  //   final db = await BaseController.db();
-  //   final id = await db.insert(table!, obj,
-  //       conflictAlgorithm: sql.ConflictAlgorithm.replace);
-  //   return id;
-  // }
-
-  // Future<int> update(int id, obj) async {
-  //   final db = await BaseController.db();
-  //   final result =
-  //       await db.update(table!, obj, where: "id = ?", whereArgs: [id]);
-  //   return result;
-  // }
+  Future<void> delete(String id) async {
+    try {
+      var uri = Uri.parse("$basePath$resourcePath/$id");
+      final response = await httpClient.delete(uri, headers: headers);
+      if (response.statusCode == HttpStatus.ok) {
+        final responseData = jsonDecode(response.body);
+        return responseData['data'];
+      }
+    } catch (e) {
+      debugPrint("Something went wrong when deleting an item: $e");
+    }
+  }
 }
