@@ -1,4 +1,3 @@
-import '../controllers/controllers.dart';
 import '../core/classes/classes.dart';
 import '../views/views.dart';
 
@@ -40,6 +39,7 @@ class App extends RouteManager {
   static const String exampleYoutubeVideo = "/youtube-video";
   static const String exampleDataTable = "/data-table";
   static const String examplePaginatedDataTable = "/paginated-data-table";
+  static const String exampleFirebaseRemoteConfig = "/firebase-remote-config";
   static const String exampleAutocomplete = "/autocomplete";
   App() {
     addRoute(App.home, (context) => HomeView());
@@ -77,6 +77,8 @@ class App extends RouteManager {
     addRoute(App.exampleDataTable, (context) => const DataTableView());
     addRoute(App.examplePaginatedDataTable,
         (context) => const PaginatedDataTableView());
+    addRoute(App.exampleFirebaseRemoteConfig,
+        (context) => const FirebaseRemoteConfigView());
     addRoute(
         App.exampleAutocomplete,
         (context) => DropdownWithSearch(

@@ -20,6 +20,11 @@ class ExampleView extends StatelessWidget {
               onTap: () => Nav.toNamed(context, App.exampleYoutubeVideo),
             ),
             ListTile(
+              title: const Center(child: Text("Firebase Remote Config")),
+              onTap: () =>
+                  Nav.toNamed(context, App.exampleFirebaseRemoteConfig),
+            ),
+            ListTile(
               title: const Center(child: Text("Auth UI Example")),
               onTap: () => Nav.toNamed(context, App.exampleAuth),
             ),

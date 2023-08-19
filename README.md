@@ -22,6 +22,7 @@ This Docs given Flutter easy implement Flutter Project
 - Local Database using sqflite package
 - Switch To Dark or Light Mode
 - Banner Ad - Google Mobile Ads (Google Admob)
+- Firebase Remote Config
 
 ## Laravel REST API package recommendation
 
@@ -43,7 +44,6 @@ This Docs given Flutter easy implement Flutter Project
 
 ## Examples
 
-- Youtube Video Player
 - Grid Layout
 - Load local image
 - Load local json
@@ -55,6 +55,8 @@ This Docs given Flutter easy implement Flutter Project
 - Paginated Data Table
 - Autocomplete
 - Check Internet Connection
+- Youtube Video Player
+- Firebase Remote Config
 
 ## Reusable Widgets
 
