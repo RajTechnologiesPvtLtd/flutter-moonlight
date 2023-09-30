@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'config/config.dart';
 // import 'package:firebase_core/firebase_core.dart';
@@ -8,7 +9,9 @@ void main() async {
   // Remote Config
   // await Firebase.initializeApp(); // if used then add on firebase remote config
   // Google Mobile Ads Start
-  MobileAds.instance.initialize();
+  if (Platform.isAndroid || Platform.isIOS) {
+    MobileAds.instance.initialize();
+  }
   // Google Mobile Ads End
   runApp(const MainApp());
 }

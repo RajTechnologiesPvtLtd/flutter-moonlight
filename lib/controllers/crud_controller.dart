@@ -84,9 +84,7 @@ class CRUDController extends BaseController {
   Future<dynamic> update(String id, dynamic obj) async {
     try {
       var uri = Uri.parse("$basePath$resourcePath/$id");
-      final response = await httpClient
-          .put(uri, body: jsonEncode(obj), headers: headers)
-          .catchError(handleError);
+      final response = await httpClient.put(uri, body: jsonEncode(obj), headers: headers);
       if (response.statusCode == HttpStatus.ok) {
         final responseData = jsonDecode(response.body);
         return responseData['data'];
