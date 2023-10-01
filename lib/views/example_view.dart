@@ -77,6 +77,10 @@ class ExampleView extends StatelessWidget {
               onTap: () => Nav.toNamed(context, App.exampleInputFields),
             ),
             ListTile(
+              title: const Center(child: Text("Provider")),
+              onTap: () => Nav.toNamed(context, App.exampleProvider),
+            ),
+            ListTile(
               title: const Center(child: Text("Check Internet Connection")),
               onTap: () =>
                   Nav.toNamed(context, App.exampleCheckInternetConnection),

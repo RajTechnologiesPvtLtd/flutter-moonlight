@@ -23,6 +23,7 @@ This Docs given Flutter easy implement Flutter Project
 - Switch To Dark or Light Mode
 - Banner Ad - Google Mobile Ads (Google Admob)
 - Firebase Remote Config
+- Provider 
 
 ## Laravel REST API package recommendation
 
@@ -57,6 +58,7 @@ This Docs given Flutter easy implement Flutter Project
 - Check Internet Connection
 - Youtube Video Player
 - Firebase Remote Config
+- Count Provider (provider package)
 
 ## Reusable Widgets
 

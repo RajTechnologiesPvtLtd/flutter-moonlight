@@ -29,3 +29,4 @@ export 'example/paginated_data_table.dart';
 export 'example/autocomplete_fields_example.dart';
 export 'example/sql_crud_view.dart';
 export 'example/firebase_remote_config_view.dart';
+export 'example/provider_view.dart';

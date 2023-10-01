@@ -24,6 +24,7 @@ class App extends RouteManager {
   // Auth system
   static const String loginAuth = '${App.name}/login';
   // Examples
+  static const String exampleProvider = '${App.name}/provider';
   static const String exampleAuth = "/auth";
   static const String exampleGridView = "/grid-view";
   static const String exampleLoadLocalImage = "/load-local-image";
@@ -57,6 +58,7 @@ class App extends RouteManager {
     // Auth System
     addRoute(App.loginAuth, (context) => const LoginView());
     // Examples
+    addRoute(App.exampleProvider, (context) => const ProviderView());
     addRoute(App.exampleAuth, (context) => const AuthView());
     addRoute(App.exampleGridView, (context) => const GridViewPage());
     addRoute(
