@@ -8,11 +8,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Remote Config
   // await Firebase.initializeApp(); // if used then add on firebase remote config
-  // Google Mobile Ads Start
+  // Google Mobile Ads
   if (Platform.isAndroid || Platform.isIOS) {
     MobileAds.instance.initialize();
   }
-  // Google Mobile Ads End
   runApp(const MainApp());
 }
 

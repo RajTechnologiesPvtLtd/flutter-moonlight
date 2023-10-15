@@ -2,12 +2,11 @@ import 'dart:io';
 
 class AppConfig {
   static String name = "MoonLight";
-
   static String shareTheAppMsg = "check out my website https://example.com";
   static String rateThisAppLink =
       "http://play.google.com/store/apps/details?id=com.rajtechnologies.StockMarketProfitCalculator";
 
-  // Google Mobile Ads Start
+  // Google Mobile Ads
   static String get bannerAdUnitId {
     if (Platform.isAndroid) {
       return 'ca-app-pub-3940256099942544/6300978111';
@@ -16,6 +15,5 @@ class AppConfig {
     } else {
       throw UnsupportedError('Unsupported platform');
     }
-    // Google Mobile Ads End
   }
 }

@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
         children: [
           Image.asset(
             AppImage.appLogo,
-            width: 150,
+            width: 100,
           ),
           const SizedBox(height: 10),
           const Text(
@@ -49,11 +49,9 @@ class HomeView extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Card(
-                  child: TextButton(
-                    onPressed: () => mlLaunchURL(AppLink.officialWebsite),
-                    child: const Text("Official Website"),
-                  ),
+                child: ElevatedButton(
+                  onPressed: () => mlLaunchURL(AppLink.officialWebsite),
+                  child: const Text("Official Website"),
                 ),
               ),
             ],
@@ -61,19 +59,16 @@ class HomeView extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Card(
-                  child: TextButton(
-                    onPressed: () => Nav.toNamed(context, App.exampleMVC),
-                    child: const Text("Example MVC"),
-                  ),
+                child: ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.exampleMVC),
+                  child: const Text("Example MVC"),
                 ),
               ),
+              const SizedBox(width: 10),
               Expanded(
-                child: Card(
-                  child: TextButton(
-                    onPressed: () => Nav.toNamed(context, App.example),
-                    child: const Text("Examples"),
-                  ),
+                child: ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.example),
+                  child: const Text("Examples"),
                 ),
               ),
             ],
