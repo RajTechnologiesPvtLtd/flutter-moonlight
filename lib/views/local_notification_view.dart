@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 import '../services/services.dart';
 import '../widgets/widgets.dart';
 
@@ -33,7 +34,12 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
             const SizedBox(height: 2),
             ElevatedButton(
               child: const Text("send Notification"),
-              onPressed: () {
+              onPressed: () async {
+                var status = await Permission.notification.status;
+                if (status.isDenied) {
+                  permissionDialog(context);
+                  return;
+                }
                 localNotificationService.showNotification(
                     "Normal Notification", "This is a Body");
               },
@@ -41,7 +47,12 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
             const SizedBox(width: 2),
             ElevatedButton(
               child: const Text("Schedule Notification"),
-              onPressed: () {
+              onPressed: () async {
+                var status = await Permission.notification.status;
+                if (status.isDenied) {
+                  permissionDialog(context);
+                  return;
+                }
                 localNotificationService.scheduleNotification(
                     "Schedule Notification", "This is a Body");
               },
@@ -49,7 +60,12 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
             const SizedBox(width: 2),
             ElevatedButton(
               child: const Text("Stop All Notification"),
-              onPressed: () {
+              onPressed: () async {
+                var status = await Permission.notification.status;
+                if (status.isDenied) {
+                  permissionDialog(context);
+                  return;
+                }
                 localNotificationService.stopAllScheduleNotification();
               },
             )

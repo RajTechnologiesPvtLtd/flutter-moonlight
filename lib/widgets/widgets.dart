@@ -1,6 +1,8 @@
 export 'navbar.dart';
 export 'drawer.dart';
 export 'drawer-tile.dart';
+// Specific Widgets
+export 'permission_dialog.dart';
 // Reusable Widgets
 export 'full_screen_loader.dart';
 export 'no_data_found.dart';

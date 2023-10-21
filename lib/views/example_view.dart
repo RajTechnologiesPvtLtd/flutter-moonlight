@@ -85,6 +85,10 @@ class ExampleView extends StatelessWidget {
               onTap: () =>
                   Nav.toNamed(context, App.exampleCheckInternetConnection),
             ),
+            ListTile(
+              title: const Center(child: Text("Permission Handler")),
+              onTap: () => Nav.toNamed(context, App.examplePermissionHandler),
+            ),
           ],
         ),
       ),

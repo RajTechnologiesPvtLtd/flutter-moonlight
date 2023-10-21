@@ -24,6 +24,7 @@ This Docs given Flutter easy implement Flutter Project
 - Banner Ad - Google Mobile Ads (Google Admob)
 - Firebase Remote Config
 - Provider 
+- Permission Handler
 
 ## Laravel REST API package recommendation
 
@@ -59,7 +60,8 @@ This Docs given Flutter easy implement Flutter Project
 - Youtube Video Player
 - Firebase Remote Config
 - Count Provider (provider package)
-
+- Permission Handler (permission_handler package)
+  
 ## Reusable Widgets
 
 - Drawer With DrawerTile
@@ -71,6 +73,7 @@ This Docs given Flutter easy implement Flutter Project
 - showMessage For Snack Bar
 - Banner Ad Widget From Google Admob Ads
 - Banner Ad Widget From Google Admob Ads Using Firebase Remote Config 
+- Permission Handler Widget Dialog For Permission Handler Package
 
 ## Documentation
 
@@ -120,3 +123,7 @@ To deploy this project run
 
 [GNU](https://github.com/RajTechnologiesPvtLtd/flutter-moonlight/blob/master/LICENSE)
 
+### 💰 Support by donating or sponsoring us.,
+ 
+ [![sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/bhargavraviya) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/raviyatechnical/membership) [![Buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/raviyatechnical) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/raviyatechnical)
+-----

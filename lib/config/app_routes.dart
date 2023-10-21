@@ -35,6 +35,7 @@ class App extends RouteManager {
   static const String exampleUsingAlertDialog = "/using-alert-dialog-example";
   static const String exampleUsingBottomNavBar = "/using-bottom-nav-bar";
   static const String exampleSnackBar = "/snack-bar";
+  static const String examplePermissionHandler = "/permission-handler";
   static const String exampleCheckInternetConnection =
       "/check-internet-connection";
   static const String exampleYoutubeVideo = "/youtube-video";
@@ -71,6 +72,8 @@ class App extends RouteManager {
     addRoute(
         App.exampleUsingAlertDialog, (context) => const UsingAlertDialogView());
     addRoute(App.exampleSnackBar, (context) => const SnackBarView());
+    addRoute(App.examplePermissionHandler,
+        (context) => const PermissionHandlerView());
     addRoute(App.exampleUsingBottomNavBar,
         (context) => const UsingBottomNavBarView());
     addRoute(App.exampleCheckInternetConnection,
