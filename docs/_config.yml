@@ -1,8 +1,11 @@
 title: Flutter - MoonLight Starter Kit
 description: Jumpstart your Flutter app development with our Flutter Starter Kit. Packed with essential tools and resources, it's the perfect companion for creating exceptional Flutter apps. Get started today and build amazing apps with ease.
-theme: just-the-docs
+# theme: just-the-docs
 
 url: https://rajtechnologiespvtltd.github.io/flutter-moonlight
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+# aux_links:
+#   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+remote_theme: pages-themes/leap-day@v0.2.0
+plugins:
+- jekyll-remote-theme 
