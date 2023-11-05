@@ -9,21 +9,26 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  connectivity_plus: ^4.0.1
-  dio: ^5.2.1+1
-  firebase_core: ^2.15.0
-  firebase_remote_config: ^4.2.3
-  flutter_local_notifications: ^14.1.1
-  google_mobile_ads: ^3.0.0
-  http: ^1.0.0
   share_plus: ^7.0.2
-  shared_preferences: ^2.1.2
-  sqflite: ^2.2.8+4
   url_launcher: ^6.1.11
-  youtube_player_flutter: ^8.1.2
-  provider: ^6.0.5
+  http: ^1.0.0
+  dio: ^5.2.1+1
+  connectivity_plus: ^4.0.1
   permission_handler: ^11.0.1
   image_picker: ^1.0.4
+  # state management and database
+  sqflite: ^2.2.8+4
+  shared_preferences: ^2.1.2
+  provider: ^6.0.5
+  # Notification
+  flutter_local_notifications: ^14.1.1
+  firebase_messaging: ^14.7.2
+  firebase_core: ^2.15.0
+  firebase_remote_config: ^4.2.3
+  # earning
+  google_mobile_ads: ^3.0.0
+  # UI
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:

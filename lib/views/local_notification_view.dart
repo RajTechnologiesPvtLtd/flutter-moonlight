@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import '../services/services.dart';
+import '../core/classes/classes.dart';
 import '../widgets/widgets.dart';
 
 class LocalNotificationView extends StatefulWidget {
@@ -11,13 +11,12 @@ class LocalNotificationView extends StatefulWidget {
 }
 
 class _LocalNotificationViewState extends State<LocalNotificationView> {
-  LocalNotificationService localNotificationService =
-      LocalNotificationService();
+  LocalNotification localNotification = LocalNotification();
 
   @override
   void initState() {
     super.initState();
-    localNotificationService.initializeNotification();
+    localNotification.initializeNotification();
   }
 
   @override
@@ -40,7 +39,7 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
                   permissionDialog(context);
                   return;
                 }
-                localNotificationService.showNotification(
+                localNotification.showNotification(
                     "Normal Notification", "This is a Body");
               },
             ),
@@ -53,7 +52,7 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
                   permissionDialog(context);
                   return;
                 }
-                localNotificationService.scheduleNotification(
+                localNotification.scheduleNotification(
                     "Schedule Notification", "This is a Body");
               },
             ),
@@ -66,7 +65,7 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
                   permissionDialog(context);
                   return;
                 }
-                localNotificationService.stopAllScheduleNotification();
+                localNotification.stopAllScheduleNotification();
               },
             )
           ],

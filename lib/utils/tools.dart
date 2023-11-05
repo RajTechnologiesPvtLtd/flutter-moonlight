@@ -3,7 +3,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void mlLaunchURL(url) async {
-  if (!await launch(url)) throw 'Could not launch $url';
+  if (!await launchUrl(url)) throw 'Could not launch $url';
 }
 
 void mlShare(message) async {

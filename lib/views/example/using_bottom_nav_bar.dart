@@ -29,38 +29,40 @@ class _UsingBottomNavBarViewState extends State<UsingBottomNavBarView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // Title
-          title: const Text("Using Bottom Navigation Bar"),
-          // Set the background color of the App Bar
-          backgroundColor: Colors.blue,
-        ),
-        body: TabBarView(
-          // Add tabs as widgets
+      appBar: AppBar(
+        // Title
+        title: const Text("Using Bottom Navigation Bar"),
+        // Set the background color of the App Bar
+        backgroundColor: Colors.blue,
+      ),
+      body: TabBarView(
+        // Add tabs as widgets
+        controller: controller,
+        // Add tabs as widgets
+        children: <Widget>[FirstTab(), SecondTab(), ThirdTab()],
+      ),
+      bottomNavigationBar: Material(
+        // set the color of the bottom navigation bar
+        color: Colors.blue,
+        // set the tab bar as the child of bottom navigation bar
+        child: TabBar(
+          tabs: const <Tab>[
+            Tab(
+              // set icon to the tab
+              icon: Icon(Icons.favorite),
+            ),
+            Tab(
+              icon: Icon(Icons.adb),
+            ),
+            Tab(
+              icon: Icon(Icons.airport_shuttle),
+            ),
+          ],
+          // setup the controller
           controller: controller,
-          // Add tabs as widgets
-          children: <Widget>[FirstTab(), SecondTab(), ThirdTab()],
         ),
-        bottomNavigationBar: Material(
-            // set the color of the bottom navigation bar
-            color: Colors.blue,
-            // set the tab bar as the child of bottom navigation bar
-            child: TabBar(
-              tabs: const <Tab>[
-                Tab(
-                  // set icon to the tab
-                  icon: Icon(Icons.favorite),
-                ),
-                Tab(
-                  icon: Icon(Icons.adb),
-                ),
-                Tab(
-                  icon: Icon(Icons.airport_shuttle),
-                ),
-              ],
-              // setup the controller
-              controller: controller,
-            )));
+      ),
+    );
   }
 }
 

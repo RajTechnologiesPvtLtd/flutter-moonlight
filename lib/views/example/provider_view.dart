@@ -35,7 +35,7 @@ class _CountViewState extends State<CountView> {
   @override
   Widget build(BuildContext context) {
     final countProvider = Provider.of<CountProvider>(context, listen: false);
-    debugPrint("build");
+    // debugPrint("build");
     return Scaffold(
       appBar: const Navbar(title: "Provider View"),
       body: Center(

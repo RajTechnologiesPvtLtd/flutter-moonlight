@@ -33,7 +33,7 @@ class _LoadMoreViewState extends State<LoadMoreView> {
   List _records = [];
 
   // This function will be called when the app launches (see the initState function)
-  void _firstLoad() async {
+  _firstLoad() async {
     setState(() {
       _isFirstLoadRunning = true;
     });
@@ -54,7 +54,7 @@ class _LoadMoreViewState extends State<LoadMoreView> {
 
   // This function will be triggered whenver the user scroll
   // to near the bottom of the list view
-  void _loadMore() async {
+  _loadMore() async {
     if (_hasNextPage == true &&
         _isFirstLoadRunning == false &&
         _isLoadMoreRunning == false &&

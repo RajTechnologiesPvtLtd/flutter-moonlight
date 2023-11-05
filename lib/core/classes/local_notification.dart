@@ -1,6 +1,6 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-class LocalNotificationService {
+class LocalNotification {
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
 
@@ -56,10 +56,8 @@ class LocalNotificationService {
   void stopScheduleNotification(id) async {
     await flutterLocalNotificationsPlugin.cancel(id);
   }
-  
+
   void stopAllScheduleNotification() async {
     await flutterLocalNotificationsPlugin.cancelAll();
   }
-
-
 }
