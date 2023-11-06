@@ -11,7 +11,6 @@ class ExampleMVCView extends StatelessWidget {
     return Scaffold(
       drawer: const MoonLightDrawer("Home"),
       appBar: const Navbar(title: "MVC Examples"),
-      bottomNavigationBar: const BannerAdWidget(),
       body: Center(
         child: ListView(
           children: [

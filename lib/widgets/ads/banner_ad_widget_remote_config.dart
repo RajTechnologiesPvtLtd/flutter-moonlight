@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import '../config/config.dart';
+import '../../config/config.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 
 class BannerAdWidget extends StatefulWidget {

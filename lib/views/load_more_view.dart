@@ -110,7 +110,6 @@ class _LoadMoreViewState extends State<LoadMoreView> {
     return Scaffold(
       drawer: const MoonLightDrawer("Load More"),
       appBar: const Navbar(title: "Load More"),
-      bottomNavigationBar: const BannerAdWidget(),
       body: _isFirstLoadRunning
           ? fullScreenLoader()
           : (_records.isEmpty)

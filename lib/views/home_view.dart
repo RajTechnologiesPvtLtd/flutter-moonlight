@@ -6,7 +6,7 @@ import '../utils/tools.dart';
 import '../widgets/widgets.dart';
 
 class HomeView extends StatelessWidget {
-  HomeView({Key? key}) : super(key: key);
+  const HomeView({Key? key}) : super(key: key);
   // final AuthService _authService = AuthService();
 
   @override
@@ -31,7 +31,6 @@ class HomeView extends StatelessWidget {
               onPressed: () => Nav.toNamed(context, App.setting))
         ],
       ),
-      bottomNavigationBar: const BannerAdWidget(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

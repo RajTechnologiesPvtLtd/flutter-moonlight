@@ -16,6 +16,12 @@ class App extends RouteManager {
   static const String localNotification = '${App.name}/local-notification';
   static const String example = '${App.name}/examples';
   static const String setting = '${App.name}/setting';
+  // Ads Examples
+  static const String exampleAds = '${App.name}/example-ads';
+  static const String bannerAds = '${App.name}/banner-ads';
+  static const String interstitialAds = '${App.name}/interstitial-ads';
+  // static const String nativeAds = '${App.name}/native-ads';
+  // static const String rewardedAds = '${App.name}/rewarded-ads';
   //MVC
   static const String exampleMVC = "/example-mvc";
   static const String exampleCounterMVC = "/counter-mvc";
@@ -51,6 +57,12 @@ class App extends RouteManager {
     addRoute(App.sqlCrud, (context) => const SqlCRUDView());
     addRoute(App.localNotification, (context) => const LocalNotificationView());
     addRoute(App.example, (context) => const ExampleView());
+    // Ads Examples
+    addRoute(App.exampleAds, (context) => const ExampleAdsView());
+    addRoute(App.bannerAds, (context) => const BannerAdsView());
+    addRoute(App.interstitialAds, (context) => const InterstitialAdsView());
+    // addRoute(App.nativeAds, (context) => const NativeAdsView());
+    // addRoute(App.rewardedAds, (context) => const RewardedAdsView());
     //MVC
     addRoute(App.exampleMVC, (context) => const ExampleMVCView());
     addRoute(App.exampleCounterMVC, (context) => const CounterView());

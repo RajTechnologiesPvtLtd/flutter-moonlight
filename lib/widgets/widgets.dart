@@ -8,7 +8,7 @@ export 'permission_dialog.dart';
 //
 export 'pagination_controls.dart';
 // Google Mobile Ads
-export 'banner_ad_widget.dart';
+export 'ads/banner_ad_widget.dart';
 // Fields
 export 'fields/input_decoration.dart';
 export 'fields/ml_text_field.dart';

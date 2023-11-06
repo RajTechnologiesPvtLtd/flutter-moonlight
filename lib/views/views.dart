@@ -2,8 +2,13 @@ export 'home_view.dart';
 export 'setting_view.dart';
 export 'load_more_view.dart';
 export 'load_more_with_cache_view.dart';
-export 'example_view.dart';
 export 'local_notification_view.dart';
+// Ads Examples
+export 'example_ads_view.dart';
+export 'example_ads/banner_ads_view.dart';
+export 'example_ads/interstitial_ads_view.dart';
+// export 'example_ads/native_ads_view.dart';
+// export 'example_ads/rewarded_ads_view.dart';
 // MVC
 export 'example_mvc_view.dart';
 export 'example_mvc/counter_view.dart';
@@ -12,6 +17,7 @@ export 'example_mvc/sql_view.dart';
 // Auth System
 export 'auth/login_view.dart';
 // Example
+export 'example_view.dart';
 export 'example/auth_view.dart';
 export 'example/buttons_view.dart';
 export 'example/grid_view.dart';

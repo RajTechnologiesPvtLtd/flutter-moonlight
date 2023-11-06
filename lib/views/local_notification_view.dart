@@ -24,7 +24,6 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
     return Scaffold(
       drawer: const MoonLightDrawer("Local Notification"),
       appBar: const Navbar(title: "Local Notification"),
-      bottomNavigationBar: const BannerAdWidget(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
