@@ -1,16 +1,13 @@
 
 ![Logo](https://camo.githubusercontent.com/9b9d6adff7cadc133aef6f203dcffcb14d4fe0cc9fc04ed9888c4f3340e9a19b/68747470733a2f2f7777772e72616a746563686e6f6c6f676965732e636f6d2f75692f696d616765732f72616a2d746563686e6f6c6f676965732d6c6f676f2d746f702d70616e656c2e6a7067)
 
-
 # Flutter MoonLight
 
 This Docs given Flutter easy implement Flutter Project
 
-
 ## Screenshots
 
 <img src="screenshot.png" alt="Flutter Moonlight Framework" width="200"/>
-
 
 ## Features
 
@@ -113,11 +110,17 @@ To deploy this project run
   flutter build apk --release
 ```
 
+## add local.properties
+
+```bash
+flutter.minSdkVersion=23
+flutter.targetSdkVersion=28
+flutter.compileSdkVersion=33
+```
 
 ## Authors
 
 - [Bhargav Raviya](https://www.github.com/bhargavraviya)
-
 
 ## License
 

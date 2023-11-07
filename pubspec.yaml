@@ -4,29 +4,29 @@ publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: ">=3.0.3 <4.0.0"
+  sdk: ">=3.1.5 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  share_plus: ^7.0.2
-  url_launcher: ^6.1.11
-  http: ^1.0.0
-  dio: ^5.2.1+1
-  connectivity_plus: ^4.0.1
+  share_plus: ^7.2.1
+  url_launcher: ^6.2.1
+  http: ^1.1.0
+  dio: ^5.3.3
+  connectivity_plus: ^5.0.1
   permission_handler: ^11.0.1
   image_picker: ^1.0.4
   # state management and database
-  sqflite: ^2.2.8+4
-  shared_preferences: ^2.1.2
+  sqflite: ^2.3.0
+  shared_preferences: ^2.2.2
   provider: ^6.0.5
   # Notification
-  flutter_local_notifications: ^14.1.1
-  firebase_messaging: ^14.7.2
-  firebase_core: ^2.15.0
-  firebase_remote_config: ^4.2.3
+  flutter_local_notifications: ^16.1.0
+  firebase_messaging: ^14.7.3
+  firebase_core: ^2.21.0
+  firebase_remote_config: ^4.3.3
   # earning
-  google_mobile_ads: ^3.0.0
+  google_mobile_ads: ^3.1.0
   # UI
   youtube_player_flutter: ^8.1.2
 
