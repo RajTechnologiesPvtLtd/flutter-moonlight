@@ -13,31 +13,29 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MoonLightDrawer("Home"),
-      appBar: AppBar(
-        title: const Text(
-          "Home",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: [
-          // IconButton(
-          //     icon: const Icon(Icons.logout),
-          //     onPressed: () {
-          //       _authService.logout();
-          //     }),
-          IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () => Nav.toNamed(context, App.setting))
-        ],
-      ),
+      appBar: const Navbar(title: "Home"),
+      // appBar: AppBar(
+      //   title: const Text(
+      //     "Home",
+      //   ),
+      //   actions: [
+      //     IconButton(
+      //         icon: const Icon(Icons.logout),
+      //         onPressed: () {
+      //           // _authService.logout();
+      //         }),
+      //     IconButton(
+      //         icon: const Icon(Icons.settings),
+      //         onPressed: () => Nav.toNamed(context, App.setting))
+      //   ],
+      // ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
             AppImage.appLogo,
-            width: 100,
+            width: 75,
           ),
           const SizedBox(height: 10),
           const Text(
@@ -46,32 +44,24 @@ class HomeView extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () => mlLaunchURL(AppLink.officialWebsite),
-                  child: const Text("Official Website"),
-                ),
+              ElevatedButton(
+                onPressed: () => mlLaunchURL(AppLink.officialWebsite),
+                child: const Text("Official Website"),
+              ),
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: () => Nav.toNamed(context, App.exampleMVC),
+                child: const Text("Example MVC"),
+              ),
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: () => Nav.toNamed(context, App.example),
+                child: const Text("Examples"),
               ),
             ],
           ),
-          Row(
-            children: [
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () => Nav.toNamed(context, App.exampleMVC),
-                  child: const Text("Example MVC"),
-                ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () => Nav.toNamed(context, App.example),
-                  child: const Text("Examples"),
-                ),
-              ),
-            ],
-          )
         ],
       ),
     );

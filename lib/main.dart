@@ -1,17 +1,17 @@
-import 'dart:io';
+// import 'dart:io';
 import 'package:flutter/material.dart';
 import 'config/config.dart';
 // import 'package:firebase_core/firebase_core.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Remote Config
   // await Firebase.initializeApp(); // if used then add on firebase remote config
   // Google Mobile Ads
-  if (Platform.isAndroid || Platform.isIOS) {
-    MobileAds.instance.initialize();
-  }
+  // if (Platform.isAndroid || Platform.isIOS) {
+  //   MobileAds.instance.initialize();
+  // }
   runApp(const MainApp());
 }
 

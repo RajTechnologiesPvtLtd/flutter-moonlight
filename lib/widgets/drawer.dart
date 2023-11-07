@@ -16,7 +16,7 @@ class MoonLightDrawer extends StatelessWidget {
           color: Theme.of(context).scaffoldBackgroundColor,
         ),
         accountEmail: const Text(
-          "raviyatechnical@gmail.com",
+          "linkedin.com/in/raviyatechnical",
         ),
         accountName: const Text(
           "Bhargav Raviya",
