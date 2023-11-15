@@ -21,6 +21,7 @@ class LocalNotification {
       'channelName',
       importance: Importance.max,
       priority: Priority.high,
+      icon: '@mipmap/ic_launcher',
     );
 
     NotificationDetails notificationDetails = NotificationDetails(
@@ -38,6 +39,7 @@ class LocalNotification {
       'channelName',
       importance: Importance.max,
       priority: Priority.high,
+      icon: '@mipmap/ic_launcher',
     );
 
     NotificationDetails notificationDetails = NotificationDetails(
