@@ -9,7 +9,6 @@ class ExampleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Home"),
       appBar: const Navbar(title: "Examples"),
       body: Center(
         child: ListView(
@@ -62,6 +61,10 @@ class ExampleView extends StatelessWidget {
             ListTile(
               title: const Center(child: Text("Using Bottom Nav Bar Example")),
               onTap: () => Nav.toNamed(context, App.exampleUsingBottomNavBar),
+            ),
+            ListTile(
+              title: const Center(child: Text("Dynamic Tab Example")),
+              onTap: () => Nav.toNamed(context, App.exampleDynamicTab),
             ),
             ListTile(
               title: const Center(child: Text("Using Alert Dialog")),

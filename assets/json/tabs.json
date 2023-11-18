@@ -1,0 +1,18 @@
+[
+    {
+        "tabTitle": "Tab 1",
+        "items": [
+            "Item 1",
+            "Item 2",
+            "Item 3"
+        ]
+    },
+    {
+        "tabTitle": "Tab 2",
+        "items": [
+            "Item 4",
+            "Item 5",
+            "Item 6"
+        ]
+    }
+]

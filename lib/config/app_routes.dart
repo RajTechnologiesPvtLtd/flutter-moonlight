@@ -40,6 +40,7 @@ class App extends RouteManager {
   static const String exampleInputFields = "/input-fields-example";
   static const String exampleUsingAlertDialog = "/using-alert-dialog-example";
   static const String exampleUsingBottomNavBar = "/using-bottom-nav-bar";
+  static const String exampleDynamicTab = "/dynamic-tab";
   static const String exampleSnackBar = "/snack-bar";
   static const String examplePermissionHandler = "/permission-handler";
   static const String exampleCheckInternetConnection =
@@ -88,6 +89,8 @@ class App extends RouteManager {
         (context) => const PermissionHandlerView());
     addRoute(App.exampleUsingBottomNavBar,
         (context) => const UsingBottomNavBarView());
+    addRoute(App.exampleDynamicTab,
+        (context) => const DynamicTabView());
     addRoute(App.exampleCheckInternetConnection,
         (context) => const CheckInternetConnectionView());
     addRoute(App.exampleYoutubeVideo, (context) => const YoutubeVideoView());

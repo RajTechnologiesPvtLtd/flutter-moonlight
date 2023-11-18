@@ -29,40 +29,42 @@ class HomeView extends StatelessWidget {
       //         onPressed: () => Nav.toNamed(context, App.setting))
       //   ],
       // ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset(
-            AppImage.appLogo,
-            width: 75,
-          ),
-          const SizedBox(height: 10),
-          const Text(
-            "Welcome to Moonlight Starter Kit for Flutter",
-            style: TextStyle(fontSize: 18),
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () => mlLaunchURL(AppLink.officialWebsite),
-                child: const Text("Official Website"),
-              ),
-              const SizedBox(width: 10),
-              ElevatedButton(
-                onPressed: () => Nav.toNamed(context, App.exampleMVC),
-                child: const Text("Example MVC"),
-              ),
-              const SizedBox(width: 10),
-              ElevatedButton(
-                onPressed: () => Nav.toNamed(context, App.example),
-                child: const Text("Examples"),
-              ),
-            ],
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              AppImage.appLogo,
+              width: 75,
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              "Welcome to Moonlight Starter Kit for Flutter",
+              style: TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 10),
+            Wrap(
+              
+              children: [
+                ElevatedButton(
+                  onPressed: () => mlLaunchURL(AppLink.officialWebsite),
+                  child: const Text("Official Website"),
+                ),
+                const SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.exampleMVC),
+                  child: const Text("Example MVC"),
+                ),
+                const SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.example),
+                  child: const Text("Examples"),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

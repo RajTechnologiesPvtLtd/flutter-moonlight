@@ -9,7 +9,6 @@ class ExampleMVCView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Home"),
       appBar: const Navbar(title: "MVC Examples"),
       body: Center(
         child: ListView(

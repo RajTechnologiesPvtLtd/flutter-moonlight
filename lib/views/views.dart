@@ -27,6 +27,7 @@ export 'example/load_local_json.dart';
 export 'example/load_more_using_api.dart';
 export 'example/using_alert_dialog.dart';
 export 'example/using_bottom_nav_bar.dart';
+export 'example/dynamic_tab_view.dart';
 export 'example/snackbar_view.dart';
 export 'example/check_internet_connection.dart';
 export 'example/youtube_video_view.dart';
