@@ -3,11 +3,11 @@ import '../models/LoadMoreModelMVC.dart';
 class LoadMoreControllerMVC {
   final LoadMoreModelMVC model = LoadMoreModelMVC();
 
-  Future<void> fetchFirstPosts() async {
+  Future<void> fetchFirstRecords() async {
     await model.firstLoad();
   }
 
-  Future<void> fetchMorePosts() async {
+  Future<void> fetchMoreRecords() async {
     await model.loadMore();
   }
 }

@@ -16,7 +16,7 @@ class _LoadMoreViewMVCState extends State<LoadMoreViewMVC> {
   @override
   void initState() {
     super.initState();
-    controller.fetchFirstPosts();
+    controller.fetchFirstRecords();
     _scrollController.addListener(_loadMore);
   }
 
@@ -31,27 +31,27 @@ class _LoadMoreViewMVCState extends State<LoadMoreViewMVC> {
     final double currentPosition = _scrollController.position.pixels;
     final double delta = scrollExtent - currentPosition;
     if (delta < 200 && controller.model.hasNextPage) {
-      controller.fetchMorePosts();
+      controller.fetchMoreRecords();
     }
   }
 
   Widget _buildList() {
-    if (controller.model.posts.isEmpty) {
+    if (controller.model.records.isEmpty) {
       return const Center(child: CircularProgressIndicator());
     } else {
       return ListView.builder(
         controller: _scrollController,
-        itemCount: controller.model.posts.length +
+        itemCount: controller.model.records.length +
             (controller.model.hasNextPage ? 1 : 0),
         itemBuilder: (_, index) {
-          if (index == controller.model.posts.length) {
+          if (index == controller.model.records.length) {
             return const Center(child: CircularProgressIndicator());
           } else {
-            final post = controller.model.posts[index];
+            final record = controller.model.records[index];
             return Card(
               margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
               child: ListTile(
-                title: Text(post['title']),
+                title: Text(record['title']),
               ),
             );
           }

@@ -7,20 +7,23 @@ import '../config/config.dart';
 class LoadMoreModelMVC {
   int _page = 0;
   final int _limit = 20;
-  bool hasNextPage = true;
+  bool _hasNextPage = true;
   bool _isFirstLoadRunning = false;
   bool _isLoadMoreRunning = false;
-  List posts = [];
+  List _records = [];
   final _baseUrl = ApiEndpoint.loadMoreUrl;
 
   late ScrollController _controller;
-
+  // Getters
+  List get records => _records;
+  bool get hasNextPage => _hasNextPage;
+  
   Future<void> firstLoad() async {
     _isFirstLoadRunning = true;
     try {
       final res =
           await http.get(Uri.parse("$_baseUrl?_page=$_page&_limit=$_limit"));
-      posts = json.decode(res.body);
+      _records = json.decode(res.body);      
     } catch (err) {
       print('Something went wrong');
     }
@@ -28,7 +31,7 @@ class LoadMoreModelMVC {
   }
 
   Future<void> loadMore() async {
-    if (hasNextPage == true &&
+    if (_hasNextPage == true &&
         _isFirstLoadRunning == false &&
         _isLoadMoreRunning == false &&
         _controller.position.extentAfter < 300) {
@@ -37,12 +40,11 @@ class LoadMoreModelMVC {
       try {
         final res =
             await http.get(Uri.parse("$_baseUrl?_page=$_page&_limit=$_limit"));
-
-        final List fetchedPosts = json.decode(res.body);
-        if (fetchedPosts.length > 0) {
-          posts.addAll(fetchedPosts);
+        final List fetchedRecords = json.decode(res.body);
+        if (fetchedRecords.isNotEmpty) {
+          _records.addAll(fetchedRecords);
         } else {
-          hasNextPage = false;
+          _hasNextPage = false;
         }
       } catch (err) {
         print('Something went wrong!');
@@ -64,26 +66,26 @@ class LoadMoreModelMVC {
     return _controller;
   }
 
-  List getPosts() {
-    return posts;
-  }
+  // List getRecords() {
+  //   return _records;
+  // }
 
-  bool getIsFirstLoadRunning() {
-    return _isFirstLoadRunning;
-  }
+  // bool getIsFirstLoadRunning() {
+  //   return _isFirstLoadRunning;
+  // }
 
-  bool getIsLoadMoreRunning() {
-    return _isLoadMoreRunning;
-  }
+  // bool getIsLoadMoreRunning() {
+  //   return _isLoadMoreRunning;
+  // }
 
-  bool getHasNextPage() {
-    return hasNextPage;
-  }
+  // bool getHasNextPage() {
+  //   return _hasNextPage;
+  // }
 
   Future<void> refresh() async {
     _page = 0;
-    hasNextPage = true;
-    posts = [];
+    _hasNextPage = true;
+    _records = [];
     await firstLoad();
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../config/config.dart';
 import '../core/classes/classes.dart';
 // import '../services/services.dart';
+import '../l10n/app_localizations.dart';
 import '../utils/tools.dart';
 import '../widgets/widgets.dart';
 
@@ -12,8 +13,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Home"),
-      appBar: const Navbar(title: "Home"),
+      drawer: MoonLightDrawer(AppLocalizations.of(context)!.home),
+      appBar: Navbar(title: AppLocalizations.of(context)!.home),
       // appBar: AppBar(
       //   title: const Text(
       //     "Home",

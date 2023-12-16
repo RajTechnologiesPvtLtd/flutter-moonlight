@@ -4,6 +4,7 @@ import 'config/app_theme.dart';
 import 'config/config.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,7 @@ void main() async {
 
 class MainApp extends StatelessWidget {
   static final ValueNotifier<ThemeMode> themeNotifier =
-      ValueNotifier(ThemeMode.light); // Theme Mode Change  
+      ValueNotifier(ThemeMode.light); // Theme Mode Change
   const MainApp({Key? key}) : super(key: key);
 
   @override
@@ -31,6 +32,10 @@ class MainApp extends StatelessWidget {
             themeMode: currentMode,
             initialRoute: App.home,
             routes: Routes().routes,
+            // Localizations
+            locale: const Locale('gu'),
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
           );
         });
   }

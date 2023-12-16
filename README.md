@@ -102,6 +102,12 @@ Install dependencies
 flutter pub get
 ```
 
+Setup Localizations
+
+```bash
+flutter gen-l10n
+```
+
 Start the server
 
 ```bash
