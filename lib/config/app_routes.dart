@@ -50,6 +50,8 @@ class App extends RouteManager {
   static const String examplePaginatedDataTable = "/paginated-data-table";
   static const String exampleFirebaseRemoteConfig = "/firebase-remote-config";
   static const String exampleAutocomplete = "/autocomplete";
+  static const String exampleGeoLocation = "/geo-location";
+
   App() {
     addRoute(App.home, (context) => HomeView());
     addRoute(App.setting, (context) => const SettingView());
@@ -113,5 +115,6 @@ class App extends RouteManager {
                 'Watermelon',
               ],
             ));
+    addRoute(App.exampleGeoLocation, (context) => const GeoLocationView());
   }
 }

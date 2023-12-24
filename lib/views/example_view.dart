@@ -91,6 +91,10 @@ class ExampleView extends StatelessWidget {
               title: const Center(child: Text("Permission Handler")),
               onTap: () => Nav.toNamed(context, App.examplePermissionHandler),
             ),
+            ListTile(
+              title: const Center(child: Text("Geo Location")),
+              onTap: () => Nav.toNamed(context, App.exampleGeoLocation),
+            ),
           ],
         ),
       ),
