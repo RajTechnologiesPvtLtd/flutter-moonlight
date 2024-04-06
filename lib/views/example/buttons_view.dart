@@ -202,7 +202,7 @@ class SimpleElevatedButton extends StatelessWidget {
       child: child,
       style: ElevatedButton.styleFrom(
         padding: padding,
-        primary: color ?? currentTheme.primaryColor,
+        // primary: color ?? currentTheme.primaryColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
         ),
@@ -240,7 +240,7 @@ class SimpleOutlinedButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
         ),
-        primary: textColor ?? outlineColor ?? currentTheme.primaryColor,
+        // primary: textColor ?? outlineColor ?? currentTheme.primaryColor,
       ),
       onPressed: onPressed as void Function()?,
       child: child!,
@@ -269,7 +269,7 @@ class SimpleElevatedButtonWithIcon extends StatelessWidget {
       onPressed: onPressed as void Function()?,
       icon: Icon(iconData),
       label: label,
-      style: ElevatedButton.styleFrom(primary: color, padding: padding),
+      // style: ElevatedButton.styleFrom(primary: color, padding: padding),
     );
   }
 }

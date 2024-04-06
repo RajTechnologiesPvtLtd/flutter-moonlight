@@ -78,9 +78,9 @@ This Docs given Flutter easy implement Flutter Project
 - Banner Ad Widget From Google Admob Ads Using Firebase Remote Config 
 - Permission Handler Widget Dialog For Permission Handler Package
 
-## Documentation
+<!-- ## Documentation
 
-[Documentation](https://rajtechnologiespvtltd.github.io/flutter-moonlight/docs)
+[Documentation](https://rajtechnologiespvtltd.github.io/flutter-moonlight/docs) -->
 
 ## Run Locally
 
@@ -130,11 +130,17 @@ flutter.targetSdkVersion=28
 flutter.compileSdkVersion=33
 ```
 
+## Tech Stack
+
+**Client:** Flutter (No Framework)
+
+**Server:** NONE
+
 ## Authors
 
 - [Bhargav Raviya](https://www.github.com/bhargavraviya)
 
 ## License
 
-[GNU](https://github.com/RajTechnologiesPvtLtd/flutter-moonlight/blob/master/LICENSE)
+[MIT](https://github.com/RajTechnologiesPvtLtd/flutter-moonlight/blob/master/LICENSE)
 

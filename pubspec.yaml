@@ -1,45 +1,45 @@
 name: moonlight
-description: moonlight framework.
-publish_to: "none"
+description: "moonlight framework"
+publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ">=3.1.5 <4.0.0"
+  sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  share_plus: ^7.2.1
-  url_launcher: ^6.2.1
-  http: ^1.1.0
-  dio: ^5.3.3
-  connectivity_plus: ^5.0.1
-  permission_handler: ^11.0.1
-  image_picker: ^1.0.4
+  share_plus: ^8.0.2
+  url_launcher: ^6.2.5
+  http: ^1.2.1
+  dio: ^5.4.2+1
+  connectivity_plus: ^6.0.1
+  permission_handler: ^11.3.1
+  image_picker: ^1.0.7
   # state management and database
-  sqflite: ^2.3.0
+  sqflite: ^2.3.3
   shared_preferences: ^2.2.2
-  provider: ^6.0.5
-  firebase_remote_config: ^4.3.3
+  provider: ^6.1.2
+  firebase_remote_config: ^4.4.0
   # notification
-  flutter_local_notifications: ^16.1.0
-  firebase_messaging: ^14.7.3
-  firebase_core: ^2.21.0
+  flutter_local_notifications: ^17.0.0
+  firebase_core: ^2.28.0
+  firebase_messaging: ^14.8.0
   # earning
-  google_mobile_ads: ^3.1.0
+  google_mobile_ads: ^5.0.0
   # UI
-  youtube_player_flutter: ^8.1.2
+  youtube_player_flutter: ^9.0.0
   # localizations
   flutter_localizations:
     sdk: flutter
   intl: any
-  flutter_gen: ^5.3.2
-  geolocator: ^10.1.0
+  flutter_gen: ^5.4.0
+  geolocator: ^11.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true

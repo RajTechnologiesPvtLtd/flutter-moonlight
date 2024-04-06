@@ -18,7 +18,7 @@ void main() async {
 class MainApp extends StatelessWidget {
   static final ValueNotifier<ThemeMode> themeNotifier =
       ValueNotifier(ThemeMode.light); // Theme Mode Change
-  const MainApp({Key? key}) : super(key: key);
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {

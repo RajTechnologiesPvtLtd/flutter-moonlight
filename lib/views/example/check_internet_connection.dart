@@ -17,37 +17,37 @@ class _CheckInternetConnectionViewState
 
   @override
   void initState() {
-    connection = Connectivity()
-        .onConnectivityChanged
-        .listen((ConnectivityResult result) {
-      // whenevery connection status is changed.
-      if (result == ConnectivityResult.none) {
-        //there is no any connection
-        setState(() {
-          isoffline = true;
-        });
-      } else if (result == ConnectivityResult.mobile) {
-        //connection is mobile data network
-        setState(() {
-          isoffline = false;
-        });
-      } else if (result == ConnectivityResult.wifi) {
-        //connection is from wifi
-        setState(() {
-          isoffline = false;
-        });
-      } else if (result == ConnectivityResult.ethernet) {
-        //connection is from wired connection
-        setState(() {
-          isoffline = false;
-        });
-      } else if (result == ConnectivityResult.bluetooth) {
-        //connection is from bluetooth threatening
-        setState(() {
-          isoffline = false;
-        });
-      }
-    });
+    // connection = Connectivity()
+    //     .onConnectivityChanged
+    //     .listen((ConnectivityResult result) {
+    //   // whenevery connection status is changed.
+    //   if (result == ConnectivityResult.none) {
+    //     //there is no any connection
+    //     setState(() {
+    //       isoffline = true;
+    //     });
+    //   } else if (result == ConnectivityResult.mobile) {
+    //     //connection is mobile data network
+    //     setState(() {
+    //       isoffline = false;
+    //     });
+    //   } else if (result == ConnectivityResult.wifi) {
+    //     //connection is from wifi
+    //     setState(() {
+    //       isoffline = false;
+    //     });
+    //   } else if (result == ConnectivityResult.ethernet) {
+    //     //connection is from wired connection
+    //     setState(() {
+    //       isoffline = false;
+    //     });
+    //   } else if (result == ConnectivityResult.bluetooth) {
+    //     //connection is from bluetooth threatening
+    //     setState(() {
+    //       isoffline = false;
+    //     });
+    //   }
+    // });
     super.initState();
   }
 
