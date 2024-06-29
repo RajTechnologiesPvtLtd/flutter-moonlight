@@ -7,7 +7,7 @@ import '../utils/tools.dart';
 import '../widgets/widgets.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
   // final AuthService _authService = AuthService();
 
   @override

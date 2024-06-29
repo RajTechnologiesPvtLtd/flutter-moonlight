@@ -1,11 +1,10 @@
-import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 import 'constants.dart';
 
 class ApiClient {
   final Dio _dio = Dio();
-  final _http = http.Client;
+  // final _http = http.Client;
 
   Future<dynamic> registerUser(Map<String, dynamic>? data) async {
     try {
@@ -16,13 +15,13 @@ class ApiClient {
         // options: Options(headers: {'X-LoginRadius-Sott': ApiSecret.sott})
       );
       return response.data;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return e.response!.data;
     }
   }
 
   Future<dynamic> login(String email, String password) async {
-    var body_data = {
+    var bodyData = {
       'email': email,
       'password': password,
     };
@@ -32,7 +31,7 @@ class ApiClient {
     //   // queryParameters: {'apikey': ApiSecret.apiKey},
     // );
     var uri = Uri.parse(appAPILogin);
-    final response = await http.post(uri, body: body_data);
+    final response = await http.post(uri, body: bodyData);
     return response;
   }
 
@@ -46,7 +45,7 @@ class ApiClient {
         ),
       );
       return response.data;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return e.response!.data;
     }
   }
@@ -65,7 +64,7 @@ class ApiClient {
         ),
       );
       return response.data;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return e.response!.data;
     }
   }
@@ -80,7 +79,7 @@ class ApiClient {
         ),
       );
       return response.data;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return e.response!.data;
     }
   }

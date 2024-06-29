@@ -144,3 +144,6 @@ flutter.compileSdkVersion=33
 
 [MIT](https://github.com/RajTechnologiesPvtLtd/flutter-moonlight/blob/master/LICENSE)
 
+##  Google Mobile Ads
+
+https://github.com/firebase/quickstart-android/blob/master/mock-google-services.json

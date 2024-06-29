@@ -3,7 +3,7 @@ import '../../controllers/controllers.dart';
 import '../../widgets/widgets.dart';
 
 class LoadMoreViewMVC extends StatefulWidget {
-  const LoadMoreViewMVC({Key? key}) : super(key: key);
+  const LoadMoreViewMVC({super.key});
 
   @override
   State<LoadMoreViewMVC> createState() => _LoadMoreViewMVCState();

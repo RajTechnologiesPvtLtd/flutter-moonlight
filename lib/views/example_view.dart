@@ -4,7 +4,7 @@ import '../core/classes/classes.dart';
 import '../widgets/widgets.dart';
 
 class ExampleView extends StatelessWidget {
-  const ExampleView({Key? key}) : super(key: key);
+  const ExampleView({super.key});
 
   @override
   Widget build(BuildContext context) {

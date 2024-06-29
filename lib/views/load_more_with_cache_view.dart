@@ -7,7 +7,7 @@ import '../core/classes/classes.dart';
 import '../widgets/widgets.dart';
 
 class LoadMoreWithCacheView extends StatefulWidget {
-  const LoadMoreWithCacheView({Key? key}) : super(key: key);
+  const LoadMoreWithCacheView({super.key});
 
   @override
   State<LoadMoreWithCacheView> createState() => _LoadMoreWithCacheViewState();
@@ -18,17 +18,17 @@ class _LoadMoreWithCacheViewState extends State<LoadMoreWithCacheView> {
   final _baseUrl = ApiEndpoint.loadMoreUrl;
 
   // At the beginning, we fetch the first 20 records
-  int _page = 0;
+  final int _page = 0;
   final int _limit = 20;
 
   // There is next page or not
-  bool _hasNextPage = true;
+  final bool _hasNextPage = true;
 
   // Used to display loading indicators when _firstLoad function is running
   bool _isFirstLoadRunning = false;
 
   // Used to display loading indicators when _loadMore function is running
-  bool _isLoadMoreRunning = false;
+  final bool _isLoadMoreRunning = false;
 
   // This holds the records fetched from the server
   List _records = [];

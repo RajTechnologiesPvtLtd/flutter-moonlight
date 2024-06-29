@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ButtonsExample extends StatelessWidget {
-  const ButtonsExample({Key? key}) : super(key: key);
+  const ButtonsExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ButtonsExample extends StatelessWidget {
 }
 
 class SimpleButtons extends StatelessWidget {
-  const SimpleButtons({Key? key}) : super(key: key);
+  const SimpleButtons({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +31,14 @@ class SimpleButtons extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SimpleElevatedButton(
-                  child: const Text("Elevated Button"),
                   color: Colors.blue,
                   onPressed: () {},
+                  child: const Text("Elevated Button"),
                 ),
                 SimpleOutlinedButton(
-                  child: const Text("Outlined Button"),
                   onPressed: () {},
                   outlineColor: Colors.blue,
+                  child: const Text("Outlined Button"),
                 ),
               ],
             ),
@@ -47,14 +47,14 @@ class SimpleButtons extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SimpleElevatedButton(
-                  child: const Text("Elevated Button"),
                   color: Colors.green,
                   onPressed: () {},
+                  child: const Text("Elevated Button"),
                 ),
                 SimpleOutlinedButton(
-                  child: const Text("Outlined Button"),
                   onPressed: () {},
                   outlineColor: Colors.green,
+                  child: const Text("Outlined Button"),
                 ),
               ],
             ),
@@ -63,14 +63,14 @@ class SimpleButtons extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SimpleElevatedButton(
-                  child: const Text("Elevated Button"),
                   color: Colors.amber,
                   onPressed: () {},
+                  child: const Text("Elevated Button"),
                 ),
                 SimpleOutlinedButton(
-                  child: const Text("Outlined Button"),
                   onPressed: () {},
                   outlineColor: Colors.amber,
+                  child: const Text("Outlined Button"),
                 ),
               ],
             ),
@@ -187,8 +187,7 @@ class SimpleElevatedButton extends StatelessWidget {
       this.onPressed,
       this.borderRadius = 6,
       this.padding = const EdgeInsets.symmetric(horizontal: 28, vertical: 20),
-      Key? key})
-      : super(key: key);
+      super.key});
   final Color? color;
   final Widget? child;
   final Function? onPressed;
@@ -197,9 +196,8 @@ class SimpleElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData currentTheme = Theme.of(context);
+    // ThemeData currentTheme = Theme.of(context);
     return ElevatedButton(
-      child: child,
       style: ElevatedButton.styleFrom(
         padding: padding,
         // primary: color ?? currentTheme.primaryColor,
@@ -208,6 +206,7 @@ class SimpleElevatedButton extends StatelessWidget {
         ),
       ),
       onPressed: onPressed as void Function()?,
+      child: child,
     );
   }
 }
@@ -220,8 +219,7 @@ class SimpleOutlinedButton extends StatelessWidget {
       required this.onPressed,
       this.borderRadius = 6,
       this.padding = const EdgeInsets.symmetric(horizontal: 28, vertical: 20),
-      Key? key})
-      : super(key: key);
+      super.key});
   final Widget? child;
   final Function onPressed;
   final double borderRadius;
@@ -255,8 +253,7 @@ class SimpleElevatedButtonWithIcon extends StatelessWidget {
       this.iconData,
       required this.onPressed,
       this.padding = const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-      Key? key})
-      : super(key: key);
+      super.key});
   final Widget label;
   final Color? color;
   final IconData? iconData;
@@ -284,8 +281,7 @@ class SimpleCircularIconButton extends StatelessWidget {
       this.notificationCount,
       this.onPressed,
       this.radius = 48.0,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   final IconData iconData;
   final Color fillColor;

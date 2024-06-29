@@ -4,10 +4,10 @@ import 'dart:convert';
 import '../../widgets/widgets.dart';
 
 class LoadMoreUsingAPIPage extends StatefulWidget {
-  const LoadMoreUsingAPIPage({Key? key}) : super(key: key);
+  const LoadMoreUsingAPIPage({super.key});
 
   @override
-  _LoadMoreUsingAPIPageState createState() => _LoadMoreUsingAPIPageState();
+  State<LoadMoreUsingAPIPage> createState() => _LoadMoreUsingAPIPageState();
 }
 
 class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
@@ -16,7 +16,7 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
 
   // At the beginning, we fetch the first 20 posts
   int _page = 0;
-  int _limit = 20;
+  final int _limit = 20;
 
   // There is next page or not
   bool _hasNextPage = true;
@@ -66,7 +66,7 @@ class _LoadMoreUsingAPIPageState extends State<LoadMoreUsingAPIPage> {
             await http.get(Uri.parse("$_baseUrl?_page=$_page&_limit=$_limit"));
 
         final List fetchedPosts = json.decode(res.body);
-        if (fetchedPosts.length > 0) {
+        if (fetchedPosts.isNotEmpty) {
           setState(() {
             _posts.addAll(fetchedPosts);
           });

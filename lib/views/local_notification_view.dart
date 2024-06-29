@@ -4,7 +4,7 @@ import '../core/classes/classes.dart';
 import '../widgets/widgets.dart';
 
 class LocalNotificationView extends StatefulWidget {
-  const LocalNotificationView({Key? key}) : super(key: key);
+  const LocalNotificationView({super.key});
 
   @override
   State<LocalNotificationView> createState() => _LocalNotificationViewState();

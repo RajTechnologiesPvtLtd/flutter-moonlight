@@ -3,7 +3,7 @@ import '../../controllers/controllers.dart';
 import '../../widgets/widgets.dart';
 
 class SqlView extends StatefulWidget {
-  const SqlView({Key? key}) : super(key: key);
+  const SqlView({super.key});
   @override
   State<SqlView> createState() => _SqlViewState();
 }
@@ -55,11 +55,11 @@ class _SqlViewState extends State<SqlView> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  mlTextField(labelText: "Title", controller: _titleCtr),
+                  MLTextField(labelText: "Title", controller: _titleCtr),
                   const SizedBox(
                     height: 10,
                   ),
-                  mlTextField(
+                  MLTextField(
                       labelText: "Description", controller: _descriptionCtr),
                   const SizedBox(
                     height: 10,

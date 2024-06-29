@@ -6,7 +6,7 @@ import '../config/config.dart';
 import '../widgets/widgets.dart';
 
 class LoadMoreView extends StatefulWidget {
-  const LoadMoreView({Key? key}) : super(key: key);
+  const LoadMoreView({super.key});
 
   @override
   State<LoadMoreView> createState() => _LoadMoreViewState();
@@ -68,7 +68,7 @@ class _LoadMoreViewState extends State<LoadMoreView> {
             await http.get(Uri.parse("$_baseUrl?_page=$_page&_limit=$_limit"));
 
         final List fetchedRecords = json.decode(res.body);
-        if (fetchedRecords.length > 0) {
+        if (fetchedRecords.isNotEmpty) {
           setState(() {
             _records.addAll(fetchedRecords);
           });

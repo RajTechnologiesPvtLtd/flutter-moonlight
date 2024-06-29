@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AuthView extends StatefulWidget {
-  const AuthView({Key? key}) : super(key: key);
+  const AuthView({super.key});
 
   @override
   _AuthViewState createState() => _AuthViewState();

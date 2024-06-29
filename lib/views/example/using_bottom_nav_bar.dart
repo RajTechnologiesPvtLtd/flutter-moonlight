@@ -39,7 +39,7 @@ class _UsingBottomNavBarViewState extends State<UsingBottomNavBarView>
         // Add tabs as widgets
         controller: controller,
         // Add tabs as widgets
-        children: <Widget>[FirstTab(), SecondTab(), ThirdTab()],
+        children: const <Widget>[FirstTab(), SecondTab(), ThirdTab()],
       ),
       bottomNavigationBar: Material(
         // set the color of the bottom navigation bar

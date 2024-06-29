@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class CheckInternetConnectionView extends StatefulWidget {
   const CheckInternetConnectionView({super.key});
   @override
-  _CheckInternetConnectionViewState createState() =>
+  State<CheckInternetConnectionView> createState() =>
       _CheckInternetConnectionViewState();
 }
 

@@ -6,7 +6,7 @@ void mlLaunchURL(url) async {
   if (!await launchUrl(url)) throw 'Could not launch $url';
 }
 
-void mlShare(message) async {
+Future<Future<ShareResult>> mlShare(message) async {
   return Share.share(message);
 }
 

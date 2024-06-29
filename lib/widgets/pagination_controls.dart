@@ -15,8 +15,8 @@ class PaginationControls extends StatelessWidget {
   final PaginationInfo paginationInfo;
   final ValueChanged<int> onPageChanged;
 
-  PaginationControls(
-      {required this.paginationInfo, required this.onPageChanged});
+  const PaginationControls(
+      {super.key, required this.paginationInfo, required this.onPageChanged});
 
   @override
   Widget build(BuildContext context) {

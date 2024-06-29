@@ -3,7 +3,7 @@ import '../../utils/utils.dart';
 import '../../widgets/widgets.dart';
 
 class SqlCRUDView extends StatefulWidget {
-  const SqlCRUDView({Key? key}) : super(key: key);
+  const SqlCRUDView({super.key});
   @override
   State<SqlCRUDView> createState() => _SqlCRUDViewState();
 }

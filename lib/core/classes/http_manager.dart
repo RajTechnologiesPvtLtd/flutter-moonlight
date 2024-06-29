@@ -17,9 +17,9 @@ class MLApi {
           .timeout(
             const Duration(seconds: 5),
           );
-    } on TimeoutException catch (e) {
+    } on TimeoutException {
       return http.Response(jsonEncode({"success": false, "code": 404}), 404);
-    } on Exception catch (e) {
+    } on Exception {
       return http.Response(jsonEncode({"success": false, "code": 404}), 404);
     }
   }
@@ -36,9 +36,9 @@ class MLApi {
           .timeout(
             const Duration(seconds: 5),
           );
-    } on TimeoutException catch (e) {
+    } on TimeoutException {
       return http.Response(jsonEncode({"success": false, "code": 404}), 404);
-    } on Exception catch (e) {
+    } on Exception {
       return http.Response(jsonEncode({"success": false, "code": 404}), 404);
     }
   }

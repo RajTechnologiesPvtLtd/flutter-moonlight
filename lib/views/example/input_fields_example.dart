@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputFieldsExample extends StatelessWidget {
-  const InputFieldsExample({Key? key}) : super(key: key);
+  const InputFieldsExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,9 @@ class InputFieldsExample extends StatelessWidget {
     );
   }
 }
+
 class SimpleTextFields extends StatelessWidget {
-  const SimpleTextFields({Key? key}) : super(key: key);
+  const SimpleTextFields({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -111,8 +112,7 @@ class SimpleTextField extends StatefulWidget {
       this.showError = true,
       this.verticalPadding = 20,
       this.horizontalPadding = 12,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   final Function(String)? onChanged;
   final TextEditingController? textEditingController;
@@ -142,7 +142,7 @@ class SimpleTextField extends StatefulWidget {
   final double horizontalPadding;
 
   @override
-  _SimpleTextFieldState createState() => _SimpleTextFieldState();
+  State<SimpleTextField> createState() => _SimpleTextFieldState();
 }
 
 class _SimpleTextFieldState extends State<SimpleTextField> {

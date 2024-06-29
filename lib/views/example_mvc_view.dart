@@ -4,7 +4,7 @@ import '../core/classes/classes.dart';
 import '../widgets/widgets.dart';
 
 class ExampleMVCView extends StatelessWidget {
-  const ExampleMVCView({Key? key}) : super(key: key);
+  const ExampleMVCView({super.key});
 
   @override
   Widget build(BuildContext context) {

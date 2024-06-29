@@ -49,11 +49,11 @@ class _LoginViewState extends State<LoginView> {
                 width: 100,
                 height: 100,
               ),
-              mlTextField(
+              MLTextField(
                 controller: _emailCtr,
                 labelText: "Email",
               ),
-              mlPasswordField(
+              MLPasswordField(
                 controller: _passwordCtr,
                 labelText: "Password",
               ),

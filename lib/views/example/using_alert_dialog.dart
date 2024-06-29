@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UsingAlertDialogView extends StatefulWidget {
-  const UsingAlertDialogView({Key? key}) : super(key: key);
+  const UsingAlertDialogView({super.key});
 
   @override
   State<UsingAlertDialogView> createState() => _UsingAlertDialogViewState();

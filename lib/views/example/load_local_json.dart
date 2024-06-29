@@ -13,16 +13,16 @@ class LoadLocalJSONPage extends StatelessWidget {
         future:
             DefaultAssetBundle.of(context).loadString('assets/json/users.json'),
         builder: (context, snapshot) {
-          var new_data = jsonDecode(snapshot.data.toString());
+          var newData = jsonDecode(snapshot.data.toString());
           return ListView.builder(
-              itemCount: new_data == null ? 0 : new_data.length,
+              itemCount: newData == null ? 0 : newData.length,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: NetworkImage(new_data[index]['urlAvatar']),
+                    backgroundImage: NetworkImage(newData[index]['urlAvatar']),
                   ),
-                  title: Text(new_data[index]['username']),
-                  subtitle: Text(new_data[index]['email']),
+                  title: Text(newData[index]['username']),
+                  subtitle: Text(newData[index]['email']),
                 );
               });
         },

@@ -5,7 +5,7 @@ import 'drawer-tile.dart';
 
 class MoonLightDrawer extends StatelessWidget {
   final String currentPage;
-  const MoonLightDrawer(this.currentPage, {Key? key}) : super(key: key);
+  const MoonLightDrawer(this.currentPage, {super.key});
 
   @override
   Widget build(BuildContext context) {

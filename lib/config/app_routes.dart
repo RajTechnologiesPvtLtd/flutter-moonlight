@@ -53,7 +53,7 @@ class App extends RouteManager {
   static const String exampleGeoLocation = "/geo-location";
 
   App() {
-    addRoute(App.home, (context) => HomeView());
+    addRoute(App.home, (context) => const HomeView());
     addRoute(App.setting, (context) => const SettingView());
     addRoute(App.loadMore, (context) => const LoadMoreView());
     addRoute(App.loadMoreWithCache, (context) => const LoadMoreWithCacheView());
@@ -91,8 +91,7 @@ class App extends RouteManager {
         (context) => const PermissionHandlerView());
     addRoute(App.exampleUsingBottomNavBar,
         (context) => const UsingBottomNavBarView());
-    addRoute(App.exampleDynamicTab,
-        (context) => const DynamicTabView());
+    addRoute(App.exampleDynamicTab, (context) => const DynamicTabView());
     addRoute(App.exampleCheckInternetConnection,
         (context) => const CheckInternetConnectionView());
     addRoute(App.exampleYoutubeVideo, (context) => const YoutubeVideoView());

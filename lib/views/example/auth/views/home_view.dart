@@ -4,7 +4,7 @@ import 'login_view.dart';
 
 class HomeScreen extends StatefulWidget {
   final String accesstoken;
-  const HomeScreen({Key? key, required this.accesstoken}) : super(key: key);
+  const HomeScreen({super.key, required this.accesstoken});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
