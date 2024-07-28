@@ -2,8 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:sqflite/sqflite.dart' as sql;
-import '../config/config.dart';
 
 class BaseController {
   // base for HTTP Client Request
@@ -39,26 +37,5 @@ class BaseController {
       // Handle other errors
       debugPrint('An error occurred: $error');
     }
-  }
-
-  // Base for SQLite
-  static Future<sql.Database> db() async {
-    return sql.openDatabase(
-      AppDatabase.database,
-      version: 1,
-      onCreate: (sql.Database database, int version) async {
-        await createTables(database);
-      },
-    );
-  }
-
-  static Future<void> createTables(sql.Database database) async {
-    await database.execute("""CREATE TABLE items(
-        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-        title TEXT,
-        description TEXT,
-        createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-      )
-      """);
   }
 }

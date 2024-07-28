@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../controllers/controllers.dart';
+import '../../models/models.dart';
 import '../../widgets/widgets.dart';
 
 class SqlView extends StatefulWidget {
@@ -9,7 +9,7 @@ class SqlView extends StatefulWidget {
 }
 
 class _SqlViewState extends State<SqlView> {
-  final SqlController _controller = SqlController();
+  final ItemModel _recordModel = ItemModel();
 
   List<Map<String, dynamic>> _records = [];
   bool _isLoading = true;
@@ -25,14 +25,45 @@ class _SqlViewState extends State<SqlView> {
   }
 
   _refreshRecords() async {
-    final data = await _controller.list();
+    final data = await _recordModel.getAll();
     setState(() {
       _records = data;
       _isLoading = false;
     });
   }
 
-  void _showForm(int? id) async {
+  _resetForm() {
+    _titleCtr.text = '';
+    _descriptionCtr.text = '';
+  }
+
+  _saveRecord(int? id) async {
+    String msg = '';
+    if (id != null) {
+      await _recordModel.update(id, {
+        'title': _titleCtr.text,
+        'description': _descriptionCtr.text,
+      });
+    } else {
+      await _recordModel.store({
+        'title': _titleCtr.text,
+        'description': _descriptionCtr.text,
+      });
+      msg = "Successfully created a record!";
+    }
+    _resetForm();
+    showMessage(context, msg);
+    _refreshRecords();
+    Navigator.pop(context);
+  }
+
+  _deleteItem(int id) async {
+    await _recordModel.delete(id);
+    showMessage(context, "Successfully deleted a record!");
+    _refreshRecords();
+  }
+
+  _showForm(int? id) async {
     if (id != null) {
       final existingRecord =
           _records.firstWhere((element) => element['id'] == id);
@@ -65,18 +96,7 @@ class _SqlViewState extends State<SqlView> {
                     height: 10,
                   ),
                   ElevatedButton(
-                    onPressed: () async {
-                      if (id != null) {
-                        await _updateItem(id);
-                      } else {
-                        await _addItem();
-                      }
-                      // Clear the text fields
-                      _titleCtr.text = '';
-                      _descriptionCtr.text = '';
-                      // Close the bottom sheet
-                      Navigator.pop(context);
-                    },
+                    onPressed: () => _saveRecord(id),
                     child: Text(id == null ? 'Create New' : 'Update'),
                   )
                 ],
@@ -84,38 +104,11 @@ class _SqlViewState extends State<SqlView> {
             ));
   }
 
-  // Insert a new record to the database
-  Future<void> _addItem() async {
-    await _controller.store({
-      'title': _titleCtr.text,
-      'description': _descriptionCtr.text,
-    });
-    showMessage(context, "Successfully created a record!");
-    _refreshRecords();
-  }
-
-  // Update an existing record
-  Future<void> _updateItem(int id) async {
-    await _controller.update(id, {
-      'title': _titleCtr.text,
-      'description': _descriptionCtr.text,
-    });
-    showMessage(context, "Successfully update a record!");
-    _refreshRecords();
-  }
-
-// Delete an item
-  void _deleteItem(int id) async {
-    await _controller.delete(id);
-    showMessage(context, "Successfully deleted a record!");
-    _refreshRecords();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MoonLightDrawer("Sql View (MVC)"),
-      appBar: const Navbar(title: "Sql View (MVC)"),
+      appBar: const Navbar(title: "Sql View (MVC) [Sqflite]"),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () => _showForm(null),
