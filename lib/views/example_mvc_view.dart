@@ -22,6 +22,10 @@ class ExampleMVCView extends StatelessWidget {
               onTap: () => Nav.toNamed(context, App.loadMoreMVC),
             ),
             ListTile(
+              title: const Center(child: Text("SQL Model and View")),
+              onTap: () => Nav.toNamed(context, App.sqlMV),
+            ),
+            ListTile(
               title: const Center(child: Text("SQL")),
               onTap: () => Nav.toNamed(context, App.sqlMVC),
             ),

@@ -14,6 +14,7 @@ export 'example_mvc_view.dart';
 export 'example_mvc/counter_view.dart';
 export 'example_mvc/LoadMoreViewMVC.dart';
 export 'example_mvc/sql_view.dart';
+export 'example_mvc/item_view.dart';
 // Auth System
 export 'auth/login_view.dart';
 // Example

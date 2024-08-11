@@ -53,3 +53,11 @@ Widget fullScreenLoader() {
     ),
   );
 }
+
+Widget sizedBoxByHeight(double height) {
+  return SizedBox(height: height);
+}
+
+Widget sizedBoxByWidth(double width) {
+  return SizedBox(width: width);
+}
