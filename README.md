@@ -1,5 +1,5 @@
 
-![Logo](https://camo.githubusercontent.com/9b9d6adff7cadc133aef6f203dcffcb14d4fe0cc9fc04ed9888c4f3340e9a19b/68747470733a2f2f7777772e72616a746563686e6f6c6f676965732e636f6d2f75692f696d616765732f72616a2d746563686e6f6c6f676965732d6c6f676f2d746f702d70616e656c2e6a7067)
+![Logo](https://www.rajtechnologies.com/ui/images/raj-technologies-logo-top-panel.jpg)
 
 # Flutter MoonLight
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moonlight/core/app_settings.dart';
 import '../main.dart';
 import '../utils/utils.dart';
 import '../widgets/widgets.dart';
@@ -10,6 +11,7 @@ class SettingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppSettings appSettings = MainApp.appSettingsNotifier.value;
     return Scaffold(
       appBar: const Navbar(title: "Settings"),
       body: SingleChildScrollView(
@@ -23,18 +25,21 @@ class SettingView extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w500)),
             ),
             ListTile(
-              leading: Icon(MainApp.themeNotifier.value == ThemeMode.light
+              leading: Icon(appSettings.themeMode == ThemeMode.light
                   ? Icons.dark_mode
                   : Icons.light_mode),
-              title: MainApp.themeNotifier.value == ThemeMode.light
+              title: appSettings.themeMode == ThemeMode.light
                   ? const Text("Dark Mode")
                   : const Text("Light Mode"),
               trailing: const Icon(Icons.navigate_next),
               onTap: (() {
-                MainApp.themeNotifier.value =
-                    MainApp.themeNotifier.value == ThemeMode.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light;
+                changeTheme(appSettings.themeMode == ThemeMode.light
+                    ? ThemeMode.dark
+                    : ThemeMode.light);
+                // MainApp.themeNotifier.value =
+                //     MainApp.themeNotifier.value == ThemeMode.light
+                //         ? ThemeMode.dark
+                //         : ThemeMode.light;
               }),
             ),
             ListTile(
@@ -45,6 +50,30 @@ class SettingView extends StatelessWidget {
                 CacheManager.clearData();
                 showMessage(context, "API cache clear successfully.");
               }),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: mlButton("English", () {
+                    // _provider.setLocale('en');
+                    changeLanguage('en');
+                  }),
+                ),
+                sizedBoxByWidth(5),
+                Expanded(
+                  child: mlButton("ગુજરાતી", () {
+                    // _provider.setLocale('gu');
+                    changeLanguage('gu');
+                  }),
+                ),
+                sizedBoxByWidth(5),
+                Expanded(
+                  child: mlButton("हिंदी", () {
+                    // _provider.setLocale('hi');
+                    changeLanguage('hi');
+                  }),
+                ),
+              ],
             ),
             const Center(
               child: Text(

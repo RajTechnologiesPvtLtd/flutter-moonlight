@@ -4,6 +4,7 @@ import 'config/app_theme.dart';
 import 'config/config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'core/app_settings.dart';
 import 'l10n/app_localizations.dart';
 
 void main() async {
@@ -24,6 +25,33 @@ void main() async {
 }
 
 class MainApp extends StatelessWidget {
+  static late AppSettingsNotifier appSettingsNotifier;
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<AppSettings>(
+      valueListenable: appSettingsNotifier,
+      builder: (_, AppSettings appSettings, __) {
+        return MaterialApp(
+          title: AppConfig.name,
+          theme: MyTheme().lightTheme,
+          darkTheme: MyTheme().darkTheme,
+          themeMode: appSettings.themeMode,
+          initialRoute: App.home,
+          routes: Routes().routes,
+          // Localizations
+          locale: appSettings.locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+        );
+      },
+    );
+  }
+}
+
+/*
+class MainApp extends StatelessWidget {
   static final ValueNotifier<ThemeMode> themeNotifier =
       ValueNotifier(ThemeMode.light); // Theme Mode Change
   const MainApp({super.key});
@@ -41,10 +69,11 @@ class MainApp extends StatelessWidget {
             initialRoute: App.home,
             routes: Routes().routes,
             // Localizations
-            locale: const Locale('en'),
+            locale: Locale(AppConfig.defaultLanguage),
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
           );
         });
   }
 }
+*/

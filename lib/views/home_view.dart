@@ -39,12 +39,12 @@ class HomeView extends StatelessWidget {
               AppImage.appLogo,
               width: 75,
             ),
-            const SizedBox(height: 10),
+            sizedBoxByWidth(10),
             const Text(
               "Welcome to Moonlight Starter Kit for Flutter",
               style: TextStyle(fontSize: 18),
             ),
-            const SizedBox(height: 10),
+            sizedBoxByWidth(10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -59,7 +59,7 @@ class HomeView extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(width: 10),
+            sizedBoxByWidth(10),
             ElevatedButton(
               onPressed: () => Nav.toNamed(context, App.example),
               child: const Text("Examples"),

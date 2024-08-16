@@ -61,3 +61,16 @@ Widget sizedBoxByHeight(double height) {
 Widget sizedBoxByWidth(double width) {
   return SizedBox(width: width);
 }
+
+Widget mlButton(String label, void Function() click) {
+  return ElevatedButton(
+    // style: ElevatedButton.styleFrom(
+    //   backgroundColor: ColorScheme.light().primary,
+    //   textStyle: TextStyle(
+    //     color: ColorScheme.light().primary,
+    //   ),
+    // ),
+    onPressed: click,
+    child: Text(label),
+  );
+}
