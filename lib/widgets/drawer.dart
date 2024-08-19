@@ -64,6 +64,11 @@ class MoonLightDrawer extends StatelessWidget {
         onTap: () => Nav.toNamed(context, App.exampleAds),
       ),
       DrawerTile(
+        title: "Local Database Examples",
+        icon: Icons.list,
+        onTap: () => Nav.toNamed(context, App.localDatabaseExample),
+      ),
+      DrawerTile(
         title: "Settings",
         icon: Icons.settings,
         onTap: () => Nav.toNamed(context, App.setting),

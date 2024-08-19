@@ -14,11 +14,15 @@ export 'example_mvc_view.dart';
 export 'example_mvc/counter_view.dart';
 export 'example_mvc/LoadMoreViewMVC.dart';
 export 'example_mvc/sql_view.dart';
-export 'example_mvc/item_view.dart';
+export 'local_database_examples/item_view.dart';
+// Local Database Examples
+export 'local_database_examples/sqflite_crud_view.dart';
+export 'local_database_examples/sqlite3_crud_view.dart';
 // Auth System
 export 'auth/login_view.dart';
 // Example
 export 'example_view.dart';
+export 'local_database_example_view.dart';
 export 'example/auth_view.dart';
 export 'example/buttons_view.dart';
 export 'example/grid_view.dart';
@@ -35,7 +39,6 @@ export 'example/youtube_video_view.dart';
 export 'example/data_table_view.dart';
 export 'example/paginated_data_table.dart';
 export 'example/autocomplete_fields_example.dart';
-export 'example/sql_crud_view.dart';
 export 'example/firebase_remote_config_view.dart';
 export 'example/provider_view.dart';
 export 'example/permission_handler_view.dart';

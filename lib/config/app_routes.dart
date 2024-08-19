@@ -12,7 +12,6 @@ class App extends RouteManager {
   static const String home = '${App.name}/';
   static const String loadMore = '${App.name}/load-more';
   static const String loadMoreWithCache = '${App.name}/load-more-with-cache';
-  static const String sqlCrud = '${App.name}/sql-crud';
   static const String localNotification = '${App.name}/local-notification';
   static const String example = '${App.name}/examples';
   static const String setting = '${App.name}/setting';
@@ -30,6 +29,11 @@ class App extends RouteManager {
   static const String sqlMVC = '${App.name}/sql-mvc';
   // Auth system
   static const String loginAuth = '${App.name}/login';
+  // Local Database Example
+  static const String localDatabaseExample =
+      '${App.name}/local-database-example';
+  static const String sqfliteCrud = '${App.name}/sqflite-crud';
+  static const String sqlite3Crud = '${App.name}/sqlite3-crud';
   // Examples
   static const String exampleProvider = '${App.name}/provider';
   static const String exampleAuth = "/auth";
@@ -58,7 +62,6 @@ class App extends RouteManager {
     addRoute(App.setting, (context) => const SettingView());
     addRoute(App.loadMore, (context) => const LoadMoreView());
     addRoute(App.loadMoreWithCache, (context) => const LoadMoreWithCacheView());
-    addRoute(App.sqlCrud, (context) => const SqlCRUDView());
     addRoute(App.localNotification, (context) => const LocalNotificationView());
     addRoute(App.example, (context) => const ExampleView());
     // Ads Examples
@@ -75,6 +78,11 @@ class App extends RouteManager {
     addRoute(App.sqlMVC, (context) => const ItemView());
     // Auth System
     addRoute(App.loginAuth, (context) => const LoginView());
+    // Local Database Example
+    addRoute(App.localDatabaseExample,
+        (context) => const LocalDatabaseExampleView());
+    addRoute(App.sqfliteCrud, (context) => const SqfliteCRUDView());
+    addRoute(App.sqlite3Crud, (context) => const Sqlite3CRUDView());
     // Examples
     addRoute(App.exampleProvider, (context) => const ProviderView());
     addRoute(App.exampleAuth, (context) => const AuthView());

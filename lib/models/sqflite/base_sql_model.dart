@@ -8,12 +8,12 @@ abstract class BaseSQLModel {
   String get orderBy;
 
   Future<List<Map<String, dynamic>>> getAll() async {
-    final db = await Sqlite.db();
+    final db = await Sqflite.db();
     return db.query(table, orderBy: orderBy);
   }
 
   Future<Map<String, dynamic>?> getById(int id) async {
-    final db = await Sqlite.db();
+    final db = await Sqflite.db();
     final List<Map<String, dynamic>> maps = await db.query(
       table,
       where: "id = ?",
@@ -23,7 +23,7 @@ abstract class BaseSQLModel {
   }
 
   Future<Map<String, dynamic>?> getBySlug(String slug) async {
-    final db = await Sqlite.db();
+    final db = await Sqflite.db();
     final List<Map<String, dynamic>> maps = await db.query(
       table,
       where: "slug = ?",
@@ -34,7 +34,7 @@ abstract class BaseSQLModel {
 
   static Future<Map<String, dynamic>?> getBy(
       Map<String, dynamic> criteria) async {
-    final db = await Sqlite.db();
+    final db = await Sqflite.db();
     String whereClause = criteria.keys.map((key) => '$key = ?').join(' AND ');
     List<dynamic> whereArgs = criteria.values.toList();
 
@@ -45,7 +45,7 @@ abstract class BaseSQLModel {
 
   Future<int> store(obj) async {
     try {
-      final db = await Sqlite.db();
+      final db = await Sqflite.db();
       final int id = await db.transaction<int>((txn) async {
         // Perform the insert operation inside the transaction
         return await txn.insert(table, obj,
@@ -61,7 +61,7 @@ abstract class BaseSQLModel {
 
   Future<int> update(int id, dynamic obj) async {
     try {
-      final db = await Sqlite.db();
+      final db = await Sqflite.db();
       final int result = await db.transaction<int>((txn) async {
         // Perform the update operation inside the transaction
         return await txn.update(table, obj, where: "id = ?", whereArgs: [id]);
@@ -74,7 +74,7 @@ abstract class BaseSQLModel {
   }
 
   Future<void> delete(int id) async {
-    final db = await Sqlite.db();
+    final db = await Sqflite.db();
     try {
       await db.delete(table, where: "id = ?", whereArgs: [id]);
     } catch (err) {
@@ -83,7 +83,7 @@ abstract class BaseSQLModel {
   }
 
   Future<void> truncate() async {
-    final db = await Sqlite.db();
+    final db = await Sqflite.db();
     try {
       await db.transaction((txn) async {
         await txn.rawDelete('DELETE FROM $table');

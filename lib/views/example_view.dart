@@ -14,6 +14,10 @@ class ExampleView extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
+              title: const Center(child: Text("sqfliteCrud")),
+              onTap: () => Nav.toNamed(context, App.sqfliteCrud),
+            ),
+            ListTile(
               title: const Center(child: Text("Youtube Video")),
               onTap: () => Nav.toNamed(context, App.exampleYoutubeVideo),
             ),

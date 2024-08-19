@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import '../../utils/utils.dart';
 import '../../widgets/widgets.dart';
 
-class SqlCRUDView extends StatefulWidget {
-  const SqlCRUDView({super.key});
+class SqfliteCRUDView extends StatefulWidget {
+  const SqfliteCRUDView({super.key});
   @override
-  State<SqlCRUDView> createState() => _SqlCRUDViewState();
+  State<SqfliteCRUDView> createState() => _SqfliteCRUDViewState();
 }
 
-class _SqlCRUDViewState extends State<SqlCRUDView> {
+class _SqfliteCRUDViewState extends State<SqfliteCRUDView> {
   // All journals
   List<Map<String, dynamic>> _journals = [];
   bool _isLoading = true;
@@ -79,10 +79,10 @@ class _SqlCRUDViewState extends State<SqlCRUDView> {
                       if (id != null) {
                         await _updateItem(id);
                       }
-// Clear the text fields
+                      // Clear the text fields
                       _titleController.text = '';
                       _descriptionController.text = '';
-// Close the bottom sheet
+                      // Close the bottom sheet
                       Navigator.of(context).pop();
                     },
                     child: Text(id == null ? 'Create New' : 'Update'),
@@ -118,7 +118,6 @@ class _SqlCRUDViewState extends State<SqlCRUDView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("SQL CRUD"),
       appBar: const Navbar(title: "SQL CRUD"),
       body: _isLoading
           ? fullScreenLoader()
