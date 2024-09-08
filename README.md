@@ -17,6 +17,7 @@ This Docs given Flutter easy implement Flutter Project
 ## Features
 
 - Core Routes
+- BloC Architecture (Clean Architecture)
 - MVC Architecture 
 - HTTP CRUD Method (MVC Architecture )
 - SQLite CRUD Method (MVC Architecture )
@@ -38,6 +39,9 @@ This Docs given Flutter easy implement Flutter Project
 - Load More Data Using API With Caching API
 - Local Database - CRUD Operation
 - Local Notification
+
+## Examples Bloc
+- CRUD App (Clean Architecture)
 
 ## Examples MVC
 
@@ -127,7 +131,7 @@ To deploy this project run
 ```bash
 flutter.minSdkVersion=23
 flutter.targetSdkVersion=28
-flutter.compileSdkVersion=33
+flutter.compileSdkVersion=35
 ```
 
 ## Tech Stack
@@ -135,6 +139,8 @@ flutter.compileSdkVersion=33
 **Client:** Flutter (No Framework)
 
 **Server:** NONE
+
+**Local Databases:** Sqflite
 
 ## Authors
 

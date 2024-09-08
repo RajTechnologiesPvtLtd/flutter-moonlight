@@ -25,7 +25,9 @@ void main() async {
 }
 
 class MainApp extends StatelessWidget {
-  static late AppSettingsNotifier appSettingsNotifier;
+  static AppSettingsNotifier appSettingsNotifier = AppSettingsNotifier(
+    AppSettings(themeMode: ThemeMode.system, locale: const Locale('en')),
+  );
   const MainApp({super.key});
 
   @override

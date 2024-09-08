@@ -54,15 +54,25 @@ class HomeView extends StatelessWidget {
                 ),
                 const SizedBox(width: 10),
                 ElevatedButton(
-                  onPressed: () => Nav.toNamed(context, App.exampleMVC),
-                  child: const Text("Example MVC"),
+                  onPressed: () => Nav.toNamed(context, App.example),
+                  child: const Text("Examples"),
                 ),
               ],
             ),
             sizedBoxByWidth(10),
-            ElevatedButton(
-              onPressed: () => Nav.toNamed(context, App.example),
-              child: const Text("Examples"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.exampleMVC),
+                  child: const Text("Example MVC"),
+                ),
+                const SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () => Nav.toNamed(context, App.exampleBloc),
+                  child: const Text("Example Bloc"),
+                ),
+              ],
             ),
           ],
         ),

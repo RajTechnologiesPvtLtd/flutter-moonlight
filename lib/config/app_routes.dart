@@ -1,3 +1,6 @@
+import '../bloc/data/repository/todo_sql_repository.dart';
+import '../bloc/presentation/item_page.dart';
+
 import '../core/classes/classes.dart';
 import '../views/views.dart';
 
@@ -22,6 +25,8 @@ class App extends RouteManager {
   static const String interstitialAds = '${App.name}/interstitial-ads';
   // static const String nativeAds = '${App.name}/native-ads';
   // static const String rewardedAds = '${App.name}/rewarded-ads';
+  static const String exampleBloc = "/example-bloc";
+
   //MVC
   static const String exampleMVC = "/example-mvc";
   static const String exampleCounterMVC = "/counter-mvc";
@@ -67,6 +72,12 @@ class App extends RouteManager {
     addRoute(App.interstitialAds, (context) => const InterstitialAdsView());
     // addRoute(App.nativeAds, (context) => const NativeAdsView());
     // addRoute(App.rewardedAds, (context) => const RewardedAdsView());
+    addRoute(
+        App.exampleBloc,
+        (context) => ItemPage(
+              repository: ItemSqlRepository(),
+            ));
+
     //MVC
     addRoute(App.exampleMVC, (context) => const ExampleMVCView());
     addRoute(App.exampleCounterMVC, (context) => const CounterView());
