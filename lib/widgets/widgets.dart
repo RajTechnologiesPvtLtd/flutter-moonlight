@@ -74,3 +74,10 @@ Widget mlButton(String label, void Function() click) {
     child: Text(label),
   );
 }
+
+Widget mlTextButton(String label, void Function() click) {
+  return TextButton(
+    onPressed: click,
+    child: Text(label),
+  );
+}

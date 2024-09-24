@@ -33,6 +33,7 @@ class App extends RouteManager {
   static const String loadMoreMVC = '${App.name}/load-more-mvc';
   static const String sqlMV = '${App.name}/sql-mv';
   static const String sqlMVC = '${App.name}/sql-mvc';
+  static const String sqfliteMVC = '${App.name}/sqflite-mvc';
   // Auth system
   static const String loginAuth = '${App.name}/login';
   // Examples
@@ -84,6 +85,7 @@ class App extends RouteManager {
     addRoute(App.loadMoreMVC, (context) => const LoadMoreViewMVC());
     addRoute(App.sqlMV, (context) => const SqlView());
     addRoute(App.sqlMVC, (context) => const ItemView());
+    addRoute(App.sqfliteMVC, (context) => const SqfliteView());
     // Auth System
     addRoute(App.loginAuth, (context) => const LoginView());
     // Examples
