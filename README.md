@@ -10,6 +10,10 @@ This Docs given Flutter easy implement Flutter Project
  [![sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/bhargavraviya) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/raviyatechnical/membership) [![Buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/raviyatechnical) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/raviyatechnical)
 -----
 
+## Learning Flutter Blogs
+
+[https://medium.com/flutter-framework](https://medium.com/flutter-framework)
+
 ## Screenshots
 
 <img src="screenshot.png" alt="Flutter Moonlight Framework" width="200"/>
@@ -21,6 +25,7 @@ This Docs given Flutter easy implement Flutter Project
 - MVC Architecture 
 - HTTP CRUD Method (MVC Architecture )
 - SQLite CRUD Method (MVC Architecture )
+- SQLite CRUD Methods with dynamic forms (MVC Architecture with Repository Pattern)
 - Local Notification
 - Local Database using sqflite package
 - Switch To Dark or Light Mode
@@ -49,6 +54,8 @@ This Docs given Flutter easy implement Flutter Project
 - Sql CRUD Controller App (CRUD Method)
 - Counter App
 - Load More Data Using API MVC
+- Sqflite CRUD Controller App (CRUD Method - MVC Architecture with Repository Pattern)
+
 
 ## Examples
 
