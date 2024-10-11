@@ -1,8 +1,10 @@
-import '../bloc/data/repository/todo_sql_repository.dart';
-import '../bloc/presentation/item_page.dart';
-
 import '../core/classes/classes.dart';
 import '../views/views.dart';
+// Bloc
+import '../bloc/data/repository/todo_sql_repository.dart';
+import '../bloc/presentation/item_page.dart';
+// GetX
+import '../getx/app.dart';
 
 class Routes extends RouteManager {
   Routes() {
@@ -26,6 +28,7 @@ class App extends RouteManager {
   // static const String nativeAds = '${App.name}/native-ads';
   // static const String rewardedAds = '${App.name}/rewarded-ads';
   static const String exampleBloc = "/example-bloc";
+  static const String exampleGetx = "/example-getx";
 
   //MVC
   static const String exampleMVC = "/example-mvc";
@@ -78,6 +81,7 @@ class App extends RouteManager {
         (context) => ItemPage(
               repository: ItemSqlRepository(),
             ));
+    addRoute(App.exampleGetx, (context) => const GetxApp());
 
     //MVC
     addRoute(App.exampleMVC, (context) => const ExampleMVCView());
@@ -117,8 +121,8 @@ class App extends RouteManager {
         (context) => const FirebaseRemoteConfigView());
     addRoute(
         App.exampleAutocomplete,
-        (context) => DropdownWithSearch(
-              options: const [
+        (context) => const DropdownWithSearch(
+              options: [
                 'Apple',
                 'Banana',
                 'Cherry',

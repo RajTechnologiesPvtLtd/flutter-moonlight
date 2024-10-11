@@ -9,7 +9,7 @@ class ExampleAdsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const Navbar(title: "MVC Examples"),
+      appBar: const Navbar(title: "Ads Examples"),
       body: Center(
         child: ListView(
           children: [

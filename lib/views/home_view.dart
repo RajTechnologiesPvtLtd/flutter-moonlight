@@ -52,7 +52,7 @@ class HomeView extends StatelessWidget {
                   onPressed: () => mlLaunchURL(AppLink.officialWebsite),
                   child: const Text("Official Website"),
                 ),
-                const SizedBox(width: 10),
+                sizedBoxByWidth(10),
                 ElevatedButton(
                   onPressed: () => Nav.toNamed(context, App.example),
                   child: const Text("Examples"),
@@ -67,12 +67,17 @@ class HomeView extends StatelessWidget {
                   onPressed: () => Nav.toNamed(context, App.exampleMVC),
                   child: const Text("Example MVC"),
                 ),
-                const SizedBox(width: 10),
+                sizedBoxByWidth(10),
                 ElevatedButton(
                   onPressed: () => Nav.toNamed(context, App.exampleBloc),
                   child: const Text("Example Bloc"),
                 ),
               ],
+            ),
+            sizedBoxByHeight(10),
+            ElevatedButton(
+              onPressed: () => Nav.toNamed(context, App.exampleGetx),
+              child: const Text("Example Getx"),
             ),
           ],
         ),
