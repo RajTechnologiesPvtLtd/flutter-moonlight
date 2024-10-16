@@ -20,7 +20,6 @@ class _ItemViewState extends State<ItemView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Sql View (MVC)"),
       appBar: const Navbar(title: "Sql View (MVC) [Sqflite]"),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),

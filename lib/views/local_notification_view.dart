@@ -22,7 +22,6 @@ class _LocalNotificationViewState extends State<LocalNotificationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Local Notification"),
       appBar: const Navbar(title: "Local Notification"),
       body: Center(
         child: Column(

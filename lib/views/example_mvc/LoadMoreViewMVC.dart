@@ -63,7 +63,6 @@ class _LoadMoreViewMVCState extends State<LoadMoreViewMVC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Load More MVC"),
       appBar: const Navbar(title: "Load More MVC"),
       body: _buildList(),
     );

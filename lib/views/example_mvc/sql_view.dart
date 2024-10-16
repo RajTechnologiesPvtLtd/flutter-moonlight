@@ -71,43 +71,42 @@ class _SqlViewState extends State<SqlView> {
       _descriptionCtr.text = existingRecord['description'];
     }
     showModalBottomSheet(
-        context: context,
-        elevation: 5,
-        isScrollControlled: true,
-        builder: (_) => Container(
-              padding: EdgeInsets.only(
-                top: 15,
-                left: 15,
-                right: 15,
-                // this will prevent the soft keyboard from covering the text fields
-                bottom: MediaQuery.of(context).viewInsets.bottom + 120,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  MLTextField(labelText: "Title", controller: _titleCtr),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  MLTextField(
-                      labelText: "Description", controller: _descriptionCtr),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  ElevatedButton(
-                    onPressed: () => _saveRecord(id),
-                    child: Text(id == null ? 'Create New' : 'Update'),
-                  )
-                ],
-              ),
-            ));
+      context: context,
+      elevation: 5,
+      isScrollControlled: true,
+      builder: (_) => Container(
+        padding: EdgeInsets.only(
+          top: 15,
+          left: 15,
+          right: 15,
+          // this will prevent the soft keyboard from covering the text fields
+          bottom: MediaQuery.of(context).viewInsets.bottom + 120,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            MLTextField(labelText: "Title", controller: _titleCtr),
+            const SizedBox(
+              height: 10,
+            ),
+            MLTextField(labelText: "Description", controller: _descriptionCtr),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () => _saveRecord(id),
+              child: Text(id == null ? 'Create New' : 'Update'),
+            )
+          ],
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Sql View (MVC)"),
       appBar: const Navbar(title: "Sql View (MVC) [Sqflite]"),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),

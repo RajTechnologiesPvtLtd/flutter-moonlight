@@ -82,7 +82,6 @@ class _LoadMoreWithCacheViewState extends State<LoadMoreWithCacheView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MoonLightDrawer("Load More With Cache"),
       appBar: const Navbar(title: "Load More With Cache"),
       body: _isFirstLoadRunning
           ? fullScreenLoader()
