@@ -1,4 +1,3 @@
-export 'auth_service.dart';
 import 'dart:io';
 
 import 'package:flutter/material.dart';

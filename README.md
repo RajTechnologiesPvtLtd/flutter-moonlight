@@ -22,6 +22,7 @@ This Docs given Flutter easy implement Flutter Project
 
 - Core Routes
 - BloC Architecture (Clean Architecture)
+- Getx Architecture
 - MVC Architecture 
 - HTTP CRUD Method (MVC Architecture )
 - SQLite CRUD Method (MVC Architecture )
@@ -55,7 +56,6 @@ This Docs given Flutter easy implement Flutter Project
 - Counter App
 - Load More Data Using API MVC
 - Sqflite CRUD Controller App (CRUD Method - MVC Architecture with Repository Pattern)
-
 
 ## Examples
 
@@ -93,6 +93,18 @@ This Docs given Flutter easy implement Flutter Project
 
 [Documentation](https://rajtechnologiespvtltd.github.io/flutter-moonlight/docs) -->
 
+
+## Android Version Details (add local.properties)
+
+```bash
+flutter.versionName=1.0.0
+flutter.versionCode=1
+flutter.minSdkVersion=23
+flutter.targetSdkVersion=34
+flutter.compileSdkVersion=35
+flutter.buildMode=release
+```
+
 ## Run Locally
 
 Clone the project
@@ -125,7 +137,7 @@ Start the server
 flutter run
 ```
 
-## Deployment For Android
+## Test App (APK) For Android
 
 To deploy this project run
 
@@ -133,30 +145,34 @@ To deploy this project run
   flutter build apk --release
 ```
 
-## add local.properties
+## Deployment For Android
+
+To deploy this project run
 
 ```bash
-flutter.minSdkVersion=23
-flutter.targetSdkVersion=28
-flutter.compileSdkVersion=35
+  flutter build appbundle --release
 ```
 
 ## Tech Stack
 
 **Client:** Flutter (No Framework)
 
-**Server:** NONE
+**Server:** REST API (Sample API)
 
 **Local Databases:** Sqflite
+
+##  Google Mobile Ads
+
+https://github.com/firebase/quickstart-android/blob/master/mock-google-services.json
 
 ## Authors
 
 - [Bhargav Raviya](https://www.github.com/bhargavraviya)
 
+## Support - Hire / Leaning Connect on LinkedIn
+
+[https://www.linkedin.com/in/bhargavraviya](https://www.linkedin.com/in/bhargavraviya)
+
 ## License
 
 [MIT](https://github.com/RajTechnologiesPvtLtd/flutter-moonlight/blob/master/LICENSE)
-
-##  Google Mobile Ads
-
-https://github.com/firebase/quickstart-android/blob/master/mock-google-services.json

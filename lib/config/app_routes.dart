@@ -1,5 +1,5 @@
 import '../core/classes/classes.dart';
-import '../views/views.dart';
+import '../modules/modules.dart';
 // Bloc
 import '../bloc/data/repository/todo_sql_repository.dart';
 import '../bloc/presentation/item_page.dart';
@@ -29,6 +29,14 @@ class App extends RouteManager {
   // static const String rewardedAds = '${App.name}/rewarded-ads';
   static const String exampleBloc = "/example-bloc";
   static const String exampleGetx = "/example-getx";
+  // Modules
+  static const String infiniteScrollPagination =
+      '${App.name}/infinite-scroll-pagination';
+  static const String infiniteScrollUsingApi =
+      '${App.name}/infinite-scroll-using-api';
+  static const String fetchDataFromAPI = '${App.name}/fetch-data-from-api';
+  // Package Examples
+  static const String packageExamples = '${App.name}/package-examples';
 
   //MVC
   static const String exampleMVC = "/example-mvc";
@@ -83,6 +91,13 @@ class App extends RouteManager {
             ));
     addRoute(App.exampleGetx, (context) => const GetxApp());
 
+    // Modules
+    addRoute(App.infiniteScrollPagination,
+        (context) => const InfiniteScrollPaginationView());
+    addRoute(App.infiniteScrollUsingApi,
+        (context) => const InfiniteScrollUsingAPIView());
+    addRoute(App.fetchDataFromAPI, (context) => const FetchDataFromAPIView());
+    addRoute(App.packageExamples, (context) => const PackageExampleView());
     //MVC
     addRoute(App.exampleMVC, (context) => const ExampleMVCView());
     addRoute(App.exampleCounterMVC, (context) => const CounterView());

@@ -3,10 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../core/classes/classes.dart';
-import 'base_repository.dart';
 import 'package:sqflite/sqflite.dart' as sql;
 
-abstract class SqfliteRepository extends BaseRepository {
+abstract class SqfliteRepository {
   String get table;
   String get orderBy;
   int get perPage => 10;

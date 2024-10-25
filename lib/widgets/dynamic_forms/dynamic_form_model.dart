@@ -7,14 +7,10 @@ enum DynamicFormFieldType {
   date,
   time,
   datetime,
-  checkbox,
+  checkbox
 }
 
-enum DynamicFormType {
-  view,
-  dialog,
-  bottomSheet,
-}
+enum DynamicFormType { view, dialog, bottomSheet }
 
 class DynamicFormField {
   final String key;

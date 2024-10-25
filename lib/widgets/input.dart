@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
 
-import '../utils/utils.dart';
+import '../utils.dart';
 
 // Widget customSelect(ctr) {
 //   return DropdownButtonFormField<String>(
@@ -250,6 +250,50 @@ class MLDateTimeField extends StatelessWidget {
 
             onChanged?.call(formattedDate);
           }
+        }
+      },
+    );
+  }
+}
+
+class MLDateField extends StatelessWidget {
+  final String labelText;
+  final String? hintText;
+  final String dateFormat;
+  final TextEditingController controller;
+  final Function(String)? onChanged;
+
+  const MLDateField({
+    required this.labelText,
+    required this.controller,
+    this.hintText,
+    this.onChanged,
+    this.dateFormat = "yyyy-MM-dd",
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        labelText: labelText,
+        hintText: hintText,
+        suffixIcon: const Icon(Icons.calendar_today),
+      ),
+      readOnly: true, // Prevents manual editing
+      onTap: () async {
+        DateTime? pickedDateTime = await showDatePicker(
+          context: context,
+          initialDate: DateTime.now(),
+          firstDate: DateTime(2000),
+          lastDate: DateTime(2101),
+        );
+
+        if (pickedDateTime != null) {
+          String formattedDate = DateFormat(dateFormat).format(pickedDateTime);
+          controller.text = formattedDate;
+          onChanged?.call(formattedDate);
         }
       },
     );

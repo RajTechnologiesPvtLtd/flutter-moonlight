@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../widgets.dart';
 import 'dynamic_form_model.dart';
 
+// ignore: must_be_immutable
 class DynamicForm extends StatefulWidget {
   int? recordId;
   String? title;
@@ -12,14 +13,23 @@ class DynamicForm extends StatefulWidget {
   final formKey = GlobalKey<FormState>();
   final List<DynamicFormField> fields;
   final DynamicFormType type;
+  final Function(Map<String, dynamic>)? onSubmit;
   DynamicForm({
     super.key,
     this.recordId,
+    this.record,
     this.title,
     required this.fields,
     this.type = DynamicFormType.view,
     GlobalKey<FormState>? formKey,
+    this.onSubmit,
   });
+
+  Map<String, String?> getValues() {
+    return fields
+        .asMap()
+        .map((index, field) => MapEntry(field.key, field.value));
+  }
 
   @override
   State<DynamicForm> createState() => _DynamicFormState();
@@ -41,6 +51,9 @@ class _DynamicFormState extends State<DynamicForm> {
   initializeControllers() {
     for (var field in widget.fields) {
       controllers[field.key] = TextEditingController();
+      if (widget.record != null) {
+        controllers[field.key]!.text = widget.record![field.key].toString();
+      }
     }
   }
 
@@ -59,12 +72,18 @@ class _DynamicFormState extends State<DynamicForm> {
   submitAction() async {
     if (widget.formKey.currentState!.validate()) {
       widget.formKey.currentState!.save();
-      inspect("Form is valid");
+      final values =
+          controllers.map((key, controller) => MapEntry(key, controller.text));
+      if (widget.onSubmit != null) {
+        widget.onSubmit!(values);
+        Navigator.of(context).pop();
+      }
     }
   }
 
   closeAction() async {
-    inspect(widget.formKey.currentState!.validate());
+    disposeControllers();
+    Navigator.of(context).pop();
   }
 
   optionAction() async {

@@ -16,7 +16,7 @@ class _YoutubeVideoPlayerState extends State<YoutubeVideoPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: this.widget.code,
+      initialVideoId: widget.code,
       flags: const YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
