@@ -82,6 +82,11 @@ class ExampleView extends StatelessWidget {
               title: const Center(child: Text("Input Fields Example")),
               onTap: () => Nav.toNamed(context, App.exampleInputFields),
             ),
+            ListTile(
+              title: const Center(child: Text("Dynamic Multi Form")),
+              onTap: () =>
+                  Nav.toNamed(context, App.exampleDynamicMultiFormView),
+            ),
           ],
         ),
       ),

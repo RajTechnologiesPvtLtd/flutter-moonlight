@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widgets/widgets.dart';
+import '../../routes.dart';
 import 'home_controller.dart';
 import 'item_model.dart';
 
@@ -65,6 +66,12 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.login),
+            onPressed: () => Get.toNamed(Routes.login),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showForm(null),

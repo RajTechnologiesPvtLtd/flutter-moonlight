@@ -49,6 +49,10 @@ This Docs given Flutter easy implement Flutter Project
 ## Examples Bloc
 - CRUD App (Clean Architecture)
 
+## Examples Getx
+- CRUD App
+- Auth (Coming Soon)
+
 ## Examples MVC
 
 - CRUD Controller App (HTTP CRUD Method)
@@ -75,6 +79,7 @@ This Docs given Flutter easy implement Flutter Project
 - Firebase Remote Config
 - Count Provider (provider package)
 - Permission Handler (permission_handler package)
+- Dynamic Multi Form 
   
 ## Reusable Widgets
 
@@ -151,6 +156,14 @@ To deploy this project run
 
 ```bash
   flutter build appbundle --release
+```
+
+## Logo Generator
+
+To generator this project run
+
+```bash
+  flutter pub pub run flutter_launcher_icons
 ```
 
 ## Tech Stack
