@@ -1,11 +1,13 @@
 import 'package:get/get.dart';
 
+import 'middlewares/middlewares.dart';
 import 'modules/modules.dart';
 
 abstract class Routes {
   Routes._();
+  static const auth = '/auth';
   static const home = '/home';
-  static const login = '/login';
+  static const items = '/items';
 }
 
 class AppPages {
@@ -15,15 +17,20 @@ class AppPages {
 
   static final routes = [
     GetPage(
+      name: Routes.auth,
+      page: () => const AuthView(),
+      binding: AuthBinding(),
+      middlewares: [AuthMiddleware()],
+    ),
+    GetPage(
       name: Routes.home,
       page: () => const HomeView(),
-      binding: HomeBinding(),
+      middlewares: [AuthMiddleware()],
     ),
-    // Auth
     GetPage(
-      name: Routes.login,
-      page: () => const LoginView(),
-      binding: AuthBinding(),
+      name: Routes.items,
+      page: () => const ItemView(),
+      binding: ItemBinding(),
     ),
   ];
 }

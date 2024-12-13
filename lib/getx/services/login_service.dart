@@ -1,7 +1,7 @@
 import 'package:get/get_connect.dart';
 import 'package:get/get_connect/http/src/status/http_status.dart';
 
-import '../models/models.dart';
+import '../modules/auth/models/models.dart';
 
 /// LoginService responsible to communicate with web-server
 /// via authenticaton related APIs
@@ -18,7 +18,8 @@ class LoginService extends GetConnect {
     });
     if (response.statusCode == HttpStatus.ok) {
       // print(response.body['data']['token']);
-      return LoginResponseModel.fromJson(response.body['data']);
+      // return LoginResponseModel.fromJson(response.body['data']);
+      return LoginResponseModel.fromJson(response.body);
     } else {
       return null;
     }

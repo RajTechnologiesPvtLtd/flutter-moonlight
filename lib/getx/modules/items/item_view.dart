@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widgets/widgets.dart';
-import '../../routes.dart';
-import 'home_controller.dart';
-import 'item_model.dart';
+import '../modules.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+class ItemView extends GetView<ItemController> {
+  const ItemView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +63,7 @@ class HomeView extends GetView<HomeController> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.login),
-            onPressed: () => Get.toNamed(Routes.login),
-          ),
-        ],
+        title: const Text('Sqlite CRUD'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showForm(null),

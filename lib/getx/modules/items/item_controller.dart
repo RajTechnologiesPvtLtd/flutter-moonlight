@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../repositories/item_repository.dart';
 import 'item_model.dart';
 
-class HomeController extends GetxController {
+class ItemController extends GetxController {
   final ItemRepository _repo = ItemRepository();
   ScrollController scrollController = ScrollController();
   int get perPage => _repo.perPage;
@@ -27,8 +27,8 @@ class HomeController extends GetxController {
   }
 
   Future<void> loadRecords() async {
-    List measurements = await _repo.getPaginate();
-    records.addAll(measurements.map((e) => ItemModel.fromJson(e)));
+    List newRecords = await _repo.getPaginate();
+    records.addAll(newRecords.map((e) => ItemModel.fromJson(e)));
   }
 
   Future<void> save(ItemModel record) async {
