@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,14 +11,24 @@ class ItemController extends GetxController {
   int get perPage => _repo.perPage;
 
   RxList<Item> records = <Item>[].obs;
-  var isLoading = false.obs;
-  var currentPage = 0.obs;
-  var totalItems = 0.obs;
+  RxBool isLoading = false.obs;
+  // RxInt currentPage = 0.obs;
+  // RxInt totalItems = 0.obs;
+  // Filter with search text
+  Timer? _debounce;
+  RxString search = ''.obs;
 
   @override
   void onInit() {
     super.onInit();
     loadInitialData();
+  }
+
+  @override
+  void onClose() {
+    // Dispose the debounce timer when the controller is closed
+    _debounce?.cancel();
+    super.onClose();
   }
 
   Future<void> loadInitialData() async {
@@ -26,8 +37,23 @@ class ItemController extends GetxController {
     isLoading(false);
   }
 
-  Future<void> loadRecords() async {
-    List newRecords = await _repo.getPaginate();
+  void onSearchChanged(String value) {
+    // Cancel any previous timer
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    _debounce = Timer(const Duration(milliseconds: 2000), () {
+      search.value = value;
+      loadRecords(search: value);
+    });
+  }
+
+  Future<void> loadRecords({
+    String? search,
+  }) async {
+    List newRecords = await _repo.getPaginate(
+      queryParams: {
+        'title': search,
+      },
+    );
     records.addAll(newRecords.map((e) => ItemModel.fromJson(e)));
   }
 

@@ -52,6 +52,7 @@ class LocalNotification {
       body,
       RepeatInterval.everyMinute,
       notificationDetails,
+      androidScheduleMode: AndroidScheduleMode.exact,
     );
   }
 

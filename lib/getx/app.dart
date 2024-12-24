@@ -10,11 +10,22 @@ class GetxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // AppTranslations.init();
     Get.put(AuthController());
     return GetMaterialApp(
       title: AppConfig.name,
       initialRoute: AppPages.initial,
       getPages: AppPages.routes,
+      theme: ThemeData.light(
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData.dark(
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
+      // locale: const Locale('en', 'US'),
+      // translations: AppTranslations(),
+      // fallbackLocale: const Locale('en'),
     );
   }
 }

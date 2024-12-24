@@ -4,37 +4,37 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.4.3 <4.0.0'
+  sdk: ^3.6.0
 
 dependencies:
   flutter:
     sdk: flutter
-  share_plus: ^9.0.0
-  url_launcher: ^6.3.0
-  http: ^1.2.1
-  dio: ^5.4.3+1
-  connectivity_plus: ^6.0.3
+  share_plus: ^10.1.3
+  url_launcher: ^6.3.1
+  http: ^1.2.2
+  dio: ^5.7.0
+  connectivity_plus: ^6.1.1
   permission_handler: ^11.3.1
   image_picker: ^1.1.2
   # state management and database
-  sqflite: ^2.3.3+1
-  shared_preferences: ^2.2.3
+  sqflite: ^2.4.1
+  shared_preferences: ^2.3.4
   provider: ^6.1.2
-  firebase_remote_config: ^5.0.2
+  firebase_remote_config: ^5.2.0
   # notification
-  flutter_local_notifications: ^17.2.1
-  firebase_core: ^3.1.1
-  firebase_messaging: ^15.0.2
+  flutter_local_notifications: ^18.0.1
+  firebase_core: ^3.9.0
+  firebase_messaging: ^15.1.6
   # earning
-  google_mobile_ads: ^5.1.0
+  google_mobile_ads: ^5.2.0
   # UI
-  youtube_player_flutter: ^9.0.1
+  youtube_player_flutter: ^9.1.1
   # localizations
   flutter_localizations:
     sdk: flutter
   intl: any
-  flutter_gen: ^5.6.0
-  geolocator: ^12.0.0
+  flutter_gen: ^5.8.0
+  geolocator: ^13.0.2
   # Framework
   flutter_bloc: ^8.1.6
   get: ^4.6.6
@@ -43,7 +43,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true

@@ -70,6 +70,7 @@ class App extends RouteManager {
   static const String exampleAutocomplete = "/autocomplete";
   static const String exampleGeoLocation = "/geo-location";
   static const String exampleDynamicMultiFormView = "/dynamic-multi-form";
+  static const String exampleTopSearchBar = "/top-search-bar";
 
   App() {
     addRoute(App.home, (context) => const HomeView());
@@ -152,5 +153,6 @@ class App extends RouteManager {
     addRoute(App.exampleGeoLocation, (context) => const GeoLocationView());
     addRoute(App.exampleDynamicMultiFormView,
         (context) => const DynamicMultiFormView());
+    addRoute(App.exampleTopSearchBar, (context) => const TopSearchBarView());
   }
 }

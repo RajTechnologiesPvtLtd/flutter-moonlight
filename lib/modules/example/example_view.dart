@@ -87,6 +87,10 @@ class ExampleView extends StatelessWidget {
               onTap: () =>
                   Nav.toNamed(context, App.exampleDynamicMultiFormView),
             ),
+            ListTile(
+              title: const Center(child: Text("Top Search Bar")),
+              onTap: () => Nav.toNamed(context, App.exampleTopSearchBar),
+            ),
           ],
         ),
       ),

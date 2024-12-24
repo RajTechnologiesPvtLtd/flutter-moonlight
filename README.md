@@ -79,7 +79,8 @@ This Docs given Flutter easy implement Flutter Project
 - Firebase Remote Config
 - Count Provider (provider package)
 - Permission Handler (permission_handler package)
-- Dynamic Multi Form 
+- Dynamic Multi Form
+- Top Search Bar (SearchDelegate and ListView)
   
 ## Reusable Widgets
 

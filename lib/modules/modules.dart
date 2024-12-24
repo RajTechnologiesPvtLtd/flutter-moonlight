@@ -26,6 +26,7 @@ export 'example/data_table_view.dart';
 export 'example/paginated_data_table.dart';
 export 'example/autocomplete_fields_example.dart';
 export 'example/dynamic_multi_form/dynamic_multi_form_view.dart';
+export 'example/top_search_bar_view.dart';
 // Ads Examples
 export 'example_ads/example_ads_view.dart';
 export 'example_ads/banner_ads_view.dart';

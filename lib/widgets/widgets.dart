@@ -81,3 +81,67 @@ Widget mlTextButton(String label, void Function() click) {
     child: Text(label),
   );
 }
+
+class CustomSearchDelegate extends SearchDelegate {
+  List<String> searchResults = [
+    'Brazil',
+    'Argentina',
+    'USA',
+    'Canada',
+    'Mexico',
+    'Germany',
+    'France',
+    'Italy',
+    'India',
+    'Spain',
+  ];
+
+  @override
+  List<Widget>? buildActions(BuildContext context) => [
+        IconButton(
+          icon: const Icon(Icons.clear),
+          onPressed: () {
+            if (query.isEmpty) {
+              close(context, null);
+            } else {
+              query = '';
+            }
+          },
+        ),
+      ];
+
+  @override
+  Widget? buildLeading(BuildContext context) => IconButton(
+        icon: const Icon(Icons.arrow_back),
+        onPressed: () {
+          close(context, null);
+        },
+      );
+
+  @override
+  Widget buildResults(BuildContext context) => Center(
+        child: Text(query),
+      );
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    List<String> suggestions = query.isEmpty
+        ? searchResults
+        : searchResults
+            .where((element) =>
+                element.toLowerCase().contains(query.toLowerCase()))
+            .toList();
+    return ListView.builder(
+      itemCount: suggestions.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(suggestions[index]),
+          onTap: () {
+            query = suggestions[index];
+            showResults(context);
+          },
+        );
+      },
+    );
+  }
+}
