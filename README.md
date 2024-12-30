@@ -81,6 +81,7 @@ This Docs given Flutter easy implement Flutter Project
 - Permission Handler (permission_handler package)
 - Dynamic Multi Form
 - Top Search Bar (SearchDelegate and ListView)
+- Filter Chip (Using REST API)
   
 ## Reusable Widgets
 
