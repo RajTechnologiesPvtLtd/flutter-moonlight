@@ -6,7 +6,6 @@ class AppConfig {
   static String rateThisAppLink =
       "http://play.google.com/store/apps/details?id=com.rajtechnologies.StockMarketProfitCalculator";
   static String defaultLanguage = "en";
-
   // Google Mobile Ads
   static String get bannerAdUnitId {
     if (Platform.isAndroid) {

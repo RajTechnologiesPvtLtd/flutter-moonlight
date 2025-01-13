@@ -16,11 +16,14 @@ dependencies:
   connectivity_plus: ^6.1.1
   permission_handler: ^11.3.1
   image_picker: ^1.1.2
-  # state management and database
-  sqflite: ^2.4.1
+  # storage
   shared_preferences: ^2.3.4
-  provider: ^6.1.2
+  get_storage: ^2.1.1
+  flutter_secure_storage: ^9.2.4
   firebase_remote_config: ^5.2.0
+  # database
+  hive_flutter: ^1.1.0
+  sqflite: ^2.4.1
   # notification
   flutter_local_notifications: ^18.0.1
   firebase_core: ^3.9.0
@@ -35,10 +38,10 @@ dependencies:
   intl: any
   flutter_gen: ^5.8.0
   geolocator: ^13.0.2
-  # Framework
-  flutter_bloc: ^8.1.6
+  # Framework / State Management
+  provider: ^6.1.2
   get: ^4.6.6
-  get_storage: ^2.1.1
+  flutter_bloc: ^8.1.6  
 
 dev_dependencies:
   flutter_test:

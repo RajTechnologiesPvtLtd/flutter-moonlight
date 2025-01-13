@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../config/config.dart';
 import 'modules/modules.dart';
 import 'routes.dart';
+
+class AppConfig {
+  static const String name = 'MoonLight';
+  static String cacheIsOnboarding = "isOnboarding";
+}
 
 class GetxApp extends StatelessWidget {
   const GetxApp({super.key});

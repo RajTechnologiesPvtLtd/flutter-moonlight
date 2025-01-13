@@ -15,6 +15,10 @@ class ExampleView extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
+              title: const Center(child: Text("Cache Examples")),
+              onTap: () => Nav.toNamed(context, App.exampleCache),
+            ),
+            ListTile(
               title: const Center(child: Text("Infinite Scroll Pagination")),
               onTap: () => Nav.toNamed(context, App.infiniteScrollPagination),
             ),
@@ -94,6 +98,10 @@ class ExampleView extends StatelessWidget {
             ListTile(
               title: const Center(child: Text("Filter Chip")),
               onTap: () => Nav.toNamed(context, App.exampleFilterChip),
+            ),
+            ListTile(
+              title: const Center(child: Text("OnBoarding (Walkthrough)")),
+              onTap: () => Nav.toNamed(context, App.exampleOnboarding),
             ),
           ],
         ),

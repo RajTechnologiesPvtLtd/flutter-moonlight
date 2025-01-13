@@ -299,3 +299,112 @@ class MLDateField extends StatelessWidget {
     );
   }
 }
+
+class MLNumberFieldWithButton extends StatefulWidget {
+  final TextEditingController controller;
+  final String labelText;
+  final int minValue;
+  final int maxValue;
+  final TextInputType? keyboardType;
+  final bool readOnly;
+  final List<TextInputFormatter>? inputFormatters;
+
+  const MLNumberFieldWithButton({
+    super.key,
+    required this.controller,
+    required this.labelText,
+    this.minValue = 0,
+    this.maxValue = 10,
+    this.keyboardType = TextInputType.number,
+    this.readOnly = false,
+    this.inputFormatters,
+  });
+
+  @override
+  State<MLNumberFieldWithButton> createState() =>
+      _MLNumberFieldWithButtonState();
+}
+
+class _MLNumberFieldWithButtonState extends State<MLNumberFieldWithButton> {
+  int currentValue = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    currentValue = int.tryParse(widget.controller.text) ?? widget.minValue;
+    widget.controller.text = currentValue.toString();
+  }
+
+  void increment() {
+    if (currentValue < widget.maxValue) {
+      setState(() {
+        currentValue++;
+        widget.controller.text = currentValue.toString();
+      });
+    }
+  }
+
+  void decrement() {
+    if (currentValue > widget.minValue) {
+      setState(() {
+        currentValue--;
+        widget.controller.text = currentValue.toString();
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: IconButton(
+              onPressed: decrement,
+              icon: const Icon(Icons.remove),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: TextFormField(
+              readOnly: widget.readOnly,
+              controller: widget.controller,
+              keyboardType: widget.keyboardType,
+              inputFormatters: widget.inputFormatters,
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                // labelText: widget.labelText,
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.zero,
+                // contentPadding:
+                //     EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                // filled: true,
+                // fillColor: Colors.grey[200],
+              ),
+              onChanged: (value) {
+                final parsedValue = int.tryParse(value);
+                if (parsedValue != null &&
+                    parsedValue >= widget.minValue &&
+                    parsedValue <= widget.maxValue) {
+                  setState(() {
+                    currentValue = parsedValue;
+                  });
+                } else {
+                  widget.controller.text = currentValue.toString();
+                }
+              },
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: IconButton(
+              onPressed: increment,
+              icon: const Icon(Icons.add),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

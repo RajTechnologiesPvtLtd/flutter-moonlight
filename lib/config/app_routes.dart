@@ -72,6 +72,8 @@ class App extends RouteManager {
   static const String exampleDynamicMultiFormView = "/dynamic-multi-form";
   static const String exampleTopSearchBar = "/top-search-bar";
   static const String exampleFilterChip = "/filter-chip";
+  static const String exampleOnboarding = "/onboarding";
+  static const String exampleCache = "/cache";
 
   App() {
     addRoute(App.home, (context) => const HomeView());
@@ -156,5 +158,7 @@ class App extends RouteManager {
         (context) => const DynamicMultiFormView());
     addRoute(App.exampleTopSearchBar, (context) => const TopSearchBarView());
     addRoute(App.exampleFilterChip, (context) => const FilterChipView());
+    addRoute(App.exampleOnboarding, (context) => const OnboardingView());
+    addRoute(App.exampleCache, (context) => const CacheView());
   }
 }

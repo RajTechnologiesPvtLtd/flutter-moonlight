@@ -5,6 +5,7 @@ import 'modules/modules.dart';
 
 abstract class Routes {
   Routes._();
+  static const onboarding = '/';
   static const auth = '/auth';
   static const home = '/home';
   static const items = '/items';
@@ -13,9 +14,14 @@ abstract class Routes {
 class AppPages {
   AppPages._();
 
-  static const initial = Routes.home;
+  static const initial = Routes.onboarding;
 
   static final routes = [
+    GetPage(
+      name: Routes.onboarding,
+      page: () => const OnboardingView(),
+      binding: OnboardingBinding(),
+    ),
     GetPage(
       name: Routes.auth,
       page: () => const AuthView(),
