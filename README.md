@@ -86,6 +86,7 @@ This Docs given Flutter easy implement Flutter Project
 - Top Search Bar (SearchDelegate and ListView)
 - Filter Chip (Using REST API)
 - Cache (Shared Preferences, GetStorage, Hive, and Secure Storage Benchmarks)
+- Sensors (sensors_plus)
   
 ## Reusable Widgets
 

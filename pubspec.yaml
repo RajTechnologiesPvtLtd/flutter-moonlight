@@ -42,6 +42,7 @@ dependencies:
   provider: ^6.1.2
   get: ^4.6.6
   flutter_bloc: ^8.1.6  
+  sensors_plus: ^6.1.1
 
 dev_dependencies:
   flutter_test:

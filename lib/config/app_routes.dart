@@ -74,6 +74,7 @@ class App extends RouteManager {
   static const String exampleFilterChip = "/filter-chip";
   static const String exampleOnboarding = "/onboarding";
   static const String exampleCache = "/cache";
+  static const String exampleSensors = "/sensors";
 
   App() {
     addRoute(App.home, (context) => const HomeView());
@@ -160,5 +161,6 @@ class App extends RouteManager {
     addRoute(App.exampleFilterChip, (context) => const FilterChipView());
     addRoute(App.exampleOnboarding, (context) => const OnboardingView());
     addRoute(App.exampleCache, (context) => const CacheView());
+    addRoute(App.exampleSensors, (context) => const SensorView());
   }
 }

@@ -30,6 +30,7 @@ export 'example/top_search_bar_view.dart';
 export 'example/filter_chip_view.dart';
 export 'example/onboarding_view.dart';
 export 'example/cache_view.dart';
+export 'example/sensor_view.dart';
 // Ads Examples
 export 'example_ads/example_ads_view.dart';
 export 'example_ads/banner_ads_view.dart';
