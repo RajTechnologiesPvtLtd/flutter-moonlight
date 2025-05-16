@@ -111,6 +111,7 @@ This Docs given Flutter easy implement Flutter Project
 ```bash
 flutter.versionName=1.0.0
 flutter.versionCode=1
+flutter.ndkVersion=27.0.12077973
 flutter.minSdkVersion=23
 flutter.targetSdkVersion=34
 flutter.compileSdkVersion=35
