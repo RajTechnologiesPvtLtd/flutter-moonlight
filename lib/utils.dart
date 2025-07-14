@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -84,4 +85,25 @@ InputDecoration inputDecoration(String labelText, IconData iconData,
         borderRadius: BorderRadius.circular(30),
         borderSide: const BorderSide(color: Colors.black)),
   );
+}
+
+String formatDateTime(DateTime dateTime) {
+  final DateFormat dateFormat = DateFormat('hh:mm a');
+  return dateFormat.format(dateTime);
+}
+
+extension NameInitials on String {
+  String getInitials({int limit = 2}) {
+    // Remove special characters and split by spaces
+    final words = replaceAll(RegExp(r'[^a-zA-Z0-9\s]'), '').split(RegExp(r'\s+'));
+
+    // Extract the first letter of each word, up to the specified limit
+    final initials = words
+        .where((word) => word.isNotEmpty)
+        .take(limit)
+        .map((word) => word[0].toUpperCase())
+        .join();
+
+    return initials;
+  }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../utils.dart';
+import '../config/config.dart';
 
 export 'navbar.dart';
 export 'drawer.dart';
@@ -144,4 +146,42 @@ class CustomSearchDelegate extends SearchDelegate {
       },
     );
   }
+}
+
+Widget generateCircleAvatar({
+  required String name,
+  Color backgroundColor = Colors.blue,
+  Color textColor = Colors.white,
+  double radius = 20.0,
+}) {
+  return CircleAvatar(
+    radius: radius,
+    backgroundColor: backgroundColor,
+    child: Text(
+      name.getInitials(),
+      style: TextStyle(color: textColor),
+    ),
+  );
+}
+
+Widget mlImage(String imageUrl,{
+  String? name
+}) {
+return Image.network(
+    imageUrl,
+    width: 50,
+    height: 50,
+    fit: BoxFit.cover,
+    errorBuilder: (context, error, stackTrace) {
+      if (name != null && name.trim().isNotEmpty) {
+        return generateCircleAvatar(name: name);
+      }
+      return Image.asset(
+        AppConfig.defaultLogo,
+        width: 50,
+        height: 50,
+        fit: BoxFit.cover,
+      );
+    },
+  );
 }

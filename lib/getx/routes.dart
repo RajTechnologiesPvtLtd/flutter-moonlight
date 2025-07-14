@@ -9,6 +9,7 @@ abstract class Routes {
   static const auth = '/auth';
   static const home = '/home';
   static const items = '/items';
+  static const chats = '/chats';
 }
 
 class AppPages {
@@ -37,6 +38,13 @@ class AppPages {
       name: Routes.items,
       page: () => const ItemView(),
       binding: ItemBinding(),
+    ),
+    GetPage(
+      name: Routes.chats,
+      page: () => const ChatView(),
+      binding: BindingsBuilder(() {
+        Get.put(ChatController());
+      }),
     ),
   ];
 }

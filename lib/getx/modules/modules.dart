@@ -8,3 +8,5 @@ export 'items/item_binding.dart';
 export 'items/item_model.dart';
 export 'items/item_controller.dart';
 export 'items/item_view.dart';
+export 'chats/chat_controller.dart';
+export 'chats/chat_view.dart';

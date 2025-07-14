@@ -75,6 +75,7 @@ class App extends RouteManager {
   static const String exampleOnboarding = "/onboarding";
   static const String exampleCache = "/cache";
   static const String exampleSensors = "/sensors";
+  static const String exampleChats = "/chats";
 
   App() {
     addRoute(App.home, (context) => const HomeView());
@@ -162,5 +163,6 @@ class App extends RouteManager {
     addRoute(App.exampleOnboarding, (context) => const OnboardingView());
     addRoute(App.exampleCache, (context) => const CacheView());
     addRoute(App.exampleSensors, (context) => const SensorView());
+    addRoute(App.exampleChats, (context) => const ChatView());
   }
 }

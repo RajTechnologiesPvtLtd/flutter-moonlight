@@ -55,6 +55,7 @@ This Docs given Flutter easy implement Flutter Project
 - Onboarding
 - CRUD App
 - Auth (Coming Soon)
+- Chats UI
 
 ## Examples MVC
 
@@ -87,6 +88,7 @@ This Docs given Flutter easy implement Flutter Project
 - Filter Chip (Using REST API)
 - Cache (Shared Preferences, GetStorage, Hive, and Secure Storage Benchmarks)
 - Sensors (sensors_plus)
+- Chats UI
   
 ## Reusable Widgets
 

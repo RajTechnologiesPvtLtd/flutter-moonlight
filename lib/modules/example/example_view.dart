@@ -107,6 +107,10 @@ class ExampleView extends StatelessWidget {
               title: const Center(child: Text("Sensors")),
               onTap: () => Nav.toNamed(context, App.exampleSensors),
             ),
+            ListTile(
+              title: const Center(child: Text("Chats Example")),
+              onTap: () => Nav.toNamed(context, App.exampleChats),
+            ),
           ],
         ),
       ),

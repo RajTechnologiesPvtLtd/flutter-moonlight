@@ -16,6 +16,10 @@ class HomeView extends GetView {
             icon: const Icon(Icons.logout),
             onPressed: () => Get.find<AuthController>().logOut(),
           ),
+          IconButton(
+            icon: const Icon(Icons.chat),
+            onPressed: () => Get.toNamed(Routes.chats ),
+          ),
         ],
       ),
       body: Padding(
@@ -26,6 +30,12 @@ class HomeView extends GetView {
               child: ListTile(
                 onTap: () => Get.toNamed(Routes.items),
                 title: const Text('Sqflite CRUD'),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                onTap: () => Get.toNamed(Routes.chats),
+                title: const Text('Chat Example'),
               ),
             ),
           ],

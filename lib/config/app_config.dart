@@ -6,6 +6,9 @@ class AppConfig {
   static String rateThisAppLink =
       "http://play.google.com/store/apps/details?id=com.rajtechnologies.StockMarketProfitCalculator";
   static String defaultLanguage = "en";
+  static String developerName = "Bhargav Raviya";
+  // Assets Paths
+  static const String defaultLogo = 'assets/images/logo.jpeg';
   // Google Mobile Ads
   static String get bannerAdUnitId {
     if (Platform.isAndroid) {
