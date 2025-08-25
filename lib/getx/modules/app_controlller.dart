@@ -11,20 +11,29 @@ class AppController extends GetxController {
   RxString currentVersion = "".obs;
   RxString newAppUrl = "".obs;
 
+  @override
   void onInit() async {
     super.onInit();
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    currentVersion.value = packageInfo.version;
-    print(currentVersion.value);
     checkLatestVersion();
+      _initVersionCheck(); // Safe async call
+
   }
+
+Future<void> _initVersionCheck() async {
+  // final packageInfo = await PackageInfo.fromPlatform();
+  // currentVersion.value = packageInfo.version;
+  print(currentVersion.value);
+  checkLatestVersion();
+}
 
   Future<void> checkLatestVersion() async {
     const repositoryOwner = 'MrNitishroy';
     const repositoryName = 'Sampark';
-    final response = await http.get(Uri.parse(
-      'https://api.github.com/repos/$repositoryOwner/$repositoryName/releases/latest',
-    ));
+    final response = await http.get(
+      Uri.parse(
+        'https://api.github.com/repos/$repositoryOwner/$repositoryName/releases/latest',
+      ),
+    );
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = json.decode(response.body);
       final tagName = data['tag_name'];
@@ -41,7 +50,8 @@ class AppController extends GetxController {
       }
     } else {
       print(
-          'Failed to fetch GitHub release info. Status code: ${response.statusCode}');
+        'Failed to fetch GitHub release info. Status code: ${response.statusCode}',
+      );
     }
   }
 

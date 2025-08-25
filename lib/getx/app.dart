@@ -15,6 +15,7 @@ class GetxApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // AppTranslations.init();
+    Get.put(AppController());
     Get.put(AuthController());
     return GetMaterialApp(
       title: AppConfig.name,

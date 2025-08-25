@@ -73,6 +73,7 @@ class App extends RouteManager {
   static const String exampleTopSearchBar = "/top-search-bar";
   static const String exampleFilterChip = "/filter-chip";
   static const String exampleOnboarding = "/onboarding";
+  static const String exampleIsolates = "/isolates";
   static const String exampleCache = "/cache";
   static const String exampleSensors = "/sensors";
   static const String exampleChats = "/chats";
@@ -161,6 +162,7 @@ class App extends RouteManager {
     addRoute(App.exampleTopSearchBar, (context) => const TopSearchBarView());
     addRoute(App.exampleFilterChip, (context) => const FilterChipView());
     addRoute(App.exampleOnboarding, (context) => const OnboardingView());
+    addRoute(App.exampleIsolates, (context) => const IsolatesView());
     addRoute(App.exampleCache, (context) => const CacheView());
     addRoute(App.exampleSensors, (context) => const SensorView());
     addRoute(App.exampleChats, (context) => const ChatView());

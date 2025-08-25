@@ -29,6 +29,7 @@ export 'example/dynamic_multi_form/dynamic_multi_form_view.dart';
 export 'example/top_search_bar_view.dart';
 export 'example/filter_chip_view.dart';
 export 'example/onboarding_view.dart';
+export 'example/isolates_view.dart';
 export 'example/cache_view.dart';
 export 'example/sensor_view.dart';
 export 'example/chats/chat_view.dart';

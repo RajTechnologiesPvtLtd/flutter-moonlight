@@ -5,12 +5,17 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'main.dart';
 
-void mlLaunchURL(url) async {
-  if (!await launchUrl(url)) throw 'Could not launch $url';
+Future<void> mlLaunchURL(String url) async {
+  final Uri uri = Uri.parse(url);
+  if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+    throw Exception('Could not launch $url');
+  }
 }
 
 Future<Future<ShareResult>> mlShare(message) async {
-  return Share.share(message);
+  return   SharePlus.instance.share(
+    ShareParams(text: message)
+  );
 }
 
 mlGoBack(BuildContext context) {

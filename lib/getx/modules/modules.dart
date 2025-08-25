@@ -1,3 +1,4 @@
+export 'app_controlller.dart';
 export 'onboarding/onboarding_binding.dart';
 export 'onboarding/onboarding_view.dart';
 export 'auth/auth_binding.dart';
